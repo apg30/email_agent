@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="en">
 
 <head>
@@ -39,7 +38,7 @@
             <tr class="email">
                 <td>
                     <div class="email-checkbox">
-                        <input type="checkbox" value="1" id="email-checkbox1" name="" />
+                        <input type="checkbox" value="1" id="email-checkbox1" name="select" />
                         <label for="email-checkbox1"></label>
                     </div>
                 </td>
@@ -50,7 +49,7 @@
             <tr class="email">
                 <td>
                     <div class="email-checkbox">
-                        <input type="checkbox" value="1" id="email-checkbox2" name="" />
+                        <input type="checkbox" value="1" id="email-checkbox2" name="select" />
                         <label for="email-checkbox2"></label>
                     </div>
                 </td>
@@ -61,7 +60,7 @@
             <tr class="email">
                 <td>
                     <div class="email-checkbox">
-                        <input type="checkbox" value="1" id="email-checkbox3" name="" />
+                        <input type="checkbox" value="1" id="email-checkbox3" name="select" />
                         <label for="email-checkbox3"></label>
                     </div>
                 </td>

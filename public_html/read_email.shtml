@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>Email Client</title>
+	<meta name="description" content="Email client">
+	<meta name="author" content="Cameron A. Craig, Stuart J. Thain, Aidan P. Gallagher">
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+	<script src="js/scripts.js"></script>
+</head>
+
+<body>
+	<!--#include file="html/header.html" -->
+	<!--#include file="html/nav.html" -->
+	<main>
+		<p>Subject: Really Important Meeting</p>
+		<p>Received: 24th October 2016</p>
+		<p>From: Hamish Taylor</p>
+		<p>To: cac30</p>
+	</main>
+	<!--#include file="html/footer.html" -->
+</body>
+</html>
