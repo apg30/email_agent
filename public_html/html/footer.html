@@ -2,8 +2,13 @@
 		Copyright (C) 2017 Cameron A. Craig, Stuart J. Thain, Aidan P. Gallagher
 		
         <script type = "text/javascript">
-			document.getElementById("html_validation").setAttribute("href", 'http://validator.w3.org/check?uri=' + window.location.href);
+			window.onload = function(){
+				document.getElementById("html_validation").setAttribute("href", 'http://validator.w3.org/check?uri=' + window.location.href);
+				document.getElementById("css_validation").setAttribute("href", 'http://jigsaw.w3.org/css-validator/validator?uri=' + window.location.href);
+			};
 		</script>ss
 		
-        <a id = "html_validation" href = "#">Validate HTML</a>
+        <a id = "html_validation" href = "#">Validate HTML 5</a>
+        <a id = "css_validation" href = "#">Validate CSS 3</a>
+        
 </footer>
