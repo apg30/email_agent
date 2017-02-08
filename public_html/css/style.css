@@ -102,6 +102,16 @@ tbody tr:hover td:last-child {
     background: #26ca28;
 }
 
+nav.email-nav {
+	float: left;
+	width: 30%;
+}
+
+div.email-list {
+	float:right;
+	width: 70%;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
