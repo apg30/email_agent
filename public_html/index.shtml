@@ -17,12 +17,20 @@
 </head>
 
 <body>
-    <header>
-        <div>Email Client</div>
-        <div>Cameron A. Craig, Stuart J.Thain, Aidan P. Gallagher</div>
-    </header>
+		<!--#include file="html/header.html" -->
+
     <script src="js/scripts.js"></script>
 
+		<nav>
+			<ul>
+			  <li><a href="#home">Home</a></li>
+			  <li><a href="#news">News</a></li>
+			  <li><a href="#contact">Contact</a></li>
+			  <li><a href="#about">About</a></li>
+			</ul>
+		</nav>
+		
+		<div class = "email-list">
     <table class="email-inbox email" width="100%">
         <thead>
             <tr>
@@ -71,9 +79,8 @@
 
         </tbody>
     </table>
-    <footer>
-        Copyright (C) 2017 Cameron A. Craig, Stuart J. Thain, Aidan P. Gallagher
-    </footer>
+	</div>
+		<!--#include file="html/header.html" -->
 </body>
 
 </html>
