@@ -1,20 +1,31 @@
-#Email and instant messaging application
+# `YouWatt` Email Client
 
-The web front end will be realised in the XHTML syntax of HTML 5 with a CSS 3 stylesheet
+# Introduction
 
-The middle tier will run under a public web server using a *suitable web programming technology*
+An email client and instant messenger. User authentication via login page.
+Registration requires secret key.
 
-The backend will either be an existing application service like an IRC, mail, Twitter or XMPP instant messenger service, or be a custom service built to support the application.
 
+# Technical
 
-The Mail User Agent should work with local SMTP servers and with either POP or IMAP servers and let users read their mail and post mail messages.
+An HTML5/CSS3 frontent and Node.js backend.
 
-The user agent should run within a web browser and let users
+A minimum number of third pary libraries are used, we try not to use:
+- Bootstrap
+- jQuery
+- Online HTML templates
 
-browse subject and other details of messages in mail box
-* read selected mail messages
-* compose and post mail messages
-* delete selected mail messages
+The email client uses SMTP and POP3 to communicate with email servers.
+
+The email client is supported in Chrome, Firefox and (hopeefully) IE (latest versions).
+
+# Features
+
+## Email
+
+* Read message in pop-up window by clicking on an email.
+* Compose and send email within a pop-up window
+* Delete messages.
 
 The user agent should also
 * interact with mailbox using either POP or IMAP
@@ -23,9 +34,40 @@ The user agent should also
 
 Server programs must not use mail server APIs. They should drive SMTP, POP or IMAP interactions directly using application protocol directives.
 
+## Instant Messaging
+
+Allow instant messaging to user accounts also registered on YouWatt, instant messages can only be sent to users that are correspondents with each other.
+
+# Development
+
 The project could be divided into the following tasks
 
-* initialisation & integration	eliciting user and mail service details, integrating parts
-* composing & posting	composing and posting of mail messages
-* handling mailbox	summarising contents of mailbox
-* message retrieval & deletion	retrieval and deletion of e-mail messages
+* initialisation & integration: eliciting user and mail service details, integrating parts
+* composing & posting: composing and posting of mail messages
+* handling mailbox: summarising contents of mailbox
+* message retrieval & deletion: retrieval and deletion of e-mail messages
+
+# Repository Structure
+```
+.
+├── public_html                    // Root folder 
+│   ├── css                        // CSS files
+│   │   └── style.css
+│   ├── html                       // HTML 'snippet' files (included by .shtml files)
+│   │   ├── compose_email.html
+│   │   ├── footer.html
+│   │   ├── header.html
+│   │   └── nav.html
+│   ├── img                        // Images
+│   │   └── backgrounds
+│   │       ├── 01.jpg
+│   │       ├── 02.jpg
+│   │       ...
+│   ├── index.shtml                // Main html file
+│   ├── js                         // Javascript files 
+│   │   └── scripts.js
+│   ├── page_template.shtml
+│   └── read_email.shtml
+└── README.md
+
+```
