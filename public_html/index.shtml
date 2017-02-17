@@ -17,10 +17,6 @@
 
 <body>
 		<!--#include file="html/header.html" -->
-
-    <script src="js/scripts.js"></script>
-
-
 		<!--#include file="html/nav.html" -->
 		<main>
 		<div class = "email-list">
@@ -75,17 +71,43 @@
 	</div> <!-- email-list-->
 	</main>
 
-    <div id="chat_modal" class="modal">
 
-      <!-- Modal content -->
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Some text in the Modal..</p>
-      </div>
+  <!-- The Compose Modal -->
+  <div id="compose_modal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" id="compose_modal_close">&times;</span>
+      <form action="/action_page.php">
+        To:
+        <input type="email" name="email">
+        <br> From: email@email.com
+        <br> Subject:
+        <input type="email" name="email">
+        <br>
+        <textarea rows="20" cols="60">
+          Email content
+        </textarea>
+        <br>
+        <button> Attach Files</button>
+        <br>
+        <input type="submit">
+      </form>
+    </div> <!-- modal-content -->
+  </div> <!-- modal-->
+  
+   <!-- The Chat Modal -->
+  <div id="chat_modal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" id="chat_modal_close">&times;</span>
+      Chat...
+    </div>  <!-- modal-content-->
+  </div> <!-- modal -->
+  
+  <!--#include file="html/footer.html" -->
 
-    </div>
+  <script src="js/scripts.js"></script>
 
-		<!--#include file="html/footer.html" -->
 </body>
 
 </html>
