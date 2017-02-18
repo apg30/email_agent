@@ -3,6 +3,55 @@ header {
     margin: 0em;
 }
 
+/* Main box containing web page content */
+main {
+	display: inline-block;
+	background-color: white;
+	width: 80%;
+
+	margin-left: 2em;
+	padding: 1em;
+	margin-top: 2em;
+}
+
+main.login {
+	display: inline;
+	width: 20em;
+	height: 15em;
+	background-color: wh;
+
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	margin: auto;
+}
+
+form.login {
+	margin:1em 2em;
+}
+
+/* Left navigation bar */
+nav.email-nav {
+	display:inline-block;
+	float: left;
+	width: 10em;
+}
+
+/* Footer is always at the bottom of the page */
+footer {
+	position:fixed;
+	left: 0px;
+	bottom: 0px;
+	height: 30px;
+	width: 100%;
+	background: white;
+
+	/* Footer text is centred */
+	text-align: center;
+}
 
 th {
     text-align: left;
@@ -115,12 +164,6 @@ tbody tr:hover td:last-child {
     background: #26ca28;
 }
 
-nav.email-nav {
-	display:inline-block;
-	float: left;
-	width: 10em;
-}
-
 div.email-list {
 	width: 70%;
 }
@@ -146,14 +189,6 @@ li a:hover {
     background-color: #555;
     color: white;
 }
-
-main {
-	display: inline-block;
-	background-color: grey;
-	border-radius:1em;
-	margin: 1em 2em;
-}
-
 
  /* Modal style (chat and compose email pop-up windows) */
 .modal {
