@@ -1,0 +1,19 @@
+#!/usr/bin/perl
+
+# hello.pl -- my first perl script!
+
+print "Content-type: text/html", "\n\n";
+print "<html>", "\n";
+print "<head><title>Git Pull Script</title></head>", "\n";
+print "<body>", "\n";
+print "<h1>", "Git Pull Script", "</h1>", "<hr>", "\n";
+print "Sit back and relax :)<br><br>", "\n";
+
+
+print "git pull result: ", "\n";
+$result = `cd /home/ce5/cac30/git/email_agent/; git pull`;
+print $result;
+
+print "</body></html>", "\n";
+
+exit(0);
