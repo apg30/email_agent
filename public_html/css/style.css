@@ -18,7 +18,7 @@ main.login {
 	display: inline;
 	width: 20em;
 	height: 15em;
-	background-color: wh;
+	background-color: white;
 
 	position: absolute;
 	top:0;
@@ -40,6 +40,12 @@ nav.email-nav {
 	width: 10em;
 }
 
+div.chat_menu {
+	display:inline-block;
+	float: left;
+	width: 10em;
+}
+
 /* Footer is always at the bottom of the page */
 footer {
 	position:fixed;
@@ -53,18 +59,170 @@ footer {
 	text-align: center;
 }
 
+/* Basic vertical navigation box */
+ul.basic-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+    margin-top: 2em;
+}
+
+li.basic-nav a {
+    display: inline-block;
+    color: #000;
+    padding: 8px 16px;
+    width: 80%;
+    text-decoration: none;
+}
+
+/* Search bar in top header */
+.email_search {
+	float: right;
+	display: block;
+	margin: 1em;
+}
+
+/* Message dialogs */
+div.message_box {
+	margin: 10px 0px;
+	padding: 12px;
+
+	/* To show, use JS to change DOM (set text and set visibility) */
+	display: none;
+}
+
+div.warning_message {
+    color: #9F6000;
+    background-color: #FEEFB3;
+}
+
+div.error_message {
+    color: #D8000C;
+    background-color: #FFBABA;
+}
+
+div.success_message {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+}
+
+div.info_message {
+    color: #00529B;
+    background-color: #BDE5F8;
+}
+
+.message_box i {
+    margin: 10px 22px;
+    font-size: 2em;
+    vertical-align: middle;
+}
+
+/*.message_box.fadeout {
+	animation-delay: 2s;
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -ms-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear;
+}
+
+.hidden .visible.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
+}*/
+
+.message_box {
+    opacity: 1;
+    animation: fadeinout 2s linear;
+}
+
+@keyframes fadeinout {
+  0%,100% { opacity: 0 }
+  50% { opacity: 1 }
+}
+
+/*@-webkit-keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}*/
+
+
+/* Chat/Instant Messaging */
+div.chat_menu div.chat_box {
+	overflow: scroll;
+	height: 5em;
+}
+
+.chat {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.chat li {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #B3A9A9;
+}
+
+.chat li .chat-body p {
+    margin: 0;
+    color: #777777;
+}
+
+.panel .slidedown .glyphicon, .chat .glyphicon {
+    margin-right: 5px;
+}
+
+.panel-body {
+    overflow-y: scroll;
+    height: 250px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+ul.chat-nav {
+	margin-top: 0em;
+}
+
+
+
+i.warning_icon {
+	icon: url(/img/icons/warning.png);
+}
+
+
 th {
     text-align: left;
 }
 
 #page_title {
     padding: 0.5em 1em;
-}
-
-.email_search {
-	float: right;
-    display: block;
-    margin: 1em;
 }
 
 body {
@@ -74,121 +232,101 @@ body {
     background-position: center center;
 }
 
-table {
-    border-spacing: 0 0.1em;
+
+/* Email table */
+tbody.email {
+	display:block;
+}
+
+table.email-inbox tbody,
+table.email-inbox  {
+	display: block;
+	width:100%;
+}
+
+table.email-inbox tbody {
+    height: 20em;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+thead tr th {
+    height: 30px;
+}
+
+tbody td:last-child, thead th:last-child {
+    border-right: none !important;
 }
 
 th, td {
     padding: 0.5em 1em;
 }
 
-thead tr th {
-    background: #181818;
-    color: #81b71a;
+td, th {
+	width:20em;
 }
 
+/* Email table border raduis */
 thead tr th:first-child {
     border-radius: 0.6em 0 0 0.6em;
 }
-
 thead th:last-child {
     border-radius: 0 0.6em 0.6em 0;
-    background: #181818;
-    color: #81b71a;
 }
-
-tbody tr td {
-    background: #181818;
-    color: #81b71a;
-}
-
 tbody tr td:first-child {
     border-radius: 0.6em 0 0 0.6em;
 }
-
-tbody td {
-    background: #181818;
-    color: #81b71a;
-}
+/* End of Email table border raduis */
 
 tbody td:last-child {
     border-radius: 0 0.6em 0.6em 0;
 }
 
-tbody tr:hover td {
-    background: #303030;
+/* Normal email table colours */
+tbody tr td {
+    background: lightgray;
     color: #81b71a;
 }
-
-tbody tr:hover td:first-child {
-    border-radius: 0.6em 0 0 0.6em;
-}
-
-tbody tr:hover td {
-    background: #303030;
+thead tr th {
+    background: lightgray;
     color: #81b71a;
 }
-
-tbody tr:hover td:last-child {
-    border-radius: 0 0.6em 0.6em 0;
-}
+/* End of normal table colours */
 
 
-/* Checkbox to select email */
-.email-checkbox {
-    width: 40px;
-    height: 40px;
-    background: #ddd;
-    margin: 20px 90px;
-    border-radius: 100%;
-    position: relative;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
-}
 
-.email-checkbox label {
-    display: block;
-    width: 30px;
-    height: 30px;
-    border-radius: 100px;
-    transition: all .5s ease;
-    cursor: pointer;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    z-index: 1;
-    background: #333;
-    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-.email-checkbox input[type=checkbox]:checked+label {
-    background: #26ca28;
-}
-
-div.email-list {
-	width: 70%;
-}
-
-ul.email-nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: #f1f1f1;
-    margin-top: 2em;
-}
-
-li.email-nav a {
-    display: inline-block;
-    color: #000;
-    padding: 8px 16px;
-    width: 80%;
-    text-decoration: none;
-}
+/* Hover colours */
 
 /* Change the link color on hover */
 li a:hover {
     background-color: #555;
     color: white;
 }
+tbody tr:hover td {
+    background: #303030;
+    color: #81b71a;
+}
+tbody tr:hover td:first-child {
+    border-radius: 0.6em 0 0 0.6em;
+}
+tbody tr:hover td:last-child {
+    border-radius: 0 0.6em 0.6em 0;
+}
+/* End of hover colours */
+
+
+
+div.email-list {
+	width: 100%;
+}
+
+table.email-inbox {
+	width: 100%;
+}
+
+
+
+
 
  /* Modal style (chat and compose email pop-up windows) */
 .modal {

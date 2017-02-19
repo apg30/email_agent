@@ -1,5 +1,5 @@
 function setup_modal(modal, button, close) {
-  // When the user clicks the button, open the modal 
+  // When the user clicks the button, open the modal
   button.onclick = function() {
     modal.style.display = "block";
   }
@@ -10,7 +10,46 @@ function setup_modal(modal, button, close) {
   }
 }
 
-// Get the modal
+function message(type, message) {
+	if (type == "error") {
+		var message_box = document.getElementsByClassName("error_message")[0];
+		var message_text = document.getElementsByClassName("error_text")[0];
+		message_text.innerHTML = message;
+		message_box.style.display = "inline";
+		message_box.className += " notification";
+		//message_box.style.display = "none";
+	}
+	return;
+}
+
+
+/* Call this function when serverside functionality should follow,
+   but is not yet supported.
+*/
+function not_yet_implemented() {
+	message("error", "The feature you are requesting has not yet been implemented.");
+	alert("not yet implemented");
+	return false;
+}
+
+/* Called when login button is pressed, before data is passed to server. */
+function validate_login() {
+	// Validate username
+	var username = document.forms["login_form"]["username"].value;
+	if(username == "") {
+      alert("Error: Username cannot be blank!");
+      form.username.focus();
+      return false;
+    }
+	if (x == "") {
+			alert("Name must be filled out");
+			return false;
+	}
+}
+
+
+
+// Set uo modals for compose and messaging
 var compose_modal = document.getElementById('compose_modal');
 var compose_btn = document.getElementById("compose_button");
 var compose_modal_close = document.getElementById("compose_modal_close");
@@ -29,3 +68,9 @@ setup_modal(chat_modal, chat_btn, chat_modal_close);
     	chat_modal.style.display = "none"
     }
   }
+
+//Test message box
+var inbox_button = document.getElementById('inbox_button');
+inbox_button.onclick = function() {
+	message("error", "testing");
+}

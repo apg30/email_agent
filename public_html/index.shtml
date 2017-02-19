@@ -23,20 +23,94 @@
     <table class="email-inbox email" >
         <thead>
             <tr>
-                <th>Select</th>
+                <th>
+									<div class="email-checkbox">
+	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
+	                </div>
+									Select
+								</th>
                 <th>From</th>
                 <th>Subject</th>
                 <th>Time</th>
             </tr>
         </thead>
-
+				<div class = "email-list-scroller">
         <tbody class="email">
             <tr class="email">
                 <td>
-                    <div class="email-checkbox">
-                        <input type="checkbox" value="1" id="email-checkbox1" name="select" />
-                        <label for="email-checkbox1"></label>
-                    </div>
+	                <div class="email-checkbox">
+	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
+	                </div>
+                </td>
+                <td>Aidan P. Gallagher</td>
+                <td>Immediate Dismissal from...</td>
+                <td>30/1/2016</td>
+            </tr>
+						<tr class="email">
+                <td>
+	                <div class="email-checkbox">
+	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
+	                </div>
+                </td>
+                <td>Aidan P. Gallagher</td>
+                <td>Immediate Dismissal from...</td>
+                <td>30/1/2016</td>
+            </tr>
+						<tr class="email">
+                <td>
+	                <div class="email-checkbox">
+	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
+	                </div>
+                </td>
+                <td>Aidan P. Gallagher</td>
+                <td>Immediate Dismissal from...</td>
+                <td>30/1/2016</td>
+            </tr>
+						<tr class="email">
+                <td>
+	                <div class="email-checkbox">
+	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
+	                </div>
+                </td>
+                <td>Aidan P. Gallagher</td>
+                <td>Immediate Dismissal from...</td>
+                <td>30/1/2016</td>
+            </tr>
+						<tr class="email">
+                <td>
+	                <div class="email-checkbox">
+	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
+	                </div>
+                </td>
+                <td>Aidan P. Gallagher</td>
+                <td>Immediate Dismissal from...</td>
+                <td>30/1/2016</td>
+            </tr>
+						<tr class="email">
+                <td>
+	                <div class="email-checkbox">
+	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
+	                </div>
+                </td>
+                <td>Aidan P. Gallagher</td>
+                <td>Immediate Dismissal from...</td>
+                <td>30/1/2016</td>
+            </tr>
+						<tr class="email">
+                <td>
+	                <div class="email-checkbox">
+	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
+	                </div>
+                </td>
+                <td>Aidan P. Gallagher</td>
+                <td>Immediate Dismissal from...</td>
+                <td>30/1/2016</td>
+            </tr>
+						<tr class="email">
+                <td>
+	                <div class="email-checkbox">
+	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
+	                </div>
                 </td>
                 <td>Aidan P. Gallagher</td>
                 <td>Immediate Dismissal from...</td>
@@ -44,10 +118,9 @@
             </tr>
             <tr class="email">
                 <td>
-                    <div class="email-checkbox">
-                        <input type="checkbox" value="1" id="email-checkbox2" name="select" />
-                        <label for="email-checkbox2"></label>
-                    </div>
+	                <div class="email-checkbox">
+	                	<input type="checkbox" value="1" id="email-checkbox2" name="select" />
+	                </div>
                 </td>
                 <td>Stuart J. Thain</td>
                 <td>URGENT: Careers Service: Apply Now</td>
@@ -55,10 +128,9 @@
             </tr>
             <tr class="email">
                 <td>
-                    <div class="email-checkbox">
-                        <input type="checkbox" value="1" id="email-checkbox3" name="select" />
-                        <label for="email-checkbox3"></label>
-                    </div>
+	                <div class="email-checkbox">
+	                	<input type="checkbox" value="1" id="email-checkbox3" name="select" />
+	                </div>
                 </td>
                 <td>Cameron A. Craig</td>
                 <td>Your commendation of bravery for ...</td>
@@ -67,6 +139,7 @@
 
 
         </tbody>
+			</div> <!-- email-list-scroller -->
     </table>
 	</div> <!-- email-list-->
 	</main>
@@ -94,16 +167,89 @@
       </form>
     </div> <!-- modal-content -->
   </div> <!-- modal-->
-  
+
    <!-- The Chat Modal -->
   <div id="chat_modal" class="modal">
     <!-- Modal content -->
     <div class="modal-content">
       <span class="close" id="chat_modal_close">&times;</span>
-      Chat...
+      <div class = "chat_menu">
+				<ul class = "chat-nav basic-nav">
+				  <li  class = "basic-nav chat-nav"><a href="#todo">Cameron</a></li>
+				  <li  class = "basic-nav chat-nav"><a href="#todo">Stuart</a></li>
+				  <li class = "basic-nav chat-nav"><a href="#todo">Lee</a></li>
+				  <li class = "basic-nav chat-nav"><a href="#todo">Aidan</a></li>
+				  <li class = "basic-nav chat-nav"><a href="#todo">Trump</a></li>
+				</ul>
+			</div>
+			<div class = "chat_box">
+				<ul class="chat">
+          <li class="left clearfix"><span class="chat-img pull-left">
+
+          </span>
+              <div class="chat-body clearfix">
+                  <div class="header">
+                      <strong class="primary-font">Jack Sparrow</strong> <small class="pull-right text-muted">
+                          <span class="glyphicon glyphicon-time"></span>12 mins ago</small>
+                  </div>
+                  <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                      dolor, quis ullamcorper ligula sodales.
+                  </p>
+              </div>
+          </li>
+          <li class="right clearfix"><span class="chat-img pull-right">
+
+          </span>
+              <div class="chat-body clearfix">
+                  <div class="header">
+                      <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>13 mins ago</small>
+                      <strong class="pull-right primary-font">Bhaumik Patel</strong>
+                  </div>
+                  <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                      dolor, quis ullamcorper ligula sodales.
+                  </p>
+              </div>
+          </li>
+          <li class="left clearfix"><span class="chat-img pull-left">
+
+          </span>
+              <div class="chat-body clearfix">
+                  <div class="header">
+                      <strong class="primary-font">Jack Sparrow</strong> <small class="pull-right text-muted">
+                          <span class="glyphicon glyphicon-time"></span>14 mins ago</small>
+                  </div>
+                  <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                      dolor, quis ullamcorper ligula sodales.
+                  </p>
+              </div>
+          </li>
+          <li class="right clearfix"><span class="chat-img pull-right">
+          </span>
+              <div class="chat-body clearfix">
+                  <div class="header">
+                      <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>15 mins ago</small>
+                      <strong class="pull-right primary-font">Bhaumik Patel</strong>
+                  </div>
+                  <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                      dolor, quis ullamcorper ligula sodales.
+                  </p>
+              </div>
+          </li>
+        </ul>
+			</div>
+			<div class = "message_input">
+				<form>
+					<input id="btn-input" class="form-control input-sm" placeholder="Type your message here..." type="text">
+					<input type="submit" class="button" id="message_send_button" name="message_send_button" value="Send">
+				</form>
+			</div>
     </div>  <!-- modal-content-->
   </div> <!-- modal -->
-  
+
   <!--#include file="html/footer.html" -->
 
   <script src="js/scripts.js"></script>
