@@ -1,11 +1,9 @@
 <header>
-		<div id="page_title">YouWatt</div>
+		<img class="logo" src="img/icons/you_watt.png" alt="logo">
+		<img class="toolbar_img" src="img/icons/settings.png" alt="settings_logo">
+		<button class="advanced_search_button" id="advanced_search_form"></button>
 		<form class = "email_search" onsubmit="not_yet_implemented()">
-          <input type="search" name="email_search_input" placeholder="Search Email..."
-					 list="search_list">
-					 <datalist id="search_list">
-					 	<option value="hello"></option>
-					 </datalist>
+          <input type="search" name="email_search_input" placeholder="Search Email...">
         </form>
         <div style="clear: both"></div>
 </header>
@@ -29,3 +27,26 @@
     <i class="info_icon"></i>
 		<span class = "info_text"></span>
 </div>
+
+<!-- The Advanced Search Modal -->
+<div id="ad_search_modal" class="modal">
+	<!-- Modal content -->
+	<div class="modal-content">
+		<span class="close" id="ad_search_modal_close">&times;</span>
+		<form action="/action_page.php">
+			To:
+			<input type="email" name="email">
+			<br> From: email@email.com
+			<br> Subject:
+			<input type="email" name="email">
+			<br>
+			<textarea rows="20" cols="60">
+				Email content
+			</textarea>
+			<br>
+			<button> Attach Files</button>
+			<br>
+			<input type="submit">
+		</form>
+	</div> <!-- modal-content -->
+</div> <!-- modal-->
