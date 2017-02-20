@@ -37,7 +37,7 @@
 					</p>
 					<p class="submit"><input type="submit" name="commit" value="Login"></p>
 				</form>
-				<button onClick="not_yet_implemented()">test</button>
+				<button class = "styled" onClick="not_yet_implemented()">test</button>
 			</div>
 
 		</main>
