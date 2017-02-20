@@ -76,6 +76,7 @@ li.basic-nav a {
     text-decoration: none;
 }
 
+
 /* Search bar in top header */
 
 .email_search {
@@ -85,6 +86,7 @@ li.basic-nav a {
 }
 
 .email_search input[type=search] {
+    height: 2em;
     width: 30em;
     box-sizing: border-box;
     border: 2px solid #ccc;
@@ -93,13 +95,27 @@ li.basic-nav a {
     background-color: white;
     background-image: url('../img/icons/search.png');
     background-size: 1.5em;
-    background-position: 0.75em 0.75em;
+    background-position: 0.5em 0.25em;
     background-repeat: no-repeat;
     padding: 1em 2em 1em 3em;
 }
 
 .email_search input[type=search]:focus {
   outline: none;
+}
+
+/* Logo for header  */
+.logo {
+    height: 3.5em;
+    margin: 0.3em;
+    float: left;
+}
+
+/* Logo for header  */
+.toolbar_img {
+    height: 3.5em;
+    margin: 0.3em;
+    float: right;
 }
 
 /* Message dialogs */
