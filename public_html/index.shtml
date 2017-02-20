@@ -20,7 +20,6 @@
 		<!--#include file="html/header.html" -->
 		<!--#include file="html/nav.html" -->
 		<main>
-      <button type="button" onclick="change_background()">Set background image</button>
 		<div class = "email-list">
     <table class="email-inbox email" >
         <thead class="read_email">
