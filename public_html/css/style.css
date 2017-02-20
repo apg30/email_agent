@@ -293,12 +293,9 @@ tbody td:last-child, thead th:last-child {
     border-right: none !important;
 }
 
-th, td {
-    padding: 0.5em 1em;
-}
-
 td, th {
 	width:20em;
+	padding: 0.5em 1em;
 }
 
 /* Email table border raduis */
@@ -318,11 +315,11 @@ tbody td:last-child {
 }
 
 /* Normal email table colours */
-tbody tr td {
+tbody.read_email  tr.read_email  td.read_email  {
     background: lightgray;
     color: #81b71a;
 }
-thead tr th {
+thead.read_email  tr.read_email  th.read_email  {
     background: lightgray;
     color: #81b71a;
 }
@@ -337,14 +334,14 @@ li a:hover {
     background-color: #555;
     color: white;
 }
-tbody tr:hover td {
+tbody.read_email tr.read_email:hover td {
     background: #303030;
     color: #81b71a;
 }
-tbody tr:hover td:first-child {
+tbody.read_email tr.read_email:hover td:first-child {
     border-radius: 0.6em 0 0 0.6em;
 }
-tbody tr:hover td:last-child {
+tbody.read_email tr.read_email:hover td:last-child {
     border-radius: 0 0.6em 0.6em 0;
 }
 /* End of hover colours */
@@ -401,4 +398,53 @@ table.email-inbox {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+button.styled {
+    padding: 10px 15px;
+    background: #4479BA;
+    color: #FFF;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: solid 1px #20538D;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+button.styled:hover {
+    background: #356094;
+    border: solid 1px #2A4E77;
+    text-decoration: none;
+}
+button.styled:active {
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    background: #2E5481;
+    border: solid 1px #203E5F;
+}
+
+/* Set widths of table columns for inbox etc. */
+td.actions, th.actions {
+	width: 10em;
+}
+
+td.select, th.select {
+	width: 4em;
+}
+/* End of Set widths of table columns for inbox etc. */
+
+/* When reading an email, align the title td elements to the right */
+td.read_email_param {
+	text-align:right;
+	width: 10em;
 }
