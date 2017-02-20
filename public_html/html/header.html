@@ -10,11 +10,12 @@
 	    <a href="#Logout">Logout</a>
 	  </div>
 	</div>
-
+	<button class="advanced_search_button" id="advanced_search_form"></button>
 	<form class = "email_search" onsubmit="not_yet_implemented()">
     <input type="search" name="email_search_input" placeholder="Search Email...">
   </form>
   <div style="clear: both"></div>
+
 </header>
 
 <div class="message_box warning_message">
@@ -36,3 +37,30 @@
     <i class="info_icon"></i>
 		<span class = "info_text"></span>
 </div>
+
+<!-- The Advanced Search Modal -->
+<div id="ad_search_modal" class="modal advanced_search_modal">
+	<!-- Modal content -->
+	<div class="modal-content">
+		<span class="close" id="ad_search_modal_close">&times;</span>
+		<form action="/action_page.php">
+			Search Folder:
+			<select class="folder_select">
+				<option value="inbox">Inbox</option>
+				<option value="sent">sent</option>
+				<option value="drafts">drafts</option>
+			</select>
+			<br> To:
+			<input type="advanced_search_text" name="to">
+			<br> From:
+			<input type="advanced_search_text" name="from">
+			<br> Subject:
+			<input type="advanced_search_text" name="subject">
+			<br>
+			<input type="checkbox" name="has_attachment" value="Attachment">
+			Has Attachment<br>
+			<br>
+			<input type="submit" value="Search">
+		</form>
+	</div> <!-- modal-content -->
+</div> <!-- modal-->
