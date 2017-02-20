@@ -19,10 +19,10 @@ print "Sit back and relax :)<br><br>", "\n";
 
 
 print "git pull result: ", "\n";
-my $result = `cd /home/ce5/apg30/git/email_agent/; git pull`;
+my $result = `cd /home/ce5/cac30/git/email_agent/; git pull origin stable`;
 print $result;
 
-my $filename = "/home/ce5/apg30/git/email_agent/public_html/logs/git_pull.log";
+my $filename = "/home/ce5/cac30/git/email_agent/public_html/logs/git_pull.log";
 my $timestamp = get_log_time();
 
 print "Log:<br>", "\n";
