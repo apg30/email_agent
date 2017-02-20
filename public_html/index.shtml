@@ -9,6 +9,7 @@
     <meta name="author" content="Cameron A. Craig, Stuart J. Thain, Aidan P. Gallagher, Lee Hamilton">
 
     <link rel="stylesheet" href="css/style.css">
+		<script src="js/head_scripts.js"></script>
 
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -38,35 +39,28 @@
 				<div class = "email-list-scroller">
         <tbody class="email read_email">
 						<script>
-						function get_email_row_html(email) {
-							var email_html = "";
-							email_html += '<tr class="read_email">';
-							email_html += '<td class = "read_email select"><div class="email-checkbox">';
-							email_html += '<input type="checkbox" value="1" id="email-checkbox1" name="select" />';
-							email_html += '</div></td>';
-							email_html += '<td class="read_email from">';
-							email_html += email.from;
-							email_html += '</td>';
-							email_html += '<td class="read_email subject">';
-							email_html += email.subject;
-							email_html += '</td>';
-							email_html += '<td class="read_email date">';
-							email_html += email.time;
-							email_html += '</td>';
-							email_html += '<td class="read_email actions">';
-							//email_html += '<button class = "styled" onclick="display_message(' + JSON.stringify(email) + ');">Read</button>';
-							email_html += "<button class = 'styled' onclick='display_message(" + JSON.stringify(email) + ");'>Read</button>";
-							email_html += '</td>';
-							email_html += "</tr>";
-							return email_html;
-						}
-
-
 							var emails = [
 								{"subject": "Test Subject", "content": "Test Content", "to": "aidan@to.com", "from": "from@from.com", "time": "24/10/1994 05:35"},
 								{"subject": "Test Subject", "content": "Test Content", "to": "stuart@to.com", "from": "from@from.com", "time": "24/10/2008 05:35"},
 								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"}
 							];
+
 							for(var i = 0; i < emails.length; i++) {
 	    					var email = emails[i];
 								var email_html = get_email_row_html(email);

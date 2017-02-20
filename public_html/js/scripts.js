@@ -22,7 +22,6 @@ function message(type, message) {
 	return;
 }
 
-
 /* Call this function when serverside functionality should follow,
    but is not yet supported.
 */
