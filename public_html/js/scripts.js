@@ -77,8 +77,6 @@ function validate_login() {
 	}
 }
 
-
-
 // Set uo modals for compose and messaging
 var compose_modal = document.getElementById('compose_modal');
 var compose_btn = document.getElementById("compose_button");
