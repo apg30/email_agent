@@ -335,8 +335,10 @@ th {
 body {
     background-image: url("../img/backgrounds/01.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
     background-position: center center;
+    -webkit-transition: background-image 4s ease-in-out;
+    transition: background-image 4s ease-in-out;
 }
 
 
