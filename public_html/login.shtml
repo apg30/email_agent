@@ -12,7 +12,7 @@
 		<script src="js/head_scripts.js"></script>
 		<!-- Hide some header elements -->
 		<style>
-			form.email_search, img.toolbar_img {
+			form.email_search, button.advanced_search_button, img.dropbtn {
 				display: none;
 			}
 		</style>

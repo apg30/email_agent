@@ -99,9 +99,7 @@ function display_message(email_message_json) {
 	return true;
 }
 
-
-
-// Set uo modals for compose and messaging
+// Set up modals
 var compose_modal = document.getElementById('compose_modal');
 var compose_btn = document.getElementById("compose_button");
 var compose_modal_close = document.getElementById("compose_modal_close");
@@ -111,6 +109,11 @@ var chat_modal = document.getElementById('chat_modal');
 var chat_btn = document.getElementById("chat_button");
 var chat_modal_close = document.getElementById("chat_modal_close");
 setup_modal(chat_modal, chat_btn, chat_modal_close);
+
+var advanced_search_modal = document.getElementById('ad_search_modal');
+var advanced_search_btn = document.getElementById("advanced_search_form");
+var advanced_search_modal_close = document.getElementById("ad_search_modal_close");
+setup_modal(advanced_search_modal, advanced_search_btn, advanced_search_modal_close);
 
 // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
