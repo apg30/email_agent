@@ -9,6 +9,7 @@
     <meta name="author" content="Cameron A. Craig, Stuart J. Thain, Aidan P. Gallagher, Lee Hamilton">
 
     <link rel="stylesheet" href="css/style.css">
+		<script src="js/head_scripts.js"></script>
 
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -21,123 +22,52 @@
 		<main>
 		<div class = "email-list">
     <table class="email-inbox email" >
-        <thead>
-            <tr>
-                <th>
+        <thead class="read_email">
+            <tr class="read_email">
+                <th class="read_email select">
 									<div class="email-checkbox">
 	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
 	                </div>
 									Select
 								</th>
-                <th>From</th>
-                <th>Subject</th>
-                <th>Time</th>
+                <th class="read_email from">From</th>
+                <th class="read_email subject">Subject</th>
+                <th class="read_email time">Time</th>
+								<th class="read_email actions">Actions</th>
             </tr>
         </thead>
 				<div class = "email-list-scroller">
-        <tbody class="email">
-            <tr class="email">
-                <td>
-	                <div class="email-checkbox">
-	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
-	                </div>
-                </td>
-                <td>Aidan P. Gallagher</td>
-                <td>Immediate Dismissal from...</td>
-                <td>30/1/2016</td>
-            </tr>
-						<tr class="email">
-                <td>
-	                <div class="email-checkbox">
-	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
-	                </div>
-                </td>
-                <td>Aidan P. Gallagher</td>
-                <td>Immediate Dismissal from...</td>
-                <td>30/1/2016</td>
-            </tr>
-						<tr class="email">
-                <td>
-	                <div class="email-checkbox">
-	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
-	                </div>
-                </td>
-                <td>Aidan P. Gallagher</td>
-                <td>Immediate Dismissal from...</td>
-                <td>30/1/2016</td>
-            </tr>
-						<tr class="email">
-                <td>
-	                <div class="email-checkbox">
-	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
-	                </div>
-                </td>
-                <td>Aidan P. Gallagher</td>
-                <td>Immediate Dismissal from...</td>
-                <td>30/1/2016</td>
-            </tr>
-						<tr class="email">
-                <td>
-	                <div class="email-checkbox">
-	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
-	                </div>
-                </td>
-                <td>Aidan P. Gallagher</td>
-                <td>Immediate Dismissal from...</td>
-                <td>30/1/2016</td>
-            </tr>
-						<tr class="email">
-                <td>
-	                <div class="email-checkbox">
-	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
-	                </div>
-                </td>
-                <td>Aidan P. Gallagher</td>
-                <td>Immediate Dismissal from...</td>
-                <td>30/1/2016</td>
-            </tr>
-						<tr class="email">
-                <td>
-	                <div class="email-checkbox">
-	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
-	                </div>
-                </td>
-                <td>Aidan P. Gallagher</td>
-                <td>Immediate Dismissal from...</td>
-                <td>30/1/2016</td>
-            </tr>
-						<tr class="email">
-                <td>
-	                <div class="email-checkbox">
-	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
-	                </div>
-                </td>
-                <td>Aidan P. Gallagher</td>
-                <td>Immediate Dismissal from...</td>
-                <td>30/1/2016</td>
-            </tr>
-            <tr class="email">
-                <td>
-	                <div class="email-checkbox">
-	                	<input type="checkbox" value="1" id="email-checkbox2" name="select" />
-	                </div>
-                </td>
-                <td>Stuart J. Thain</td>
-                <td>URGENT: Careers Service: Apply Now</td>
-                <td>30/1/2016</td>
-            </tr>
-            <tr class="email">
-                <td>
-	                <div class="email-checkbox">
-	                	<input type="checkbox" value="1" id="email-checkbox3" name="select" />
-	                </div>
-                </td>
-                <td>Cameron A. Craig</td>
-                <td>Your commendation of bravery for ...</td>
-                <td>30/1/2016</td>
-            </tr>
+        <tbody class="email read_email">
+						<script>
+							var emails = [
+								{"subject": "Test Subject", "content": "Test Content", "to": "aidan@to.com", "from": "from@from.com", "time": "24/10/1994 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "stuart@to.com", "from": "from@from.com", "time": "24/10/2008 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
+								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"}
+							];
 
-
+							for(var i = 0; i < emails.length; i++) {
+	    					var email = emails[i];
+								var email_html = get_email_row_html(email);
+	    					document.write(email_html);
+								console.log("test");
+							}
+						</script>
         </tbody>
 			</div> <!-- email-list-scroller -->
     </table>
@@ -249,6 +179,34 @@
 			</div>
     </div>  <!-- modal-content-->
   </div> <!-- modal -->
+
+	<!-- The Read Email Modal -->
+	<div id="read_email_modal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close" id="read_email_modal_close">&times;</span>
+			<table>
+				<tr>
+					<td class = "read_email_param">Subject:</td>
+					<td><span id="read_email_subject"></span></td>
+				</tr>
+				<tr>
+					<td class = "read_email_param">To:</td>
+					<td><span id="read_email_to"></span></td>
+				</tr>
+				<tr>
+					<td class = "read_email_param">From:</td>
+					<td><span id="read_email_from"></span></td>
+				</tr>
+				<tr>
+					<td colspan="2"><textarea id = "read_email_content" rows="20" cols="60" readonly></textarea></td>
+				</tr>
+			</table>
+			<button class = "styled">Delete</button>
+			<button class = "styled">Reply</button>
+			<button class = "styled">Forward</button>
+		</div> <!-- modal-content -->
+	</div> <!-- End of read email modal -->
 
   <!--#include file="html/footer.html" -->
 
