@@ -28,8 +28,39 @@ function message(type, message) {
 */
 function not_yet_implemented() {
 	message("error", "The feature you are requesting has not yet been implemented.");
-	alert("not yet implemented");
+	//alert("not yet implemented");
 	return false;
+}
+
+function display_message(email_message_json) {
+	var modal = document.getElementById('read_email_modal');
+
+	var close_button = document.getElementById('read_email_modal_close');
+
+	// When the user clicks on <span> (x), close the modal
+  close_button.onclick = function() {
+    modal.style.display = "none";
+  }
+
+	var subject = document.getElementById('read_email_subject');
+	subject.innerHTML = email_message_json.subject;
+
+	var to = document.getElementById('read_email_to');
+	to.innerHTML = email_message_json.to;
+
+	var from = document.getElementById('read_email_from');
+	from.innerHTML = email_message_json.from;
+
+	var content = document.getElementById('read_email_content');
+	content.innerHTML = email_message_json.content;
+	//var email_message = JSON.parse(email_message_json);
+	/*
+		'subject', 'to', 'from', 'content',
+	*/
+
+	// Display modal
+	modal.style.display = "block";
+	return true;
 }
 
 /* Called when login button is pressed, before data is passed to server. */

@@ -19,7 +19,7 @@
 		<!--#include file="html/header.html" -->
 		<main class = "login" >
 			<div class="login">
-				<form method="post" action="serverside voodoo" class="login" name="login_form">
+				<form method="post" onSubmit="not_yet_implemented()" class="login" name="login_form">
 					<p><input type="text" name="username" value="" placeholder="Username"></p>
 					<p><input type="password" name="password" value="" placeholder="Password"></p>
 					<p class="remember_me">
@@ -28,7 +28,7 @@
 							Remember me on this computer
 						</label>
 					</p>
-					<p class="submit"><input type="submit" name="commit" value="Login" onClick="not_yet_implemented()"></p>
+					<p class="submit"><input type="submit" name="commit" value="Login"></p>
 				</form>
 			</div>
 
