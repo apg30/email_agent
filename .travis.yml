@@ -1,0 +1,12 @@
+language: javascript
+jdk:
+ - oraclejdk8  # For html5validator
+
+install:
+ - pip install --user html5validator
+
+script:
+  # Validate HTML5
+  html5validator --root public_html/
+
+  # TODO: Validate CSS3
