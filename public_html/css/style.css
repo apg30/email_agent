@@ -182,7 +182,19 @@ div.message_box {
 	padding: 12px;
 
 	/* To show, use JS to change DOM (set text and set visibility) */
-	display: none;
+	/*display: none;*/
+}
+
+div.message_box {
+  background-color: rgba(50, 50, 50, 0.8);
+  border-radius: 33px;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  opacity: 0;
+  z-index: 99999;
+  transition: transform .25s, opacity .25s, top .25s;
+  box-sizing: border-box;
 }
 
 div.warning_message {
@@ -211,6 +223,16 @@ div.info_message {
     vertical-align: middle;
 }
 
+.message_box {
+    opacity: 1;
+    animation: fadeinout 4s linear;
+}
+
+@keyframes fadeinout {
+  0%,100% { opacity: 0 }
+  50% { opacity: 1 }
+}
+
 /*.message_box.fadeout {
 	animation-delay: 2s;
   -webkit-transition: all 2s ease-in-out;
@@ -232,15 +254,7 @@ div.info_message {
   transition: visibility 0s 2s, opacity 2s linear;
 }*/
 
-.message_box {
-    opacity: 1;
-    animation: fadeinout 2s linear;
-}
 
-@keyframes fadeinout {
-  0%,100% { opacity: 0 }
-  50% { opacity: 1 }
-}
 
 /*@-webkit-keyframes fadeinout {
   0%,100% { opacity: 0; }

@@ -1,4 +1,7 @@
 function setup_modal(modal, button, close) {
+	if((button == null) || (modal == null) || (close == null)){
+		return;
+	}
   // When the user clicks the button, open the modal
   button.onclick = function() {
     modal.style.display = "block";
@@ -10,24 +13,62 @@ function setup_modal(modal, button, close) {
   }
 }
 
+/*
+	Displays a temporary message at the top of the window.
+*/
 function message(type, message) {
+	var message_location;
+	message_location = document.getElementById("message_location");
+	var message_html;
+	var message_type;
+	var icon_type;
+
 	if (type == "error") {
-		var message_box = document.getElementsByClassName("error_message")[0];
-		var message_text = document.getElementsByClassName("error_text")[0];
-		message_text.innerHTML = message;
-		message_box.style.display = "inline";
-		message_box.className += " notification";
-		//message_box.style.display = "none";
+		message_type = "error_message";
+		icon_type = "error_icon";
+		text_type = "error_text";
+	} else if(type == "info") {
+		message_type = "info_message";
+		icon_type = "info_icon";
+		text_type = "info_text";
+	} else if(type == "warning") {
+		message_type = "warning_message";
+		icon_type = "warning_icon";
+		text_type = "warning_text";
+	} else if(type == "success") {
+		message_type = "success_message";
+		icon_type = "success_icon";
+		text_type = "success_text";
 	}
+
+	//Generate HTML for the notification message
+	message_html = '<div class="message_box ' +
+		message_type +
+		'"><i class="' +
+		icon_type +
+		'"></i><span class = "' +
+		text_type +
+		'">' +
+		message +
+		'</span></div>';
+	message_location.innerHTML += message_html;
+
+	/* Remove the temporary messages from the DOM after they have faded out.
+	 This prevents the messages re-appearing if another message is triggered.
+	*/
+	setTimeout(function() {
+    message_location.innerHTML = "";
+	}, 4100);
+
 	return;
 }
+
 
 /* Call this function when serverside functionality should follow,
    but is not yet supported.
 */
 function not_yet_implemented() {
 	message("error", "The feature you are requesting has not yet been implemented.");
-	//alert("not yet implemented");
 	return false;
 }
 
@@ -52,29 +93,10 @@ function display_message(email_message_json) {
 
 	var content = document.getElementById('read_email_content');
 	content.innerHTML = email_message_json.content;
-	//var email_message = JSON.parse(email_message_json);
-	/*
-		'subject', 'to', 'from', 'content',
-	*/
 
 	// Display modal
 	modal.style.display = "block";
 	return true;
-}
-
-/* Called when login button is pressed, before data is passed to server. */
-function validate_login() {
-	// Validate username
-	var username = document.forms["login_form"]["username"].value;
-	if(username == "") {
-      alert("Error: Username cannot be blank!");
-      form.username.focus();
-      return false;
-    }
-	if (x == "") {
-			alert("Name must be filled out");
-			return false;
-	}
 }
 
 // Set up modals
@@ -101,6 +123,7 @@ setup_modal(advanced_search_modal, advanced_search_btn, advanced_search_modal_cl
     	chat_modal.style.display = "none"
     }
   }
+
 
 //Test message box
 var inbox_button = document.getElementById('inbox_button');

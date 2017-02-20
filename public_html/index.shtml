@@ -80,7 +80,7 @@
     <!-- Modal content -->
     <div class="modal-content">
       <span class="close" id="compose_modal_close">&times;</span>
-      <form action="/action_page.php">
+      <form onsubmit="#">
         To:
         <input type="email" name="email">
         <br> From: email@email.com
@@ -91,9 +91,8 @@
           Email content
         </textarea>
         <br>
-        <button> Attach Files</button>
-        <br>
-        <input type="submit">
+        <button class = "styled" onclick = "not_yet_implemented()"> Attach Files</button>
+        <button class = "styled" onclick = "not_yet_implemented()">Send</button>
       </form>
     </div> <!-- modal-content -->
   </div> <!-- modal-->
@@ -174,7 +173,7 @@
 			<div class = "message_input">
 				<form>
 					<input id="btn-input" class="form-control input-sm" placeholder="Type your message here..." type="text">
-					<input type="submit" class="button" id="message_send_button" name="message_send_button" value="Send">
+					<input type="submit" class="styled button" id="message_send_button" name="message_send_button" value="Send">
 				</form>
 			</div>
     </div>  <!-- modal-content-->
@@ -202,9 +201,9 @@
 					<td colspan="2"><textarea id = "read_email_content" rows="20" cols="60" readonly></textarea></td>
 				</tr>
 			</table>
-			<button class = "styled">Delete</button>
-			<button class = "styled">Reply</button>
-			<button class = "styled">Forward</button>
+			<button onclick = "not_yet_implemented()" class = "styled">Delete</button>
+			<button onclick = "not_yet_implemented()" class = "styled">Reply</button>
+			<button onclick = "not_yet_implemented()" class = "styled">Forward</button>
 		</div> <!-- modal-content -->
 	</div> <!-- End of read email modal -->
 

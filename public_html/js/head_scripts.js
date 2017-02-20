@@ -21,6 +21,22 @@ function get_email_row_html(email) {
 	return email_html;
 }
 
+/* Called when login button is pressed, before data is passed to server. */
+function validate_login() {
+	// Validate username
+	var username = document.forms["login_form"]["username"].value;
+	if(username == "") {
+		message("error", "Username cannot be blank!");
+		form.username.focus();
+		return false;
+    }
+	var password = document.forms["login_form"]["password"].value;
+	if (password == "") {
+		message("error", "Password must be fiilled out!");
+		return false;
+	}
+}
+
 /***************Settings button****************************/
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
