@@ -47,7 +47,20 @@ function validate_login() {
 	}
 }
 
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
 
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
 
 // Set uo modals for compose and messaging
 var compose_modal = document.getElementById('compose_modal');
@@ -73,4 +86,10 @@ setup_modal(chat_modal, chat_btn, chat_modal_close);
 var inbox_button = document.getElementById('inbox_button');
 inbox_button.onclick = function() {
 	message("error", "testing");
+}
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
 }
