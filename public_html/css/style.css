@@ -76,6 +76,7 @@ li.basic-nav a {
     text-decoration: none;
 }
 
+
 /* Search bar in top header */
 
 .email_search {
@@ -100,6 +101,14 @@ li.basic-nav a {
 
 .email_search input[type=search]:focus {
   outline: none;
+}
+
+/* Header image size  */
+.logo {
+    height: 5em;
+    margin: 0.3em;
+    float: left;
+    background-color: powderblue;
 }
 
 /* Message dialogs */
