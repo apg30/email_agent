@@ -39,24 +39,28 @@
 </div>
 
 <!-- The Advanced Search Modal -->
-<div id="ad_search_modal" class="modal">
+<div id="ad_search_modal" class="modal advanced_search_modal">
 	<!-- Modal content -->
 	<div class="modal-content">
 		<span class="close" id="ad_search_modal_close">&times;</span>
 		<form action="/action_page.php">
-			To:
-			<input type="email" name="email">
-			<br> From: email@email.com
+			Search Folder:
+			<select class="folder_select">
+				<option value="inbox">Inbox</option>
+				<option value="sent">sent</option>
+				<option value="drafts">drafts</option>
+			</select>
+			<br> To:
+			<input type="advanced_search_text" name="to">
+			<br> From:
+			<input type="advanced_search_text" name="from">
 			<br> Subject:
-			<input type="email" name="email">
+			<input type="advanced_search_text" name="subject">
 			<br>
-			<textarea rows="20" cols="60">
-				Email content
-			</textarea>
+			<input type="checkbox" name="has_attachment" value="Attachment">
+			Has Attachment<br>
 			<br>
-			<button> Attach Files</button>
-			<br>
-			<input type="submit">
+			<input type="submit" value="Search">
 		</form>
 	</div> <!-- modal-content -->
 </div> <!-- modal-->

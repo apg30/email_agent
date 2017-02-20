@@ -90,6 +90,7 @@ li.basic-nav a {
     width: 30em;
     box-sizing: border-box;
     border: 2px solid #ccc;
+    border-right: 0px;
     border-radius: 0.5em 0 0 0.5em;
     font-size: 1em;
     background-color: white;
@@ -109,16 +110,20 @@ li.basic-nav a {
   float: right;
 	display: block;
   border: 2px solid #ccc;
+  border-left: 0px;
   border-radius: 0 0.5em 0.5em 0;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-  margin: 1em -1em;
+  margin: 1em -1em ;
+  margin-right: 1em;
   cursor: pointer;
   background-color: white;
   background-image: url('../img/icons/dropdown_arrow.png');
   background-size: 2em;
+  background-repeat: no-repeat;
   padding: 1em 1em 1em 1em;
+  outline: none;
 }
 
 /* Logo for header  */
@@ -453,6 +458,28 @@ table.email-inbox {
     cursor: pointer;
 }
 
+/* Advanced Search modal */
+.folder_select{
+  margin: 1em;
+}
+
+.advanced_search_modal{
+
+  z-index: 0; /* Sit on top */
+  left: 0em;
+  top: 0em;
+  width: 60%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0); /* Black w/ opacity */
+}
+
+.advanced_search_modal input[type="advanced_search_text"]{
+  margin: 0.5em;
+}
+
+/* Message read*/
 button.styled {
     padding: 10px 15px;
     background: #4479BA;
