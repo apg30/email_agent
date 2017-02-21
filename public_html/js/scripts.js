@@ -142,7 +142,9 @@ var background_change = document.getElementById('background_change');
 background_change.onclick = function() {
     if (change == 1) {
         change = 0;
+        message("info", "background will stop chaning");
     } else {
+      message("info", "background will start chaning");
         change = 1;
     }
 }
