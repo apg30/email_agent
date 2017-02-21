@@ -136,12 +136,24 @@ var backgrounds = new Array(
     'url(img/backgrounds/01.jpg)', 'url(img/backgrounds/02.jpg)', 'url(img/backgrounds/03.jpg)', 'url(img/backgrounds/04.jpg)', 'url(img/backgrounds/05.jpg)', 'url(img/backgrounds/06.jpg)', 'url(img/backgrounds/08.jpg)', 'url(img/backgrounds/10.jpg)', 'url(img/backgrounds/11.jpg)', 'url(img/backgrounds/12.jpg)'
 );
 var current = 0;
+var change = 1;
+
+var background_change = document.getElementById('background_change');
+background_change.onclick = function() {
+    if (change == 1) {
+        change = 0;
+    } else {
+        change = 1;
+    }
+}
 
 function change_background() {
-    current++;
-    document.body.style.backgroundImage = backgrounds[current];
-    if (current == backgrounds.length) {
-        current = 0;
+    if (change == 1) {
+        current++;
+        document.body.style.backgroundImage = backgrounds[current];
+        if (current == backgrounds.length) {
+            current = 0;
+        }
     }
 }
 setInterval(change_background, 10000);
