@@ -118,11 +118,11 @@ setup_modal(advanced_search_modal, advanced_search_btn, advanced_search_modal_cl
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == compose_modal) {
-      compose_modal.style.display = "none";
-    } else if(event.target == chat_modal){
-    	chat_modal.style.display = "none";
-    } else if(event.target == advanced_search_modal){
-      chat_modal.style.display = "none";
+        compose_modal.style.display = "none";
+    } else if (event.target == chat_modal) {
+        chat_modal.style.display = "none";
+    } else if (event.target == advanced_search_modal) {
+        chat_modal.style.display = "none";
     }
 }
 

@@ -524,18 +524,17 @@ table.email-inbox {
     margin: 1em;
 }
 
-.advanced_search_modal {
+.advanced_search_modal {}
 
+.advanced_search_modal input[type="search"] {
+    margin: 0.5em;
 }
 
-.advanced_search_modal input[type="search"]{
-  margin: 0.5em;
+.modal_table {
+    width: 50%;
+    padding-right: 50em;
 }
 
-.modal_table{
-  width: 50%;
-  padding-right: 50em;
-}
 
 /* Message read*/
 
