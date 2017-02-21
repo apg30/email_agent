@@ -133,7 +133,7 @@ inbox_button.onclick = function() {
 
 /********change backgrounds*******************/
 var backgrounds = new Array(
-    'url(/img/backgrounds/01.jpg)', 'url(/img/backgrounds/02.jpg)', 'url(/img/backgrounds/03.jpg)', 'url(/img/backgrounds/04.jpg)', 'url(/img/backgrounds/05.jpg)', 'url(/img/backgrounds/06.jpg)', 'url(/img/backgrounds/08.jpg)', 'url(/img/backgrounds/10.jpg)', 'url(/img/backgrounds/11.jpg)', 'url(/img/backgrounds/12.jpg)'
+    'url(img/backgrounds/01.jpg)', 'url(img/backgrounds/02.jpg)', 'url(img/backgrounds/03.jpg)', 'url(img/backgrounds/04.jpg)', 'url(img/backgrounds/05.jpg)', 'url(img/backgrounds/06.jpg)', 'url(img/backgrounds/08.jpg)', 'url(img/backgrounds/10.jpg)', 'url(img/backgrounds/11.jpg)', 'url(img/backgrounds/12.jpg)'
 );
 var current = 0;
 
