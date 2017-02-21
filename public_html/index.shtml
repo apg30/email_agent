@@ -185,13 +185,13 @@
 		</div>
 		<!-- email-list-->
 	</main>
-  
+
   <!-- The Compose Modal -->
   <div id="compose_modal" class="modal">
     <!-- Modal content -->
     <div class="modal-content">
       <span class="close" id="compose_modal_close">&times;</span>
-      <form action="/action_page.php">
+      <form>
         To:
         <input type="email" name="email">
         <br> From: email@email.com

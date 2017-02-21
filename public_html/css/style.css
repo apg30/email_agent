@@ -524,7 +524,9 @@ table.email-inbox {
     margin: 1em;
 }
 
-.advanced_search_modal {}
+.advanced_search_modal {
+  /* add style here to override modal css for advanced search*/
+}
 
 .advanced_search_modal input[type="search"] {
     margin: 0.5em;
