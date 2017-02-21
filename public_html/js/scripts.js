@@ -115,6 +115,11 @@ var advanced_search_btn = document.getElementById("advanced_search_form");
 var advanced_search_modal_close = document.getElementById("ad_search_modal_close");
 setup_modal(advanced_search_modal, advanced_search_btn, advanced_search_modal_close);
 
+var help_modal = document.getElementById('help_modal');
+var help_modal_btn = document.getElementById("help_btn");
+var help_modal_close = document.getElementById("help_modal_close");
+setup_modal(help_modal, help_modal_btn, help_modal_close);
+
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == compose_modal) {
@@ -140,13 +145,13 @@ var backgrounds = new Array(
 var current = 0;
 var change = 1;
 
-var background_change = document.getElementById('background_change');
+var background_change = document.getElementById('background_change_btn');
 background_change.onclick = function() {
     if (change == 1) {
         change = 0;
-        message("info", "background will stop chaning");
+        message("info", "The background will stop changing periodically.");
     } else {
-        message("info", "background will start chaning");
+        message("info", "The background will start changing periodially.");
         change = 1;
     }
 }
