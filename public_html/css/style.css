@@ -3,63 +3,67 @@ header {
     margin: 0em;
 }
 
-/* Main box containing web page content */
-main {
-	display: inline-block;
-	background-color: white;
-	width: 80%;
 
-	margin-left: 2em;
-	padding: 1em;
-	margin-top: 2em;
+/* Main box containing web page content */
+
+main {
+    display: inline-block;
+    background-color: white;
+    width: 80%;
+    margin-left: 2em;
+    padding: 1em;
+    margin-top: 2em;
 }
 
 main.login {
-	display: inline;
-	width: 20em;
-	height: 15em;
-	background-color: white;
-
-	position: absolute;
-	top:0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-
-	margin: auto;
+    display: inline;
+    width: 20em;
+    height: 15em;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 form.login {
-	margin:1em 2em;
+    margin: 1em 2em;
 }
 
+
 /* Left navigation bar */
+
 nav.email-nav {
-	display:inline-block;
-	float: left;
-	width: 10em;
+    display: inline-block;
+    float: left;
+    width: 10em;
 }
 
 div.chat_menu {
-	display:inline-block;
-	float: left;
-	width: 10em;
+    display: inline-block;
+    float: left;
+    width: 10em;
 }
+
 
 /* Footer is always at the bottom of the page */
-footer {
-	position:fixed;
-	left: 0px;
-	bottom: 0px;
-	height: 30px;
-	width: 100%;
-	background: white;
 
-	/* Footer text is centred */
-	text-align: center;
+footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height: 30px;
+    width: 100%;
+    background: white;
+    /* Footer text is centred */
+    text-align: center;
 }
 
+
 /* Basic vertical navigation box */
+
 ul.basic-nav {
     list-style-type: none;
     margin: 0;
@@ -80,9 +84,9 @@ li.basic-nav a {
 /* Search bar in top header */
 
 .email_search {
-	float: right;
-	display: block;
-	margin: 1em;
+    float: right;
+    display: block;
+    margin: 1em;
 }
 
 .email_search input[type=search] {
@@ -102,38 +106,44 @@ li.basic-nav a {
 }
 
 .email_search input[type=search]:focus {
-  outline: none;
+    outline: none;
 }
+
 
 /* Advanced Search button */
-.advanced_search_button{
-  float: right;
-	display: block;
-  border: 2px solid #ccc;
-  border-left: 0px;
-  border-radius: 0 0.5em 0.5em 0;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  margin: 1em -1em ;
-  margin-right: 1em;
-  cursor: pointer;
-  background-color: white;
-  background-image: url('../img/icons/dropdown_arrow.png');
-  background-size: 2em;
-  background-repeat: no-repeat;
-  padding: 1em 1em 1em 1em;
-  outline: none;
+
+.advanced_search_button {
+    float: right;
+    display: block;
+    border: 2px solid #ccc;
+    border-left: 0px;
+    border-radius: 0 0.5em 0.5em 0;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 1em -1em;
+    margin-right: 1em;
+    cursor: pointer;
+    background-color: white;
+    background-image: url('../img/icons/dropdown_arrow.png');
+    background-size: 2em;
+    background-repeat: no-repeat;
+    padding: 1em 1em 1em 1em;
+    outline: none;
 }
 
+
 /* Logo for header  */
+
 .logo {
     height: 3.5em;
     margin: 0.3em;
     float: left;
 }
 
+
 /******************settings button**********************/
+
 .dropbtn {
     color: white;
     font-size: 16px;
@@ -144,7 +154,7 @@ li.basic-nav a {
 }
 
 .dropbtn:hover, .dropbtn:focus {
-    background-color: 	#BDB76B;
+    background-color: #BDB76B;
 }
 
 .dropdown {
@@ -159,7 +169,7 @@ li.basic-nav a {
     background-color: #f9f9f9;
     min-width: 160px;
     overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     right: 0;
     z-index: 1;
 }
@@ -171,18 +181,37 @@ li.basic-nav a {
     display: block;
 }
 
-.dropdown a:hover {background-color: #f1f1f1}
+.dropdown a:hover {
+    background-color: #f1f1f1
+}
 
-.show {display:block;}
+.show {
+    display: block;
+}
+
+
 /****************************************/
 
-/* Message dialogs */
-div.message_box {
-	margin: 10px 0px;
-	padding: 12px;
 
-	/* To show, use JS to change DOM (set text and set visibility) */
-	display: none;
+/* Message dialogs */
+
+div.message_box {
+    margin: 10px 0px;
+    padding: 12px;
+    /* To show, use JS to change DOM (set text and set visibility) */
+    /*display: none;*/
+}
+
+div.message_box {
+    background-color: rgba(50, 50, 50, 0.8);
+    border-radius: 33px;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    opacity: 0;
+    z-index: 99999;
+    transition: transform .25s, opacity .25s, top .25s;
+    box-sizing: border-box;
 }
 
 div.warning_message {
@@ -211,6 +240,21 @@ div.info_message {
     vertical-align: middle;
 }
 
+.message_box {
+    opacity: 1;
+    animation: fadeinout 4s linear;
+}
+
+@keyframes fadeinout {
+    0%, 100% {
+        opacity: 0
+    }
+    50% {
+        opacity: 1
+    }
+}
+
+
 /*.message_box.fadeout {
 	animation-delay: 2s;
   -webkit-transition: all 2s ease-in-out;
@@ -232,15 +276,6 @@ div.info_message {
   transition: visibility 0s 2s, opacity 2s linear;
 }*/
 
-.message_box {
-    opacity: 1;
-    animation: fadeinout 2s linear;
-}
-
-@keyframes fadeinout {
-  0%,100% { opacity: 0 }
-  50% { opacity: 1 }
-}
 
 /*@-webkit-keyframes fadeinout {
   0%,100% { opacity: 0; }
@@ -249,9 +284,10 @@ div.info_message {
 
 
 /* Chat/Instant Messaging */
+
 div.chat_menu div.chat_box {
-	overflow: scroll;
-	height: 5em;
+    overflow: scroll;
+    height: 5em;
 }
 
 .chat {
@@ -281,7 +317,7 @@ div.chat_menu div.chat_box {
 }
 
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: #F5F5F5;
 }
 
@@ -291,7 +327,7 @@ div.chat_menu div.chat_box {
 }
 
 ::-webkit-scrollbar-thumb {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
     background-color: #555;
 }
 
@@ -300,15 +336,12 @@ div.chat_menu div.chat_box {
 }
 
 ul.chat-nav {
-	margin-top: 0em;
+    margin-top: 0em;
 }
-
-
 
 i.warning_icon {
-	icon: url(/img/icons/warning.png);
+    icon: url(/img/icons/warning.png);
 }
-
 
 th {
     text-align: left;
@@ -321,20 +354,22 @@ th {
 body {
     background-image: url("../img/backgrounds/01.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
     background-position: center center;
+    -webkit-transition: background-image 4s ease-in-out;
+    transition: background-image 4s ease-in-out;
 }
 
 
 /* Email table */
+
 tbody.email {
-	display:block;
+    display: block;
 }
 
-table.email-inbox tbody,
-table.email-inbox  {
-	display: block;
-	width:100%;
+table.email-inbox tbody, table.email-inbox {
+    display: block;
+    width: 100%;
 }
 
 table.email-inbox tbody {
@@ -352,98 +387,123 @@ tbody td:last-child, thead th:last-child {
 }
 
 td, th {
-	width:20em;
-	padding: 0.5em 1em;
+    width: 20em;
+    padding: 0.5em 1em;
 }
 
+
 /* Email table border raduis */
+
 thead tr th:first-child {
     border-radius: 0.6em 0 0 0.6em;
 }
+
 thead th:last-child {
     border-radius: 0 0.6em 0.6em 0;
 }
+
 tbody tr td:first-child {
     border-radius: 0.6em 0 0 0.6em;
 }
+
+
 /* End of Email table border raduis */
 
 tbody td:last-child {
     border-radius: 0 0.6em 0.6em 0;
 }
 
-/* Normal email table colours */
-tbody.read_email  tr.read_email  td.read_email  {
-    background: lightgray;
-    color: #81b71a;
-}
-thead.read_email  tr.read_email  th.read_email  {
-    background: lightgray;
-    color: #81b71a;
-}
-/* End of normal table colours */
 
+/* Normal email table colours */
+
+tbody.read_email tr.read_email td.read_email {
+    background: lightgray;
+    color: #81b71a;
+}
+
+thead.read_email tr.read_email th.read_email {
+    background: lightgray;
+    color: #81b71a;
+}
+
+
+/* End of normal table colours */
 
 
 /* Hover colours */
 
+
 /* Change the link color on hover */
+
 li a:hover {
     background-color: #555;
     color: white;
 }
+
 tbody.read_email tr.read_email:hover td {
     background: #303030;
     color: #81b71a;
 }
+
 tbody.read_email tr.read_email:hover td:first-child {
     border-radius: 0.6em 0 0 0.6em;
 }
+
 tbody.read_email tr.read_email:hover td:last-child {
     border-radius: 0 0.6em 0.6em 0;
 }
+
+
 /* End of hover colours */
 
-
-
 div.email-list {
-	width: 100%;
+    width: 100%;
 }
 
 table.email-inbox {
-	width: 100%;
+    width: 100%;
 }
 
 
+/* Modal style (chat and compose email pop-up windows) */
 
-
-
- /* Modal style (chat and compose email pop-up windows) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
 }
 
 
 /* Modal Content/Box */
+
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
+    /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%;
+    /* Could be more or less, depending on screen size */
 }
 
 
 /* The close button at top rght of modal window*/
+
 .close {
     color: #aaa;
     float: right;
@@ -451,20 +511,21 @@ table.email-inbox {
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.close:hover, .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
 }
 
+
 /* Advanced Search modal */
-.folder_select{
-  margin: 1em;
+
+.folder_select {
+    margin: 1em;
 }
 
-.advanced_search_modal{
-
+.advanced_search_modal {
+    
 }
 
 .advanced_search_modal input[type="search"]{
@@ -472,6 +533,7 @@ table.email-inbox {
 }
 
 /* Message read*/
+
 button.styled {
     padding: 10px 15px;
     background: #4479BA;
@@ -487,16 +549,18 @@ button.styled {
     -webkit-transition-duration: 0.2s;
     -moz-transition-duration: 0.2s;
     transition-duration: 0.2s;
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
+
 button.styled:hover {
     background: #356094;
     border: solid 1px #2A4E77;
     text-decoration: none;
 }
+
 button.styled:active {
     -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
     -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
@@ -505,18 +569,24 @@ button.styled:active {
     border: solid 1px #203E5F;
 }
 
+
 /* Set widths of table columns for inbox etc. */
+
 td.actions, th.actions {
-	width: 10em;
+    width: 10em;
 }
 
 td.select, th.select {
-	width: 4em;
+    width: 4em;
 }
+
+
 /* End of Set widths of table columns for inbox etc. */
 
+
 /* When reading an email, align the title td elements to the right */
+
 td.read_email_param {
-	text-align:right;
-	width: 10em;
+    text-align: right;
+    width: 10em;
 }

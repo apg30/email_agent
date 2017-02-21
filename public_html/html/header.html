@@ -1,14 +1,15 @@
 <header>
-	<img class="logo" src="img/icons/you_watt.png" alt="logo"></img>
+	<img class="logo" src="img/icons/you_watt.png" alt="logo">
 	<div class="dropdown">
-		<img src="img/icons/settings.png" alt="settings_logo" onclick="myFunction()" class="dropbtn"></img>
-	  <div id="myDropdown" class="dropdown-content">
-	    <a href="#Notifications_off">Notifications off</a>
-	    <a href="#Advanced_settings">Advanced_settings</a>
-	    <a href="#Help">Help</a>
-	    <a href="#About">About</a>
-	    <a href="#Logout">Logout</a>
-	  </div>
+		<img src="img/icons/settings.png" alt="settings_logo" onclick="myFunction()" class="dropbtn">
+		<div id="myDropdown" class="dropdown-content">
+			<a id=background_change href="#background_change">Toggle background</a>
+			<a id=Notifications_off href="#Notifications_off">Notifications off</a>
+			<a id=Advanced_settings href="#Advanced_settings">Advanced_settings</a>
+			<a id=Help href="#Help">Help</a>
+			<a id=About href="#About">About</a>
+			<a id=Logout href="#Logout">Logout</a>
+		</div>
 	</div>
 	<button class="advanced_search_button" title="Advanced Search" id="advanced_search_form"></button>
 	<form class = "email_search" onsubmit="not_yet_implemented()">
@@ -44,22 +45,4 @@
 
 </header>
 
-<div class="message_box warning_message">
-    <i class="warning_icon"></i>
-		<span class = "warning_text"></span>
-</div>
-
-<div class="message_box error_message">
-    <i class="error_icon"></i>
-		<span class = "error_text"></span>
-</div>
-
-<div class="message_box success_message">
-    <i class="success_icon"></i>
-		<span class = "success_text"></span>
-</div>
-
-<div class="message_box info_message">
-    <i class="info_icon"></i>
-		<span class = "info_text"></span>
-</div>
+<div id="message_location"></div>

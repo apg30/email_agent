@@ -2,79 +2,190 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+	<meta charset="utf-8">
 
-    <title>Email Client</title>
-    <meta name="description" content="Email client">
-    <meta name="author" content="Cameron A. Craig, Stuart J. Thain, Aidan P. Gallagher, Lee Hamilton">
+	<title>Email Client</title>
+	<meta name="description" content="Email client">
+	<meta name="author" content="Cameron A. Craig, Stuart J. Thain, Aidan P. Gallagher, Lee Hamilton">
 
-    <link rel="stylesheet" href="css/style.css">
-		<script src="js/head_scripts.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/head_scripts.js"></script>
 
-    <!--[if lt IE 9]>
+	<!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 </head>
 
 <body>
-		<!--#include file="html/header.html" -->
-		<!--#include file="html/nav.html" -->
-		<main>
-		<div class = "email-list">
-    <table class="email-inbox email" >
-        <thead class="read_email">
-            <tr class="read_email">
-                <th class="read_email select">
-									<div class="email-checkbox">
-	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
-	                </div>
-									Select
-								</th>
-                <th class="read_email from">From</th>
-                <th class="read_email subject">Subject</th>
-                <th class="read_email time">Time</th>
-								<th class="read_email actions">Actions</th>
-            </tr>
-        </thead>
-				<div class = "email-list-scroller">
-        <tbody class="email read_email">
-						<script>
-							var emails = [
-								{"subject": "Test Subject", "content": "Test Content", "to": "aidan@to.com", "from": "from@from.com", "time": "24/10/1994 05:35"},
-								{"subject": "Test Subject", "content": "Test Content", "to": "stuart@to.com", "from": "from@from.com", "time": "24/10/2008 05:35"},
-								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
-								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
-								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
-								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
-								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
-								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
-								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
-								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
-								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
-								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
-								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
-								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
-								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
-								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
-								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
-								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"},
-								{"subject": "Test Subject", "content": "Test Content", "to": "cameron@to.com", "from": "from@from.com", "time": "24/01/2017 05:35"}
-							];
-
-							for(var i = 0; i < emails.length; i++) {
-	    					var email = emails[i];
-								var email_html = get_email_row_html(email);
-	    					document.write(email_html);
-								console.log("test");
+	<!--#include file="html/header.html" -->
+	<!--#include file="html/nav.html" -->
+	<main>
+		<div class="email-list">
+			<table class="email-inbox email">
+				<thead class="read_email">
+					<tr class="read_email">
+						<th class="read_email select">
+							<div class="email-checkbox">
+								<input type="checkbox" value="1" id="email-checkbox1" name="select" />
+							</div>
+							Select
+						</th>
+						<th class="read_email from">From</th>
+						<th class="read_email subject">Subject</th>
+						<th class="read_email time">Time</th>
+						<th class="read_email actions">Actions</th>
+					</tr>
+				</thead>
+				<tbody class="email read_email email-list-scroller">
+					<script>
+						var emails = [{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "aidan@to.com",
+								"from": "from@from.com",
+								"time": "24/10/1994 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "stuart@to.com",
+								"from": "from@from.com",
+								"time": "24/10/2008 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
 							}
-						</script>
-        </tbody>
-			</div> <!-- email-list-scroller -->
-    </table>
-	</div> <!-- email-list-->
+						];
+
+						for (var i = 0; i < emails.length; i++) {
+							var email = emails[i];
+							var email_html = get_email_row_html(email);
+							document.write(email_html);
+							console.log("test");
+						}
+					</script>
+				</tbody>
+			</table>
+		</div>
+		<!-- email-list-->
 	</main>
-
-
+  
   <!-- The Compose Modal -->
   <div id="compose_modal" class="modal">
     <!-- Modal content -->
@@ -90,95 +201,94 @@
         <textarea rows="20" cols="60">
           Email content
         </textarea>
-        <br>
-        <button> Attach Files</button>
-        <br>
-        <input type="submit">
-      </form>
-    </div> <!-- modal-content -->
-  </div> <!-- modal-->
+				<br>
+				<button class="styled" onclick="not_yet_implemented()"> Attach Files</button>
+				<button class="styled" onclick="not_yet_implemented()">Send</button>
+			</form>
+		</div>
+		<!-- modal-content -->
+	</div>
+	<!-- modal-->
 
-   <!-- The Chat Modal -->
-  <div id="chat_modal" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close" id="chat_modal_close">&times;</span>
-      <div class = "chat_menu">
-				<ul class = "chat-nav basic-nav">
-				  <li  class = "basic-nav chat-nav"><a href="#todo">Cameron</a></li>
-				  <li  class = "basic-nav chat-nav"><a href="#todo">Stuart</a></li>
-				  <li class = "basic-nav chat-nav"><a href="#todo">Lee</a></li>
-				  <li class = "basic-nav chat-nav"><a href="#todo">Aidan</a></li>
-				  <li class = "basic-nav chat-nav"><a href="#todo">Trump</a></li>
+	<!-- The Chat Modal -->
+	<div id="chat_modal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close" id="chat_modal_close">&times;</span>
+			<div class="chat_menu">
+				<ul class="chat-nav basic-nav">
+					<li class="basic-nav chat-nav"><a href="#todo">Cameron</a></li>
+					<li class="basic-nav chat-nav"><a href="#todo">Stuart</a></li>
+					<li class="basic-nav chat-nav"><a href="#todo">Lee</a></li>
+					<li class="basic-nav chat-nav"><a href="#todo">Aidan</a></li>
+					<li class="basic-nav chat-nav"><a href="#todo">Trump</a></li>
 				</ul>
 			</div>
-			<div class = "chat_box">
+			<div class="chat_box">
 				<ul class="chat">
-          <li class="left clearfix"><span class="chat-img pull-left">
+					<li class="left clearfix"><span class="chat-img pull-left">
 
           </span>
-              <div class="chat-body clearfix">
-                  <div class="header">
-                      <strong class="primary-font">Jack Sparrow</strong> <small class="pull-right text-muted">
+						<div class="chat-body clearfix">
+							<div class="header">
+								<strong class="primary-font">Jack Sparrow</strong> <small class="pull-right text-muted">
                           <span class="glyphicon glyphicon-time"></span>12 mins ago</small>
-                  </div>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
-                      dolor, quis ullamcorper ligula sodales.
-                  </p>
-              </div>
-          </li>
-          <li class="right clearfix"><span class="chat-img pull-right">
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+							</p>
+						</div>
+					</li>
+					<li class="right clearfix"><span class="chat-img pull-right">
 
           </span>
-              <div class="chat-body clearfix">
-                  <div class="header">
-                      <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>13 mins ago</small>
-                      <strong class="pull-right primary-font">Bhaumik Patel</strong>
-                  </div>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
-                      dolor, quis ullamcorper ligula sodales.
-                  </p>
-              </div>
-          </li>
-          <li class="left clearfix"><span class="chat-img pull-left">
+						<div class="chat-body clearfix">
+							<div class="header">
+								<small class=" text-muted"><span class="glyphicon glyphicon-time"></span>13 mins ago</small>
+								<strong class="pull-right primary-font">Bhaumik Patel</strong>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+							</p>
+						</div>
+					</li>
+					<li class="left clearfix"><span class="chat-img pull-left">
 
           </span>
-              <div class="chat-body clearfix">
-                  <div class="header">
-                      <strong class="primary-font">Jack Sparrow</strong> <small class="pull-right text-muted">
+						<div class="chat-body clearfix">
+							<div class="header">
+								<strong class="primary-font">Jack Sparrow</strong> <small class="pull-right text-muted">
                           <span class="glyphicon glyphicon-time"></span>14 mins ago</small>
-                  </div>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
-                      dolor, quis ullamcorper ligula sodales.
-                  </p>
-              </div>
-          </li>
-          <li class="right clearfix"><span class="chat-img pull-right">
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+							</p>
+						</div>
+					</li>
+					<li class="right clearfix"><span class="chat-img pull-right">
           </span>
-              <div class="chat-body clearfix">
-                  <div class="header">
-                      <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>15 mins ago</small>
-                      <strong class="pull-right primary-font">Bhaumik Patel</strong>
-                  </div>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
-                      dolor, quis ullamcorper ligula sodales.
-                  </p>
-              </div>
-          </li>
-        </ul>
+						<div class="chat-body clearfix">
+							<div class="header">
+								<small class=" text-muted"><span class="glyphicon glyphicon-time"></span>15 mins ago</small>
+								<strong class="pull-right primary-font">Bhaumik Patel</strong>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+							</p>
+						</div>
+					</li>
+				</ul>
 			</div>
-			<div class = "message_input">
+			<div class="message_input">
 				<form>
 					<input id="btn-input" class="form-control input-sm" placeholder="Type your message here..." type="text">
-					<input type="submit" class="button" id="message_send_button" name="message_send_button" value="Send">
+					<input type="submit" class="styled button" id="message_send_button" name="message_send_button" value="Send">
 				</form>
 			</div>
-    </div>  <!-- modal-content-->
-  </div> <!-- modal -->
+		</div>
+		<!-- modal-content-->
+	</div>
+	<!-- modal -->
 
 	<!-- The Read Email Modal -->
 	<div id="read_email_modal" class="modal">
@@ -187,30 +297,32 @@
 			<span class="close" id="read_email_modal_close">&times;</span>
 			<table>
 				<tr>
-					<td class = "read_email_param">Subject:</td>
+					<td class="read_email_param">Subject:</td>
 					<td><span id="read_email_subject"></span></td>
 				</tr>
 				<tr>
-					<td class = "read_email_param">To:</td>
+					<td class="read_email_param">To:</td>
 					<td><span id="read_email_to"></span></td>
 				</tr>
 				<tr>
-					<td class = "read_email_param">From:</td>
+					<td class="read_email_param">From:</td>
 					<td><span id="read_email_from"></span></td>
 				</tr>
 				<tr>
-					<td colspan="2"><textarea id = "read_email_content" rows="20" cols="60" readonly></textarea></td>
+					<td colspan="2"><textarea id="read_email_content" rows="20" cols="60" readonly></textarea></td>
 				</tr>
 			</table>
-			<button class = "styled">Delete</button>
-			<button class = "styled">Reply</button>
-			<button class = "styled">Forward</button>
-		</div> <!-- modal-content -->
-	</div> <!-- End of read email modal -->
+			<button onclick="not_yet_implemented()" class="styled">Delete</button>
+			<button onclick="not_yet_implemented()" class="styled">Reply</button>
+			<button onclick="not_yet_implemented()" class="styled">Forward</button>
+		</div>
+		<!-- modal-content -->
+	</div>
+	<!-- End of read email modal -->
 
-  <!--#include file="html/footer.html" -->
+	<!--#include file="html/footer.html" -->
 
-  <script src="js/scripts.js"></script>
+	<script src="js/scripts.js"></script>
 
 </body>
 
