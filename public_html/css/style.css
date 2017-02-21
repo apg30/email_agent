@@ -525,24 +525,16 @@ table.email-inbox {
 }
 
 .advanced_search_modal {
-    z-index: 0;
-    /* Sit on top */
-    left: 0em;
-    top: 0em;
-    width: 60%;
-    /* Full width */
-    height: 100%;
-    /* Full height */
-    overflow: auto;
-    /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0);
-    /* Fallback color */
-    background-color: rgba(0, 0, 0, 0);
-    /* Black w/ opacity */
+  /* add style here to override modal css for advanced search*/
 }
 
-.advanced_search_modal input[type="advanced_search_text"] {
+.advanced_search_modal input[type="search"] {
     margin: 0.5em;
+}
+
+.modal_table {
+    width: 50%;
+    padding-right: 50em;
 }
 
 

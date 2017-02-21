@@ -3,48 +3,60 @@
 	<div class="dropdown">
 		<img src="img/icons/settings.png" alt="settings_logo" onclick="myFunction()" class="dropbtn">
 		<div id="myDropdown" class="dropdown-content">
-			<a id="background_change" href="#background_change">Toggle background</a>
-			<a id="Notifications_off" href="#Notifications_off">Notifications off</a>
-			<a id="advanced_settings" href="/settings.shtml">Advanced_settings</a>
-			<a id="help" href="#Help">Help</a>
-			<a id="about" href="#About">About</a>
-			<a id="logout" href="#Logout">Logout</a>
+			<a id="background_change_btn">Toggle Background</a>
+			<a id="notifications_off_btn">Notifications Off</a>
+			<a id="advanced_settings_btn" href="/settings.shtml">Advanced Settings</a>
+			<a id="help_btn">Help</a>
+			<a id="about_btn">About</a>
+			<a id="logout_btn">Logout</a>
 		</div>
 	</div>
-	<button class="advanced_search_button" id="advanced_search_form"></button>
+	<button class="advanced_search_button" title="Advanced Search" id="advanced_search_form"></button>
 	<form class="email_search" onsubmit="not_yet_implemented()">
 		<input type="search" name="email_search_input" placeholder="Search Email...">
 	</form>
+	<!-- The Advanced Search Modal -->
+	<div id="ad_search_modal" class="modal advanced_search_modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close" id="ad_search_modal_close">&times;</span>
+			<form>
+				<table class="modal_table">
+					<tr>
+						<th>Search Folder:</th>
+						<th><select class="folder_select">
+							<option value="inbox">Inbox</option>
+							<option value="sent">sent</option>
+							<option value="drafts">drafts</option>
+						</select></th>
+					</tr>
+					<tr>
+						<th>To:</th>
+						<th><input type="search" name="to"></th>
+					</tr>
+					<tr>
+						<th>From:</th>
+						<th><input type="search" name="from"></th>
+					</tr>
+					<tr>
+						<th>Subject:</th>
+						<th><input type="search" name="subject"></th>
+					</tr>
+					<tr>
+						<th><input type="checkbox" name="has_attachment" value="Attachment"></th>
+						<th>Has Attachment</th>
+					</tr>
+					<tr>
+						<th><button class="styled" onclick="not_yet_implemented()">Search</button></th>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<!-- modal-content -->
+	</div>
+	<!-- modal-->
 	<div style="clear: both"></div>
 
 </header>
 
 <div id="message_location"></div>
-
-<!-- The Advanced Search Modal -->
-<div id="ad_search_modal" class="modal advanced_search_modal">
-	<!-- Modal content -->
-	<div class="modal-content">
-		<span class="close" id="ad_search_modal_close">&times;</span>
-		<form action="/action_page.php">
-			Search Folder:
-			<select class="folder_select">
-				<option value="inbox">Inbox</option>
-				<option value="sent">sent</option>
-				<option value="drafts">drafts</option>
-			</select>
-			<br> To:
-			<input type="advanced_search_text" name="to">
-			<br> From:
-			<input type="advanced_search_text" name="from">
-			<br> Subject:
-			<input type="advanced_search_text" name="subject">
-			<br>
-			<input type="checkbox" name="has_attachment" value="Attachment"> Has Attachment<br>
-			<br>
-			<input type="submit" value="Search">
-		</form>
-	</div>
-	<!-- modal-content -->
-</div>
-<!-- modal-->
