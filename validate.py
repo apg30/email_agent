@@ -1,16 +1,27 @@
-# Programmatic XHTML Validations in Python
-# Martin Hepp and Alex Stolz
-# mhepp@computer.org / alex.stolz@ebusiness-unibw.org
+#!/usr/bin/env python
 
-import urllib
-import urllib2
 import requests
+import json
+from optparse import OptionParser
+# See https://github.com/validator/validator/wiki/Service-%C2%BB-Input-%C2%BB-POST-body
 
-URL = "http://validator.w3.org/nu/"
-SITE_URL = "http://www.heppnetz.de"
+url = "http://validator.w3.org/nu/?out=json"
 
-r = requests.get(URL + "?doc=" + SITE_URL + "&out=json");
+def validate(filename):
+	filestring = open(filename, 'r').read()
+	print filestring
 
-print r.status_code
-print r.headers
-print r.content
+	headers = {"content-type": "text/html; charset=utf-8"}
+	r = requests.post(url, headers=headers, data=filestring)
+	print r.text
+
+#Handle command line options
+parser = OptionParser()
+parser.add_option("-i", "--input-file", dest="inputfile",
+                  help="Input file.", metavar="FILE")
+
+(options, args) = parser.parse_args()
+
+print options
+
+validate(options.inputfile)

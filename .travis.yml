@@ -1,12 +1,7 @@
 language: javascript
-jdk:
- - oraclejdk8  # For html5validator
 
 install:
- - pip install --user html5validator
+ - wget https://gist.githubusercontent.com/camieac/26e5e7f70c5b687854eafdb76a393e39/raw/1814a9d7eddbe2a0b057b8f553f58873391e4945/ssi_parse.py
 
 script:
-  # Validate HTML5
-  html5validator --root public_html/
-
-  # TODO: Validate CSS3
+  ./ssi_parse.py public_html/index.shtml
