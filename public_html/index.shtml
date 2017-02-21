@@ -36,154 +36,151 @@
 						<th class="read_email actions">Actions</th>
 					</tr>
 				</thead>
-				<div class="email-list-scroller">
-					<tbody class="email read_email">
-						<script>
-							var emails = [{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "aidan@to.com",
-									"from": "from@from.com",
-									"time": "24/10/1994 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "stuart@to.com",
-									"from": "from@from.com",
-									"time": "24/10/2008 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								}
-							];
-
-							for (var i = 0; i < emails.length; i++) {
-								var email = emails[i];
-								var email_html = get_email_row_html(email);
-								document.write(email_html);
-								console.log("test");
+				<tbody class="email read_email email-list-scroller">
+					<script>
+						var emails = [{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "aidan@to.com",
+								"from": "from@from.com",
+								"time": "24/10/1994 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "stuart@to.com",
+								"from": "from@from.com",
+								"time": "24/10/2008 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
 							}
-						</script>
-					</tbody>
-				</div>
-				<!-- email-list-scroller -->
+						];
+
+						for (var i = 0; i < emails.length; i++) {
+							var email = emails[i];
+							var email_html = get_email_row_html(email);
+							document.write(email_html);
+							console.log("test");
+						}
+					</script>
+				</tbody>
 			</table>
 		</div>
 		<!-- email-list-->
