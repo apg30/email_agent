@@ -17,172 +17,173 @@
 </head>
 
 <body>
-		<!--#include file="html/header.html" -->
-		<!--#include file="html/nav.html" -->
-		<main>
-		<div class = "email-list">
-    <table class="email-inbox email" >
-        <thead class="read_email">
-            <tr class="read_email">
-                <th class="read_email select">
-									<div class="email-checkbox">
-	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
-	                </div>
-									Select
-								</th>
-                <th class="read_email from">From</th>
-                <th class="read_email subject">Subject</th>
-                <th class="read_email time">Time</th>
-								<th class="read_email actions">Actions</th>
-            </tr>
-        </thead>
-        <tbody class="email read_email email-list-scroller">
-						<script>
-							var emails = [{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "aidan@to.com",
-									"from": "from@from.com",
-									"time": "24/10/1994 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "stuart@to.com",
-									"from": "from@from.com",
-									"time": "24/10/2008 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								},
-								{
-									"subject": "Test Subject",
-									"content": "Test Content",
-									"to": "cameron@to.com",
-									"from": "from@from.com",
-									"time": "24/01/2017 05:35"
-								}
-							];
-
-							for (var i = 0; i < emails.length; i++) {
-								var email = emails[i];
-								var email_html = get_email_row_html(email);
-								document.write(email_html);
-								console.log("test");
+	<!--#include file="html/header.html" -->
+	<!--#include file="html/nav.html" -->
+	<main>
+		<div class="email-list">
+			<table class="email-inbox email">
+				<thead class="read_email">
+					<tr class="read_email">
+						<th class="read_email select">
+							<div class="email-checkbox">
+								<input type="checkbox" value="1" id="email-checkbox1" name="select" />
+							</div>
+							Select
+						</th>
+						<th class="read_email from">From</th>
+						<th class="read_email subject">Subject</th>
+						<th class="read_email time">Time</th>
+						<th class="read_email actions">Actions</th>
+					</tr>
+				</thead>
+				<tbody class="email read_email email-list-scroller">
+					<script>
+						var emails = [{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "aidan@to.com",
+								"from": "from@from.com",
+								"time": "24/10/1994 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "stuart@to.com",
+								"from": "from@from.com",
+								"time": "24/10/2008 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
 							}
-						</script>
-        </tbody>
-    </table>
-	</div> <!-- email-list-->
+						];
+
+						for (var i = 0; i < emails.length; i++) {
+							var email = emails[i];
+							var email_html = get_email_row_html(email);
+							document.write(email_html);
+							console.log("test");
+						}
+					</script>
+				</tbody>
+			</table>
+		</div>
+		<!-- email-list-->
 	</main>
 
 
