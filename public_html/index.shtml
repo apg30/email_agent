@@ -85,7 +85,7 @@
         <input type="email" name="email">
         <br> From: email@email.com
         <br> Subject:
-        <input type="email" name="email">
+        <input type="text" name="subject">
         <br>
         <textarea rows="20" cols="60">
           Email content

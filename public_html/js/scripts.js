@@ -98,7 +98,9 @@ setup_modal(advanced_search_modal, advanced_search_btn, advanced_search_modal_cl
     if (event.target == compose_modal) {
       compose_modal.style.display = "none";
     } else if(event.target == chat_modal){
-    	chat_modal.style.display = "none"
+    	chat_modal.style.display = "none";
+    } else if(event.target == advanced_search_modal){
+      chat_modal.style.display = "none";
     }
   }
 
