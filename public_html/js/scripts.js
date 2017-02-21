@@ -156,4 +156,4 @@ function change_background() {
         }
     }
 }
-setInterval(change_background, 500);
+setInterval(change_background, 10000);
