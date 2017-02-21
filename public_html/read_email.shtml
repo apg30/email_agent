@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 
@@ -26,4 +27,5 @@
 	</main>
 	<!--#include file="html/footer.html" -->
 </body>
+
 </html>
