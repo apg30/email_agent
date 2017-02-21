@@ -2,257 +2,363 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+	<meta charset="utf-8">
 
-    <title>Email Client</title>
-    <meta name="description" content="Email client">
-    <meta name="author" content="Cameron A. Craig, Stuart J. Thain, Aidan P. Gallagher, Lee Hamilton">
+	<title>Email Client</title>
+	<meta name="description" content="Email client">
+	<meta name="author" content="Cameron A. Craig, Stuart J. Thain, Aidan P. Gallagher, Lee Hamilton">
 
-    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/head_scripts.js"></script>
 
-    <!--[if lt IE 9]>
+	<!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 </head>
 
 <body>
-		<!--#include file="html/header.html" -->
-		<!--#include file="html/nav.html" -->
-		<main>
-		<div class = "email-list">
-    <table class="email-inbox email" >
-        <thead>
-            <tr>
-                <th>
-									<div class="email-checkbox">
-	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
-	                </div>
-									Select
-								</th>
-                <th>From</th>
-                <th>Subject</th>
-                <th>Time</th>
-            </tr>
-        </thead>
-				<div class = "email-list-scroller">
-        <tbody class="email">
-            <tr class="email">
-                <td>
-	                <div class="email-checkbox">
-	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
-	                </div>
-                </td>
-                <td>Aidan P. Gallagher</td>
-                <td>Immediate Dismissal from...</td>
-                <td>30/1/2016</td>
-            </tr>
-						<tr class="email">
-                <td>
-	                <div class="email-checkbox">
-	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
-	                </div>
-                </td>
-                <td>Aidan P. Gallagher</td>
-                <td>Immediate Dismissal from...</td>
-                <td>30/1/2016</td>
-            </tr>
-						<tr class="email">
-                <td>
-	                <div class="email-checkbox">
-	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
-	                </div>
-                </td>
-                <td>Aidan P. Gallagher</td>
-                <td>Immediate Dismissal from...</td>
-                <td>30/1/2016</td>
-            </tr>
-						<tr class="email">
-                <td>
-	                <div class="email-checkbox">
-	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
-	                </div>
-                </td>
-                <td>Aidan P. Gallagher</td>
-                <td>Immediate Dismissal from...</td>
-                <td>30/1/2016</td>
-            </tr>
-						<tr class="email">
-                <td>
-	                <div class="email-checkbox">
-	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
-	                </div>
-                </td>
-                <td>Aidan P. Gallagher</td>
-                <td>Immediate Dismissal from...</td>
-                <td>30/1/2016</td>
-            </tr>
-						<tr class="email">
-                <td>
-	                <div class="email-checkbox">
-	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
-	                </div>
-                </td>
-                <td>Aidan P. Gallagher</td>
-                <td>Immediate Dismissal from...</td>
-                <td>30/1/2016</td>
-            </tr>
-						<tr class="email">
-                <td>
-	                <div class="email-checkbox">
-	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
-	                </div>
-                </td>
-                <td>Aidan P. Gallagher</td>
-                <td>Immediate Dismissal from...</td>
-                <td>30/1/2016</td>
-            </tr>
-						<tr class="email">
-                <td>
-	                <div class="email-checkbox">
-	                    <input type="checkbox" value="1" id="email-checkbox1" name="select" />
-	                </div>
-                </td>
-                <td>Aidan P. Gallagher</td>
-                <td>Immediate Dismissal from...</td>
-                <td>30/1/2016</td>
-            </tr>
-            <tr class="email">
-                <td>
-	                <div class="email-checkbox">
-	                	<input type="checkbox" value="1" id="email-checkbox2" name="select" />
-	                </div>
-                </td>
-                <td>Stuart J. Thain</td>
-                <td>URGENT: Careers Service: Apply Now</td>
-                <td>30/1/2016</td>
-            </tr>
-            <tr class="email">
-                <td>
-	                <div class="email-checkbox">
-	                	<input type="checkbox" value="1" id="email-checkbox3" name="select" />
-	                </div>
-                </td>
-                <td>Cameron A. Craig</td>
-                <td>Your commendation of bravery for ...</td>
-                <td>30/1/2016</td>
-            </tr>
+	<!--#include file="html/header.html" -->
+	<!--#include file="html/nav.html" -->
+	<main>
+		<div class="email-list">
+			<table class="email-inbox email">
+				<thead class="read_email">
+					<tr class="read_email">
+						<th class="read_email select">
+							<div class="email-checkbox">
+								<input type="checkbox" value="1" id="email-checkbox1" name="select" />
+							</div>
+							Select
+						</th>
+						<th class="read_email from">From</th>
+						<th class="read_email subject">Subject</th>
+						<th class="read_email time">Time</th>
+						<th class="read_email actions">Actions</th>
+					</tr>
+				</thead>
+				<tbody class="email read_email email-list-scroller">
+					<script>
+						var emails = [{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "aidan@to.com",
+								"from": "from@from.com",
+								"time": "24/10/1994 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "stuart@to.com",
+								"from": "from@from.com",
+								"time": "24/10/2008 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							}
+						];
 
-
-        </tbody>
-			</div> <!-- email-list-scroller -->
-    </table>
-	</div> <!-- email-list-->
+						for (var i = 0; i < emails.length; i++) {
+							var email = emails[i];
+							var email_html = get_email_row_html(email);
+							document.write(email_html);
+							console.log("test");
+						}
+					</script>
+				</tbody>
+			</table>
+		</div>
+		<!-- email-list-->
 	</main>
 
+<!-- The Help Modal -->
+	<div id="help_modal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close" id="help_modal_close">&times;</span>
+			<h1>Welcome to the help page</h1>
+			<p>
+				This page is designed to help you use this web application, YouWatt.
+				The below sections explain everything you need to know about YouWatt.
+			</p>
+
+			<h2>Sending an email</h2>
+			<p>
+				If you seariously can't work out how to send an email using this thing,
+				then we probably have some major usability issues!
+			</p>
+
+			<h2>Reading your emails</h2>
+			<p>
+				Navigate your way to the inbox, your email is displayed in a table.
+			</p>
+
+			<h2>IMAP settings</h2>
+			<p>
+				Hmmm, should be on the settings page.
+			</p>
+
+			<h2>POP Settings</h2>
+			<p>
+				This should also be on the settings page.
+			</p>
+		</div>
+		<!-- modal-content -->
+	</div>
+	<!-- End Help modal-->
 
   <!-- The Compose Modal -->
   <div id="compose_modal" class="modal">
     <!-- Modal content -->
     <div class="modal-content">
       <span class="close" id="compose_modal_close">&times;</span>
-      <form action="/action_page.php">
+      <form>
         To:
         <input type="email" name="email">
         <br> From: email@email.com
         <br> Subject:
-        <input type="email" name="email">
+        <input type="text" name="subject">
         <br>
         <textarea rows="20" cols="60">
           Email content
         </textarea>
-        <br>
-        <button> Attach Files</button>
-        <br>
-        <input type="submit">
-      </form>
-    </div> <!-- modal-content -->
-  </div> <!-- modal-->
+				<br>
+				<button class="styled" onclick="not_yet_implemented()"> Attach Files</button>
+				<button class="styled" onclick="not_yet_implemented()">Send</button>
+			</form>
+		</div>
+		<!-- modal-content -->
+	</div>
+	<!-- End compose modal-->
 
-   <!-- The Chat Modal -->
-  <div id="chat_modal" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close" id="chat_modal_close">&times;</span>
-      <div class = "chat_menu">
-				<ul class = "chat-nav basic-nav">
-				  <li  class = "basic-nav chat-nav"><a href="#todo">Cameron</a></li>
-				  <li  class = "basic-nav chat-nav"><a href="#todo">Stuart</a></li>
-				  <li class = "basic-nav chat-nav"><a href="#todo">Lee</a></li>
-				  <li class = "basic-nav chat-nav"><a href="#todo">Aidan</a></li>
-				  <li class = "basic-nav chat-nav"><a href="#todo">Trump</a></li>
+	<!-- The Chat Modal -->
+	<div id="chat_modal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close" id="chat_modal_close">&times;</span>
+			<div class="chat_menu">
+				<ul class="chat-nav basic-nav">
+					<li class="basic-nav chat-nav"><a href="#todo">Cameron</a></li>
+					<li class="basic-nav chat-nav"><a href="#todo">Stuart</a></li>
+					<li class="basic-nav chat-nav"><a href="#todo">Lee</a></li>
+					<li class="basic-nav chat-nav"><a href="#todo">Aidan</a></li>
+					<li class="basic-nav chat-nav"><a href="#todo">Trump</a></li>
 				</ul>
 			</div>
-			<div class = "chat_box">
+			<div class="chat_box">
 				<ul class="chat">
-          <li class="left clearfix"><span class="chat-img pull-left">
+					<li class="left clearfix"><span class="chat-img pull-left">
 
           </span>
-              <div class="chat-body clearfix">
-                  <div class="header">
-                      <strong class="primary-font">Jack Sparrow</strong> <small class="pull-right text-muted">
+						<div class="chat-body clearfix">
+							<div class="header">
+								<strong class="primary-font">Jack Sparrow</strong> <small class="pull-right text-muted">
                           <span class="glyphicon glyphicon-time"></span>12 mins ago</small>
-                  </div>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
-                      dolor, quis ullamcorper ligula sodales.
-                  </p>
-              </div>
-          </li>
-          <li class="right clearfix"><span class="chat-img pull-right">
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+							</p>
+						</div>
+					</li>
+					<li class="right clearfix"><span class="chat-img pull-right">
 
           </span>
-              <div class="chat-body clearfix">
-                  <div class="header">
-                      <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>13 mins ago</small>
-                      <strong class="pull-right primary-font">Bhaumik Patel</strong>
-                  </div>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
-                      dolor, quis ullamcorper ligula sodales.
-                  </p>
-              </div>
-          </li>
-          <li class="left clearfix"><span class="chat-img pull-left">
+						<div class="chat-body clearfix">
+							<div class="header">
+								<small class=" text-muted"><span class="glyphicon glyphicon-time"></span>13 mins ago</small>
+								<strong class="pull-right primary-font">Bhaumik Patel</strong>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+							</p>
+						</div>
+					</li>
+					<li class="left clearfix"><span class="chat-img pull-left">
 
           </span>
-              <div class="chat-body clearfix">
-                  <div class="header">
-                      <strong class="primary-font">Jack Sparrow</strong> <small class="pull-right text-muted">
+						<div class="chat-body clearfix">
+							<div class="header">
+								<strong class="primary-font">Jack Sparrow</strong> <small class="pull-right text-muted">
                           <span class="glyphicon glyphicon-time"></span>14 mins ago</small>
-                  </div>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
-                      dolor, quis ullamcorper ligula sodales.
-                  </p>
-              </div>
-          </li>
-          <li class="right clearfix"><span class="chat-img pull-right">
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+							</p>
+						</div>
+					</li>
+					<li class="right clearfix"><span class="chat-img pull-right">
           </span>
-              <div class="chat-body clearfix">
-                  <div class="header">
-                      <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>15 mins ago</small>
-                      <strong class="pull-right primary-font">Bhaumik Patel</strong>
-                  </div>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
-                      dolor, quis ullamcorper ligula sodales.
-                  </p>
-              </div>
-          </li>
-        </ul>
+						<div class="chat-body clearfix">
+							<div class="header">
+								<small class=" text-muted"><span class="glyphicon glyphicon-time"></span>15 mins ago</small>
+								<strong class="pull-right primary-font">Bhaumik Patel</strong>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+							</p>
+						</div>
+					</li>
+				</ul>
 			</div>
-			<div class = "message_input">
+			<div class="message_input">
 				<form>
 					<input id="btn-input" class="form-control input-sm" placeholder="Type your message here..." type="text">
-					<input type="submit" class="button" id="message_send_button" name="message_send_button" value="Send">
+					<input type="submit" class="styled button" id="message_send_button" name="message_send_button" value="Send">
 				</form>
 			</div>
-    </div>  <!-- modal-content-->
-  </div> <!-- modal -->
+		</div>
+		<!-- modal-content-->
+	</div>
+	<!-- modal -->
 
-  <!--#include file="html/footer.html" -->
+	<!-- The Read Email Modal -->
+	<div id="read_email_modal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close" id="read_email_modal_close">&times;</span>
+			<table>
+				<tr>
+					<td class="read_email_param">Subject:</td>
+					<td><span id="read_email_subject"></span></td>
+				</tr>
+				<tr>
+					<td class="read_email_param">To:</td>
+					<td><span id="read_email_to"></span></td>
+				</tr>
+				<tr>
+					<td class="read_email_param">From:</td>
+					<td><span id="read_email_from"></span></td>
+				</tr>
+				<tr>
+					<td colspan="2"><textarea id="read_email_content" rows="20" cols="60" readonly></textarea></td>
+				</tr>
+			</table>
+			<button onclick="not_yet_implemented()" class="styled">Delete</button>
+			<button onclick="not_yet_implemented()" class="styled">Reply</button>
+			<button onclick="not_yet_implemented()" class="styled">Forward</button>
+		</div>
+		<!-- modal-content -->
+	</div>
+	<!-- End of read email modal -->
 
-  <script src="js/scripts.js"></script>
+	<!--#include file="html/footer.html" -->
+
+	<script src="js/scripts.js"></script>
 
 </body>
 

@@ -1,28 +1,62 @@
 <header>
-		<div id="page_title">YouWatt</div>
-		<form class = "email_search" onsubmit="not_yet_implemented()">
-          <input type="search" name="email_search_input">
-          <input type="submit" value="Search Email">
-        </form>
-        <div style="clear: both"></div>
+	<img class="logo" src="img/icons/you_watt.png" alt="logo">
+	<div class="dropdown">
+		<img src="img/icons/settings.png" alt="settings_logo" onclick="myFunction()" class="dropbtn">
+		<div id="myDropdown" class="dropdown-content">
+			<a id="background_change_btn">Toggle Background</a>
+			<a id="notifications_off_btn">Notifications Off</a>
+			<a id="advanced_settings_btn">Advanced Settings</a>
+			<a id="help_btn">Help</a>
+			<a id="about_btn">About</a>
+			<a id="logout_btn">Logout</a>
+		</div>
+	</div>
+	<button class="advanced_search_button" title="Advanced Search" id="advanced_search_form"></button>
+	<form class="email_search" onsubmit="not_yet_implemented()">
+		<input type="search" name="email_search_input" placeholder="Search Email...">
+	</form>
+	<!-- The Advanced Search Modal -->
+	<div id="ad_search_modal" class="modal advanced_search_modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close" id="ad_search_modal_close">&times;</span>
+			<form>
+				<table class="modal_table">
+					<tr>
+						<th>Search Folder:</th>
+						<th><select class="folder_select">
+							<option value="inbox">Inbox</option>
+							<option value="sent">sent</option>
+							<option value="drafts">drafts</option>
+						</select></th>
+					</tr>
+					<tr>
+						<th>To:</th>
+						<th><input type="search" name="to"></th>
+					</tr>
+					<tr>
+						<th>From:</th>
+						<th><input type="search" name="from"></th>
+					</tr>
+					<tr>
+						<th>Subject:</th>
+						<th><input type="search" name="subject"></th>
+					</tr>
+					<tr>
+						<th><input type="checkbox" name="has_attachment" value="Attachment"></th>
+						<th>Has Attachment</th>
+					</tr>
+					<tr>
+						<th><button class="styled" onclick="not_yet_implemented()">Search</button></th>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<!-- modal-content -->
+	</div>
+	<!-- modal-->
+	<div style="clear: both"></div>
+
 </header>
 
-<div class="message_box warning_message">
-    <i class="warning_icon"></i>
-		<span class = "warning_text"></span>
-</div>
-
-<div class="message_box error_message">
-    <i class="error_icon"></i>
-		<span class = "error_text"></span>
-</div>
-
-<div class="message_box success_message">
-    <i class="success_icon"></i>
-		<span class = "success_text"></span>
-</div>
-
-<div class="message_box info_message">
-    <i class="info_icon"></i>
-		<span class = "info_text"></span>
-</div>
+<div id="message_location"></div>
