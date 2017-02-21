@@ -352,7 +352,7 @@ th {
 }
 
 body {
-    background-image: url("../img/backgrounds/01.jpg");
+    background-image: url("/img/backgrounds/01.jpg");
     background-repeat: no-repeat;
     background-size: auto;
     background-position: center center;
