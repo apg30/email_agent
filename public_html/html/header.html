@@ -21,23 +21,35 @@
 		<div class="modal-content">
 			<span class="close" id="ad_search_modal_close">&times;</span>
 			<form>
-				Search Folder:
-				<select class="folder_select">
-					<option value="inbox">Inbox</option>
-					<option value="sent">sent</option>
-					<option value="drafts">drafts</option>
-				</select>
-				<br> To:
-				<input type="search" name="to">
-				<br> From:
-				<input type="search" name="from">
-				<br> Subject:
-				<input type="search" name="subject">
-				<br>
-				<input type="checkbox" name="has_attachment" value="Attachment">
-				Has Attachment<br>
-				<br>
-				<button type="button" onclick="not_yet_implemented()">Search</button>
+				<table class="modal_table">
+					<tr>
+						<th>Search Folder:</th>
+						<th><select class="folder_select">
+							<option value="inbox">Inbox</option>
+							<option value="sent">sent</option>
+							<option value="drafts">drafts</option>
+						</select></th>
+					</tr>
+					<tr>
+						<th>To:</th>
+						<th><input type="search" name="to"></th>
+					</tr>
+					<tr>
+						<th>From:</th>
+						<th><input type="search" name="from"></th>
+					</tr>
+					<tr>
+						<th>Subject:</th>
+						<th><input type="search" name="subject"></th>
+					</tr>
+					<tr>
+						<th><input type="checkbox" name="has_attachment" value="Attachment"></th>
+						<th>Has Attachment</th>
+					</tr>
+					<tr>
+						<th><button type="button" onclick="not_yet_implemented()">Search</button></th>
+					</tr>
+				</table>
 			</form>
 		</div> <!-- modal-content -->
 	</div> <!-- modal-->

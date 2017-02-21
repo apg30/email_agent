@@ -525,11 +525,16 @@ table.email-inbox {
 }
 
 .advanced_search_modal {
-    
+
 }
 
 .advanced_search_modal input[type="search"]{
   margin: 0.5em;
+}
+
+.modal_table{
+  width: 50%;
+  padding-right: 50em;
 }
 
 /* Message read*/
