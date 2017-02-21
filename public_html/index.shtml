@@ -186,7 +186,7 @@
 		<!-- email-list-->
 	</main>
 
-	<!-- The Help Modal -->
+<!-- The Help Modal -->
 	<div id="help_modal" class="modal">
 		<!-- Modal content -->
 		<div class="modal-content">
@@ -220,21 +220,21 @@
 		</div>
 		<!-- modal-content -->
 	</div>
-	<!-- Help modal-->
+	<!-- End Help modal-->
 
-	<!-- The Compose Modal -->
-	<div id="compose_modal" class="modal">
-		<!-- Modal content -->
-		<div class="modal-content">
-			<span class="close" id="compose_modal_close">&times;</span>
-			<form onsubmit="#">
-				To:
-				<input type="email" name="email">
-				<br> From: email@email.com
-				<br> Subject:
-				<input type="email" name="email">
-				<br>
-				<textarea rows="20" cols="60">
+  <!-- The Compose Modal -->
+  <div id="compose_modal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" id="compose_modal_close">&times;</span>
+      <form>
+        To:
+        <input type="email" name="email">
+        <br> From: email@email.com
+        <br> Subject:
+        <input type="text" name="subject">
+        <br>
+        <textarea rows="20" cols="60">
           Email content
         </textarea>
 				<br>
@@ -244,7 +244,7 @@
 		</div>
 		<!-- modal-content -->
 	</div>
-	<!-- modal-->
+	<!-- End compose modal-->
 
 	<!-- The Chat Modal -->
 	<div id="chat_modal" class="modal">
