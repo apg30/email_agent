@@ -36,8 +36,7 @@
 								<th class="read_email actions">Actions</th>
             </tr>
         </thead>
-				<div class = "email-list-scroller">
-        <tbody class="email read_email">
+        <tbody class="email read_email email-list-scroller">
 						<script>
 							var emails = [
 								{"subject": "Test Subject", "content": "Test Content", "to": "aidan@to.com", "from": "from@from.com", "time": "24/10/1994 05:35"},
@@ -69,7 +68,6 @@
 							}
 						</script>
         </tbody>
-			</div> <!-- email-list-scroller -->
     </table>
 	</div> <!-- email-list-->
 	</main>
