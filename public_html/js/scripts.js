@@ -144,7 +144,7 @@ background_change.onclick = function() {
         change = 0;
         message("info", "background will stop chaning");
     } else {
-      message("info", "background will start chaning");
+        message("info", "background will start chaning");
         change = 1;
     }
 }
