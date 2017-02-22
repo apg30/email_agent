@@ -57,9 +57,14 @@ footer {
     height: 30px;
     background-color: #c1ceb8;
     /* Footer text is centred */
-    text-align: center;
+    text-align: left;
+    font-size:medfium;
+    float: left;
 }
-
+.validate_link {
+  float: right;
+  padding-right: 1%;
+}
 
 /* Basic vertical navigation box */
 
