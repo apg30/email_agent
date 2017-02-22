@@ -1,5 +1,7 @@
 # `YouWatt` Email Client
 
+[![Build Status](https://travis-ci.org/apg30/email_agent.svg?branch=master)](https://travis-ci.org/apg30/email_agent)
+
 # Introduction
 
 An email client and instant messenger. User authentication via login page. Registration requires secret key.
