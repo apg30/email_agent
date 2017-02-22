@@ -58,3 +58,9 @@ window.onclick = function(e) {
     }
 }
 /********************************************/
+
+/* Detect whether drag and drop is supported by the browser */
+var advanced_upload_supported = function() {
+  var div = document.createElement('div');
+  return (('draggable' in div) || ('ondragstart' in div && 'ondrop' in div)) && 'FormData' in window && 'FileReader' in window;
+}();

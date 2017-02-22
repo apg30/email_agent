@@ -124,6 +124,13 @@ window.onclick = function(event) {
     }
 }
 
+/* Set up attachment drag and drop box, if in DOM */
+var $form = $('.box');
+
+if (isAdvancedUpload) {
+  $form.addClass('has-advanced-upload');
+}
+
 
 //Test message box
 var inbox_button = document.getElementById('inbox_button');

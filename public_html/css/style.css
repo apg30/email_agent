@@ -604,3 +604,20 @@ td.read_email_param {
     text-align: right;
     width: 10em;
 }
+
+/* Compose Email: Attachments box */
+.box__dragndrop,
+.box__uploading,
+.box__success,
+.box__error {
+  display: none;
+}
+.box.has-advanced-upload {
+  background-color: white;
+  outline: 2px dashed black;
+  outline-offset: -10px;
+}
+.box.has-advanced-upload .box__dragndrop {
+  display: inline;
+}
+/* End of Compose Email: Attachments box */
