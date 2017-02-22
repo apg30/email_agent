@@ -1,0 +1,7 @@
+language: javascript
+
+install:
+ - wget https://gist.githubusercontent.com/camieac/26e5e7f70c5b687854eafdb76a393e39/raw/1814a9d7eddbe2a0b057b8f553f58873391e4945/ssi_parse.py
+
+script:
+  ./ssi_parse.py public_html/index.shtml
