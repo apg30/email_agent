@@ -3,6 +3,7 @@ header {
     margin: 0em;
 }
 
+
 /* Main box containing web page content */
 
 main {
@@ -58,13 +59,15 @@ footer {
     background-color: #c1ceb8;
     /* Footer text is centred */
     text-align: left;
-    font-size:medfium;
+    font-size: medfium;
     float: left;
 }
+
 .validate_link {
-  float: right;
-  padding-right: 1%;
+    float: right;
+    padding-right: 1%;
 }
+
 
 /* Basic vertical navigation box */
 
@@ -529,7 +532,7 @@ table.email-inbox {
 }
 
 .advanced_search_modal {
-  /* add style here to override modal css for advanced search*/
+    /* add style here to override modal css for advanced search*/
 }
 
 .advanced_search_modal input[type="search"] {
@@ -541,9 +544,9 @@ table.email-inbox {
     padding-right: 50em;
 }
 
-.modal_table th{
-  font-weight: bold;
-  font-size: 150%;
+.modal_table th {
+    font-weight: bold;
+    font-size: 150%;
 }
 
 
