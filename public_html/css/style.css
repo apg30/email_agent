@@ -3,7 +3,6 @@ header {
     margin: 0em;
 }
 
-
 /* Main box containing web page content */
 
 main {
@@ -52,11 +51,11 @@ div.chat_menu {
 
 footer {
     position: fixed;
-    left: 0px;
-    bottom: 0px;
+    left: 0.7%;
+    right: 0.7%;
+    bottom: 0.7%;
     height: 30px;
-    width: 100%;
-    background: white;
+    background-color: #c1ceb8;
     /* Footer text is centred */
     text-align: center;
 }
