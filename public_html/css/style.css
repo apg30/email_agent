@@ -521,7 +521,7 @@ table.email-inbox {
 /* Advanced Search modal */
 
 .folder_select {
-    margin: 1em;
+    margin: 0.5em;
 }
 
 .advanced_search_modal {
@@ -535,6 +535,11 @@ table.email-inbox {
 .modal_table {
     width: 50%;
     padding-right: 50em;
+}
+
+.modal_table th{
+  font-weight: bold;
+  font-size: 150%;
 }
 
 
