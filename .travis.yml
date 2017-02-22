@@ -12,5 +12,5 @@ install:
 script:
   # Validate index.shtml
   - mkdir ssi_parsed_public_html
-  - ./ssi_parse.py public_html/index.shtml ssi_parsed_public_html/index.shtml
+  - ./ssi_parse.py public_html/index.shtml ssi_parsed_public_html/index.shtml -r public_html/
   - ./validate.py ssi_parsed_public_html/index.shtml
