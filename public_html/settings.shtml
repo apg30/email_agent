@@ -20,21 +20,36 @@
 
 <body>
 	<!--#include file="html/header.html" -->
+	<!--#include file="html/nav.html" -->
 	<main class="settings">
-		<div class=class="modal advanced_search_modal">
-			<br> Alias:
-			<input type="advanced_search_text" name="to">
-			<br> Pop server:
-			<input type="advanced_search_text" name="to">
-			<br> IMAP server:
-			<input type="advanced_search_text" name="to">
-			<br> Username:
-			<input type="advanced_search_text" name="to">
-			<br> Password:
-			<input type="advanced_search_text" name="to">
-
-			<button id=apply_button>Apply</button>
-		</div>
+			<table class="settings_table">
+				<tr>
+					<th colspan="2">Advanced Options</th>
+				</tr>
+				<tr>
+					<td>Alias:</td>
+					<td><input type="search" name="Alias"></td>
+				</tr>
+				<tr>
+					<td>Pop server:</td>
+					<td><input type="search" name="Pop_server"></td>
+				</tr>
+				<tr>
+					<td>IMAP server:</td>
+					<td><input type="search" name="IMAP_server"></td>
+				</tr>
+				<tr>
+					<td>Username:</td>
+					<td><input type="search" name="Username"></td>
+				</tr>
+				<tr>
+					<td>Password:</td>
+					<td><input type="search" name="Password"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><button class="styled" onclick="not_yet_implemented()">Apply</button></td>
+				</tr>
+			</table>
 
 	</main>
 

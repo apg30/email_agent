@@ -52,13 +52,23 @@ div.chat_menu {
 
 footer {
     position: fixed;
-    left: 0px;
-    bottom: 0px;
+    left: 0.7%;
+    right: 0.7%;
+    bottom: 0.7%;
     height: 30px;
-    width: 100%;
-    background: white;
+    background-color: #c1ceb8;
     /* Footer text is centred */
-    text-align: center;
+    text-align: left;
+    font-size: medfium;
+    float: left;
+    padding-left: 1%;
+    padding-top: 0.3%;
+}
+
+.validate_link {
+    float: right;
+    padding-right: 1%;
+    padding-top: 0.2%;
 }
 
 
@@ -521,11 +531,11 @@ table.email-inbox {
 /* Advanced Search modal */
 
 .folder_select {
-    margin: 1em;
+    margin: 0.5em;
 }
 
 .advanced_search_modal {
-  /* add style here to override modal css for advanced search*/
+    /* add style here to override modal css for advanced search*/
 }
 
 .advanced_search_modal input[type="search"] {
@@ -535,6 +545,11 @@ table.email-inbox {
 .modal_table {
     width: 50%;
     padding-right: 50em;
+}
+
+.modal_table th {
+    font-weight: bold;
+    font-size: 150%;
 }
 
 

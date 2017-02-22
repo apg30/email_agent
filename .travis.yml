@@ -1,7 +1,16 @@
 language: javascript
+sudo: required
 
 install:
- - wget https://gist.githubusercontent.com/camieac/26e5e7f70c5b687854eafdb76a393e39/raw/1814a9d7eddbe2a0b057b8f553f58873391e4945/ssi_parse.py
+  # Get the scripts required to validate shtml files
+ - wget https://gist.githubusercontent.com/camieac/26e5e7f70c5b687854eafdb76a393e39/raw/fa0aa07b222d1323532dada647ddbc4c147ba6e0/ssi_parse.py
+ - wget https://gist.githubusercontent.com/camieac/d9d54f6ad4996d2b2b287fd4d82bdd6a/raw/447f52661a60bd1a653d1ec92d951406c02f6b7d/validate.py
+ - chmod +x ssi_parse.py
+ - chmod +x validate.py
+ - pip install requests
 
 script:
-  ./ssi_parse.py public_html/index.shtml
+  # Validate index.shtml
+  - mkdir ssi_parsed_public_html
+  - ./ssi_parse.py -i public_html/index.shtml -o ssi_parsed_public_html/index.shtml -r public_html/
+  - ./validate.py -i ssi_parsed_public_html/index.shtml

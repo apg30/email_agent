@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Email Client</title>
+	<meta name="description" content="Email client">
+	<meta name="author" content="Cameron A. Craig, Stuart J. Thain, Aidan P. Gallagher, Lee Hamilton">
+
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/head_scripts.js"></script>
+	<!-- Hide some header elements -->
+
+
+	<!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+	<!--#include file="html/header.html" -->
+	<!--#include file="html/nav.html" -->
+	<main class="settings">
+		<div class=class="modal advanced_search_modal">
+      <h1>Email Agent</h1>
+      <h2>Version</h2>
+      <p> You are running verson: 1.223.4542 </p>
+      <p> This is from branch: stable </p>
+      <p> Last commit: b0e4f90784050dc6c65e7693c135cc37388eff78 </p>
+      <h2>Contribution</h2>
+      <p>This is an open source project. Follow the github  at https://github.com/apg30/email_agent</p>
+      <h2>Donations</h2>
+      <p>If you use this software and find it valuable please consider donating. Email cac30@hw.ac.uk with your
+      bank account number, sort code, bank card number,pin number, that number on the back of the bank card and
+      lastly your national insurance number.</p>
+      <h2>Authors</h2>
+      <p>This software was produced at Heriot Watt University.</p>
+		</div>
+
+	</main>
+
+	<!--#include file="html/footer.html" -->
+
+	<script src="js/scripts.js"></script>
+
+</body>
+
+</html>
