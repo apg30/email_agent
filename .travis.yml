@@ -1,4 +1,5 @@
 language: javascript
+sudo: required
 
 install:
   # Get the scripts required to validate shtml files
@@ -6,7 +7,7 @@ install:
  - wget https://gist.githubusercontent.com/camieac/d9d54f6ad4996d2b2b287fd4d82bdd6a/raw/a26a41cab6a512ead33648fe39d3067a2e84c5a3/validate.py
  - chmod +x ssi_parse.py
  - chmod +x validate.py
- - pip install requests
+ - sudo pip install requests
 
 script:
   # Validate index.shtml
