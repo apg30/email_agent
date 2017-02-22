@@ -601,3 +601,7 @@ td.read_email_param {
     text-align: right;
     width: 10em;
 }
+
+.blue-button {
+	background-color: blue;
+}
