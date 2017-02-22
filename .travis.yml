@@ -1,7 +1,14 @@
 language: javascript
 
 install:
+  # Get the scripts required to validate shtml files
  - wget https://gist.githubusercontent.com/camieac/26e5e7f70c5b687854eafdb76a393e39/raw/1814a9d7eddbe2a0b057b8f553f58873391e4945/ssi_parse.py
+ - wget https://gist.githubusercontent.com/camieac/d9d54f6ad4996d2b2b287fd4d82bdd6a/raw/a26a41cab6a512ead33648fe39d3067a2e84c5a3/validate.py
+ - chmod +x ssi_parse.py
+ - chmod +x validate.py
 
 script:
-  ./ssi_parse.py public_html/index.shtml
+  # Validate index.shtml
+  - mkdir ssi_parsed_public_html
+  - ./ssi_parse.py public_html/index.shtml ssi_parsed_public_html/index.shtml
+  - ./validate.py ssi_parsed_public_html/index.shtml
