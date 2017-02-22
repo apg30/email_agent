@@ -1,14 +1,16 @@
 <header>
+	<a href="index.shtml">
 	<img class="logo" src="img/icons/you_watt.png" alt="logo">
+	</a>
 	<div class="dropdown">
 		<img src="img/icons/settings.png" alt="settings_logo" onclick="myFunction()" class="dropbtn">
 		<div id="myDropdown" class="dropdown-content">
 			<a id="background_change_btn">Toggle Background</a>
 			<a id="notifications_off_btn">Notifications Off</a>
-			<a id="advanced_settings_btn">Advanced Settings</a>
+			<a id="advanced_settings_btn" href="settings.shtml">Advanced Settings</a>
 			<a id="help_btn">Help</a>
-			<a id="about_btn">About</a>
-			<a id="logout_btn">Logout</a>
+			<a id="about_btn" href="about.shtml">About</a>
+			<a id="logout_btn" href="login.shtml">Logout</a>
 		</div>
 	</div>
 	<button class="advanced_search_button" title="Advanced Search" id="advanced_search_form"></button>
@@ -23,31 +25,38 @@
 			<form>
 				<table class="modal_table">
 					<tr>
-						<th>Search Folder:</th>
-						<th><select class="folder_select">
+						<th colspan="2">Advanced Search Options</th>
+					</tr>
+					<tr>
+						<td>Search Folder:</td>
+						<td><select class="folder_select">
 							<option value="inbox">Inbox</option>
 							<option value="sent">sent</option>
 							<option value="drafts">drafts</option>
-						</select></th>
+						</select></td>
 					</tr>
 					<tr>
-						<th>To:</th>
-						<th><input type="search" name="to"></th>
+						<td>To:</td>
+						<td><input type="search" name="to"></td>
 					</tr>
 					<tr>
-						<th>From:</th>
-						<th><input type="search" name="from"></th>
+						<td>From:</td>
+						<td><input type="search" name="from"></td>
 					</tr>
 					<tr>
-						<th>Subject:</th>
-						<th><input type="search" name="subject"></th>
+						<td>Subject:</td>
+						<td><input type="search" name="subject"></td>
 					</tr>
 					<tr>
-						<th><input type="checkbox" name="has_attachment" value="Attachment"></th>
-						<th>Has Attachment</th>
+						<td>Contains Attachment?</td>
+						<td><select class="folder_select">
+							<option value="dont_care">Don't Know</option>
+							<option value="has">Yes</option>
+							<option value="No">No</option>
+						</select></td>
 					</tr>
 					<tr>
-						<th><button class="styled" onclick="not_yet_implemented()">Search</button></th>
+						<td colspan="2"><button class="styled" onclick="not_yet_implemented()">Search</button></td>
 					</tr>
 				</table>
 			</form>
