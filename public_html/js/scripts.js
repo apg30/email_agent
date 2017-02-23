@@ -131,6 +131,15 @@ window.onclick = function(event) {
     }
 }
 
+var btns = document.getElementsByClassName("more-mail-btn");
+for (var i = 0; i < btns.length; i++){
+  btns[i].onclick = function(e){
+    console.log(e);
+    var id = e.target.id;
+    console.log(id);
+    moreDropdown(id);
+  }
+}
 
 //Test message box
 var inbox_button = document.getElementById('inbox_button');
