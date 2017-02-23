@@ -238,7 +238,7 @@
           Email content
         </textarea>
 				<br>
-				<button class="styled" onclick="not_yet_implemented()"> Attach Files</button>
+				<input type="file" class="styled" multiple>
 				<button class="styled" onclick="not_yet_implemented()">Send</button>
 			</form>
 		</div>
