@@ -21,7 +21,7 @@
 	<!--#include file="html/nav.html" -->
 	<main>
 		<div class="email-list">
-			<table cellspacing="2" cellpadding="2" class="email-toolbar">
+			<table class="email-toolbar">
 				<tr>
 					<td>
 						<button class="styled smaller_styled" type="button">Select All</button>
@@ -33,7 +33,7 @@
 				</tr>
 			</table>
 
-			<table cellspacing="2" cellpadding="2" class="email-inbox email">
+			<table class="email-inbox email">
 				<thead class="read_email">
 					<tr class="read_email">
 						<th class="read_email select">
@@ -48,20 +48,63 @@
 				<tbody class="email read_email email-list-scroller">
 					<script>
 						var emails = [{
-								"subject": "Test Subject",
-								"content": "Test Content",
+								"message_id": "123",
+								"subject": "Cottage Cheese",
+								"content": "Dear Aidan,\r\nThe finest Cheese in all the land.\r\nCheers, Cheese Company Ltd.",
 								"to": "aidan@to.com",
 								"from": "from@from.com",
-								"time": "24/10/1994 05:35"
+								"time": "24/10/1994 05:35",
 							},
 							{
-								"subject": "Test Subject",
+								"message_id": "124",
+								"subject": "Important Meeting",
 								"content": "Test Content",
 								"to": "stuart@to.com",
 								"from": "from@from.com",
 								"time": "24/10/2008 05:35"
 							},
 							{
+								"message_id": "125",
+								"subject": "Please fill in this survey",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"message_id": "126",
+								"subject": "Free Amazon Voucher (after Questionnaire)",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"message_id": "127",
+								"subject": "Subjective Ideas",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"message_id": "128",
+								"subject": "Important Content",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"message_id": "129",
+								"subject": "RE: Job Offer",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"message_id": "130",
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
@@ -69,6 +112,7 @@
 								"time": "24/01/2017 05:35"
 							},
 							{
+								"message_id": "131",
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
@@ -76,6 +120,7 @@
 								"time": "24/01/2017 05:35"
 							},
 							{
+								"message_id": "132",
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
@@ -83,6 +128,7 @@
 								"time": "24/01/2017 05:35"
 							},
 							{
+								"message_id": "133",
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
@@ -90,6 +136,7 @@
 								"time": "24/01/2017 05:35"
 							},
 							{
+								"message_id": "134",
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
@@ -97,6 +144,7 @@
 								"time": "24/01/2017 05:35"
 							},
 							{
+								"message_id": "135",
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
@@ -104,6 +152,7 @@
 								"time": "24/01/2017 05:35"
 							},
 							{
+								"message_id": "136",
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
@@ -111,6 +160,7 @@
 								"time": "24/01/2017 05:35"
 							},
 							{
+								"message_id": "137",
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
@@ -118,6 +168,7 @@
 								"time": "24/01/2017 05:35"
 							},
 							{
+								"message_id": "138",
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
@@ -125,6 +176,7 @@
 								"time": "24/01/2017 05:35"
 							},
 							{
+								"message_id": "139",
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
@@ -132,6 +184,7 @@
 								"time": "24/01/2017 05:35"
 							},
 							{
+								"message_id": "140",
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
@@ -139,41 +192,7 @@
 								"time": "24/01/2017 05:35"
 							},
 							{
-								"subject": "Test Subject",
-								"content": "Test Content",
-								"to": "cameron@to.com",
-								"from": "from@from.com",
-								"time": "24/01/2017 05:35"
-							},
-							{
-								"subject": "Test Subject",
-								"content": "Test Content",
-								"to": "cameron@to.com",
-								"from": "from@from.com",
-								"time": "24/01/2017 05:35"
-							},
-							{
-								"subject": "Test Subject",
-								"content": "Test Content",
-								"to": "cameron@to.com",
-								"from": "from@from.com",
-								"time": "24/01/2017 05:35"
-							},
-							{
-								"subject": "Test Subject",
-								"content": "Test Content",
-								"to": "cameron@to.com",
-								"from": "from@from.com",
-								"time": "24/01/2017 05:35"
-							},
-							{
-								"subject": "Test Subject",
-								"content": "Test Content",
-								"to": "cameron@to.com",
-								"from": "from@from.com",
-								"time": "24/01/2017 05:35"
-							},
-							{
+								"message_id": "141",
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
@@ -334,33 +353,41 @@
 	<!-- modal -->
 
 	<!-- The Read Email Modal -->
-	<div id="read_email_modal" class="modal">
-		<!-- Modal content -->
-		<div class="modal-content">
-			<span class="close" id="read_email_modal_close">&times;</span>
-			<table>
-				<tr>
-					<td class="read_email_param">Subject:</td>
-					<td><span id="read_email_subject"></span></td>
-				</tr>
-				<tr>
-					<td class="read_email_param">To:</td>
-					<td><span id="read_email_to"></span></td>
-				</tr>
-				<tr>
-					<td class="read_email_param">From:</td>
-					<td><span id="read_email_from"></span></td>
-				</tr>
-				<tr>
-					<td colspan="2"><textarea id="read_email_content" rows="20" cols="60" readonly></textarea></td>
-				</tr>
-			</table>
-			<button onclick="not_yet_implemented()" class="styled">Delete</button>
-			<button onclick="not_yet_implemented()" class="styled">Reply</button>
-			<button onclick="not_yet_implemented()" class="styled">Forward</button>
-		</div>
+<div id="read_email_modal" class="modal">
+	<!-- Modal content -->
+	<div class="modal-content">
+		<span class="close" id="read_email_modal_close">&times;</span>
+		<table>
+			<tr>
+				<td class="read_email_param">Subject:</td>
+				<td><span id="read_email_subject"></span></td>
+
+				<!-- Extra column for reply/forward forms -->
+				<td rowspan="4">
+					<!--#include file="html/reply_form.html" -->
+					<!--#include file="html/forward_form.html" -->
+				</td>
+
+			</tr>
+			<tr>
+				<td class="read_email_param">To:</td>
+				<td><span id="read_email_to"></span></td>
+			</tr>
+			<tr>
+				<td class="read_email_param">From:</td>
+				<td><span id="read_email_from"></span></td>
+			</tr>
+			<tr>
+				<td colspan="2"><textarea id="read_email_content" rows="20" cols="60" readonly></textarea></td>
+			</tr>
+
+		</table>
+		<button id="delete_btn" class="styled">Delete</button>
+		<button id="reply_btn" class="styled">Reply</button>
+		<button id="forward_btn" class="styled">Forward</button>
 		<!-- modal-content -->
 	</div>
+</div>
 	<!-- End of read email modal -->
 
 	<!--#include file="html/footer.html" -->
