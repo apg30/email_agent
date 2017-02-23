@@ -358,6 +358,7 @@
 					<!-- Extra column for reply/forward forms -->
 					<td rowspan="4">
 						<!--#include file="html/reply_form.html" -->
+						<!--#include file="html/reply_all_form.html" -->
 						<!--#include file="html/forward_form.html" -->
 					</td>
 

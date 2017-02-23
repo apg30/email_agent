@@ -614,20 +614,24 @@ td.read_email_param {
 
 /* Style for replying to email etc.*/
 div#reply_content,
-div#forward_content {
+div#forward_content,
+div#reply_all_content {
 	display:none;
 	background-color:lightgrey;
 }
 
 button#send_reply_btn,
 button#cancel_reply_btn,
+button#send_reply_all_btn,
+button#cancel_reply_all_btn,
 button#send_forward_btn,
 button#cancel_forward_btn {
 	display:none;
 }
 
 .forward_form,
-.reply_form {
+.reply_form,
+.reply_all_form {
 	background-color: yellowgreen;
 	border-radius: 1em;
 	padding: 1em;
