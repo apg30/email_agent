@@ -18,9 +18,9 @@ main {
 
 main.login {
     display: inline;
-    width: 20em;
+    width: 40em;
     height: 15em;
-    background-color: white;
+    background-color: lightblue;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -29,8 +29,8 @@ main.login {
     margin: auto;
 }
 
-form.login {
-    margin: 1em 2em;
+.login-page-header{
+  font-size: 120%;
 }
 
 
