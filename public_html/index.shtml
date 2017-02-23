@@ -390,7 +390,9 @@
 
 	<!--#include file="html/footer.html" -->
 
+	<script src="js/email.js"></script>
 	<script src="js/scripts.js"></script>
+
 
 </body>
 
