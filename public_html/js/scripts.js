@@ -39,6 +39,12 @@ function display_message(email_message_json) {
     var to = document.getElementById('read_email_to');
     to.innerHTML = email_message_json.to;
 
+		var cc = document.getElementById('read_email_cc');
+    cc.innerHTML = email_message_json.cc;
+
+		var bcc = document.getElementById('read_email_bcc');
+		bcc.innerHTML = email_message_json.bcc;
+
     var from = document.getElementById('read_email_from');
     from.innerHTML = email_message_json.from;
 
