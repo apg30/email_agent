@@ -43,7 +43,7 @@
 								"content": "Test Content",
 								"to": "aidan@to.com",
 								"from": "from@from.com",
-								"time": "24/10/1994 05:35"
+								"time": "24/10/1994 05:35",
 							},
 							{
 								"subject": "Test Subject",

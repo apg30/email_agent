@@ -15,17 +15,16 @@ function get_email_row_html(email) {
     email_html += email.time;
     email_html += '</td>';
     email_html += '<td class="read_email actions">';
-    email_html += "<button class = 'styled' onclick='display_message(" + JSON.stringify(email) + ");'>Read</button>";
-    email_html += "<button class = 'styled' onclick='moreDropdown();'>More</button>";
-    email_html += "<div id='more_dropdown' class='dropdown-content more-dropdown-content'>" +
-			            "<a id='background_change_btn'>Toggle Background</a>" +
-	                "<a id='notifications_off_btn'>Notifications Off</a>" +
-			            "<a id='advanced_settings_btn' href='settings.shtml'>Advanced Settings</a>" +
-			            "<a id='help_btn'>Help</a>" +
-			            "<a id='about_btn' href='about.shtml'>About</a>" +
-			            "<a id='logout_btn' href='login.shtml'>Logout</a>" +
-		              "</div>";
+    email_html += "<button class ='styled' onclick='display_message(" + JSON.stringify(email) + ");'>Read</button>";
+    email_html += "<button class ='styled' onclick='moreDropdown();'>More</button>";
     email_html += "<button class = 'delete_button' onclick='not_yet_implemented();'></button>";
+    email_html += "<div id='more_dropdown" + email.message_id + "' class='dropdown-content more-dropdown-content'>" +
+			            "<a id='more-reply-btn' onclick=''>Reply</a>" +
+	                "<a id='more-replyall-btn'>Reply All</a>" +
+			            "<a id='more-forward-btn'>Forward</a>" +
+			            "<a id='more-markasread-btn'>Mark As Read</a>" +
+			            "<a id='more-moveto-btn'>Move To</a>" +
+		              "</div>";
     email_html += '</td>';
     email_html += "</tr>";
     return email_html;

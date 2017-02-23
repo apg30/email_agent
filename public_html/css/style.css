@@ -617,9 +617,12 @@ button.styled:active {
 /* More Mail Button*/
 
 .more-dropdown-content {
-    position: relative;
+    position: inherit;
 }
 
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
 /* Set widths of table columns for inbox etc. */
 
 td.actions, th.actions {
