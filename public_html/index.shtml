@@ -39,20 +39,63 @@
 				<tbody class="email read_email email-list-scroller">
 					<script>
 						var emails = [{
-								"subject": "Test Subject",
-								"content": "Test Content",
+							  "message_id": "123",
+								"subject": "Cottage Cheese",
+								"content": "Dear Aidan,\r\nThe finest Cheese in all the land.\r\nCheers, Cheese Company Ltd.",
 								"to": "aidan@to.com",
 								"from": "from@from.com",
 								"time": "24/10/1994 05:35",
 							},
 							{
-								"subject": "Test Subject",
+								"message_id": "124",
+								"subject": "Important Meeting",
 								"content": "Test Content",
 								"to": "stuart@to.com",
 								"from": "from@from.com",
 								"time": "24/10/2008 05:35"
 							},
 							{
+								"message_id": "125",
+								"subject": "Please fill in this survey",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"message_id": "126",
+								"subject": "Free Amazon Voucher (after Questionnaire)",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"message_id": "127",
+								"subject": "Subjective Ideas",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"message_id": "128",
+								"subject": "Important Content",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"message_id": "129",
+								"subject": "RE: Job Offer",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"message_id": "130",
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
@@ -60,6 +103,7 @@
 								"time": "24/01/2017 05:35"
 							},
 							{
+								"message_id": "131",
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
@@ -67,6 +111,7 @@
 								"time": "24/01/2017 05:35"
 							},
 							{
+								"message_id": "132",
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
@@ -74,6 +119,7 @@
 								"time": "24/01/2017 05:35"
 							},
 							{
+								"message_id": "133",
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
@@ -81,6 +127,7 @@
 								"time": "24/01/2017 05:35"
 							},
 							{
+								"message_id": "134",
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
@@ -88,6 +135,7 @@
 								"time": "24/01/2017 05:35"
 							},
 							{
+								"message_id": "135",
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
@@ -95,6 +143,7 @@
 								"time": "24/01/2017 05:35"
 							},
 							{
+								"message_id": "136",
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
@@ -102,6 +151,7 @@
 								"time": "24/01/2017 05:35"
 							},
 							{
+								"message_id": "137",
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
@@ -109,6 +159,7 @@
 								"time": "24/01/2017 05:35"
 							},
 							{
+								"message_id": "138",
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
@@ -116,6 +167,7 @@
 								"time": "24/01/2017 05:35"
 							},
 							{
+								"message_id": "139",
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
@@ -123,6 +175,7 @@
 								"time": "24/01/2017 05:35"
 							},
 							{
+								"message_id": "140",
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
@@ -130,41 +183,7 @@
 								"time": "24/01/2017 05:35"
 							},
 							{
-								"subject": "Test Subject",
-								"content": "Test Content",
-								"to": "cameron@to.com",
-								"from": "from@from.com",
-								"time": "24/01/2017 05:35"
-							},
-							{
-								"subject": "Test Subject",
-								"content": "Test Content",
-								"to": "cameron@to.com",
-								"from": "from@from.com",
-								"time": "24/01/2017 05:35"
-							},
-							{
-								"subject": "Test Subject",
-								"content": "Test Content",
-								"to": "cameron@to.com",
-								"from": "from@from.com",
-								"time": "24/01/2017 05:35"
-							},
-							{
-								"subject": "Test Subject",
-								"content": "Test Content",
-								"to": "cameron@to.com",
-								"from": "from@from.com",
-								"time": "24/01/2017 05:35"
-							},
-							{
-								"subject": "Test Subject",
-								"content": "Test Content",
-								"to": "cameron@to.com",
-								"from": "from@from.com",
-								"time": "24/01/2017 05:35"
-							},
-							{
+								"message_id": "141",
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
@@ -347,11 +366,49 @@
 				<tr>
 					<td colspan="2"><textarea id="read_email_content" rows="20" cols="60" readonly></textarea></td>
 				</tr>
+				<tr>
+					<td colspan="2">
+						<!-- Write reply section -->
+						<div id="reply_content">
+							<form class="reply_form">
+								Reply:<br>
+								<textarea class= "reply_box" rows="20" cols="60">
+								</textarea>
+								<button id="send_reply_btn"  class="styled">Send Reply</button>
+								<button id="cancel_reply_btn" class="styled">Cancel Reply</button>
+							</form>
+						</div>
+
+						<!-- End write reply section -->
+						<!-- Forward email section -->
+						<div id="forward_content">
+							<form class="forward_form">
+							<table>
+								<tr>
+									<td>To:</td>
+									<td><input type="email" name="forward_to"></td>
+								</tr>
+								<tr>
+									<td>From: </td>
+									<td><input type="email" name="forward_from"></td>
+								</tr>
+							</table>
+
+							<button id="send_forward_btn" class="styled">Forward Email</button>
+							<button id="cancel_forward_btn" class="styled">Cancel</button>
+						</div>
+					</form>
+						<!-- End forward email section -->
+					</div>
+					</td>
+				</tr>
 			</table>
-			<button onclick="not_yet_implemented()" class="styled">Delete</button>
-			<button onclick="not_yet_implemented()" class="styled">Reply</button>
-			<button onclick="not_yet_implemented()" class="styled">Forward</button>
-		</div>
+			<button id="delete_btn" class="styled">Delete</button>
+			<button id="reply_btn" class="styled">Reply</button>
+			<button id="forward_btn" class="styled">Forward</button>
+
+
+
 		<!-- modal-content -->
 	</div>
 	<!-- End of read email modal -->

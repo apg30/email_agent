@@ -643,3 +643,25 @@ td.read_email_param {
     text-align: right;
     width: 10em;
 }
+
+/* Style for replying to email etc.*/
+div#reply_content,
+div#forward_content {
+	display:none;
+	background-color:lightgrey;
+}
+
+button#send_reply_btn,
+button#cancel_reply_btn,
+button#send_forward_btn,
+button#cancel_forward_btn {
+	display:none;
+}
+
+.forward_form,
+.reply_form {
+	background-color: yellowgreen;
+	border-radius: 1em;
+	padding: 1em;
+}
+/* End of of style for replying to email etc. */
