@@ -21,17 +21,12 @@
 	<!--#include file="html/nav.html" -->
 	<main>
 		<div class="email-list">
-			<table class="email-toolbar">
-				<tr>
-					<td>
-						<button class="styled smaller_styled" type="button">Select All</button>
-						<button class="styled smaller_styled" type="button">Mark as read</button>
-						<button class="styled smaller_styled" type="button">Mark as unread</button>
-						<button class="styled smaller_styled" type="button">Mark as important</button>
-						<button class="styled smaller_styled" type="button">Delete selected</button> </td>
-					<td> </td>
-				</tr>
-			</table>
+
+				<button class="styled smaller_styled" type="button">Select All</button>
+				<button class="styled smaller_styled" type="button">Mark as read</button>
+				<button class="styled smaller_styled" type="button">Mark as unread</button>
+				<button class="styled smaller_styled" type="button">Mark as important</button>
+				<button class="styled smaller_styled" type="button">Delete selected</button>
 
 			<table class="email-inbox email">
 				<thead class="read_email">
@@ -52,6 +47,8 @@
 								"subject": "Cottage Cheese",
 								"content": "Dear Aidan,\r\nThe finest Cheese in all the land.\r\nCheers, Cheese Company Ltd.",
 								"to": "aidan@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
 								"from": "from@from.com",
 								"time": "24/10/1994 05:35",
 							},
@@ -60,6 +57,8 @@
 								"subject": "Important Meeting",
 								"content": "Test Content",
 								"to": "stuart@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
 								"from": "from@from.com",
 								"time": "24/10/2008 05:35"
 							},
@@ -68,6 +67,8 @@
 								"subject": "Please fill in this survey",
 								"content": "Test Content",
 								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
 								"from": "from@from.com",
 								"time": "24/01/2017 05:35"
 							},
@@ -76,6 +77,8 @@
 								"subject": "Free Amazon Voucher (after Questionnaire)",
 								"content": "Test Content",
 								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
 								"from": "from@from.com",
 								"time": "24/01/2017 05:35"
 							},
@@ -84,6 +87,8 @@
 								"subject": "Subjective Ideas",
 								"content": "Test Content",
 								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
 								"from": "from@from.com",
 								"time": "24/01/2017 05:35"
 							},
@@ -92,6 +97,8 @@
 								"subject": "Important Content",
 								"content": "Test Content",
 								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
 								"from": "from@from.com",
 								"time": "24/01/2017 05:35"
 							},
@@ -100,6 +107,8 @@
 								"subject": "RE: Job Offer",
 								"content": "Test Content",
 								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
 								"from": "from@from.com",
 								"time": "24/01/2017 05:35"
 							},
@@ -108,6 +117,8 @@
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
 								"from": "from@from.com",
 								"time": "24/01/2017 05:35"
 							},
@@ -116,6 +127,8 @@
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
 								"from": "from@from.com",
 								"time": "24/01/2017 05:35"
 							},
@@ -124,6 +137,8 @@
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
 								"from": "from@from.com",
 								"time": "24/01/2017 05:35"
 							},
@@ -132,6 +147,8 @@
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
 								"from": "from@from.com",
 								"time": "24/01/2017 05:35"
 							},
@@ -140,6 +157,8 @@
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
 								"from": "from@from.com",
 								"time": "24/01/2017 05:35"
 							},
@@ -148,6 +167,8 @@
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
 								"from": "from@from.com",
 								"time": "24/01/2017 05:35"
 							},
@@ -156,6 +177,8 @@
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
 								"from": "from@from.com",
 								"time": "24/01/2017 05:35"
 							},
@@ -164,6 +187,8 @@
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
 								"from": "from@from.com",
 								"time": "24/01/2017 05:35"
 							},
@@ -172,6 +197,8 @@
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
 								"from": "from@from.com",
 								"time": "24/01/2017 05:35"
 							},
@@ -180,6 +207,8 @@
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
 								"from": "from@from.com",
 								"time": "24/01/2017 05:35"
 							},
@@ -188,6 +217,8 @@
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
 								"from": "from@from.com",
 								"time": "24/01/2017 05:35"
 							},
@@ -196,6 +227,8 @@
 								"subject": "Test Subject",
 								"content": "Test Content",
 								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
 								"from": "from@from.com",
 								"time": "24/01/2017 05:35"
 							}
@@ -205,7 +238,6 @@
 							var email = emails[i];
 							var email_html = get_email_row_html(email);
 							document.write(email_html);
-							console.log("test");
 						}
 					</script>
 				</tbody>
@@ -254,12 +286,21 @@
 		<div class="modal-content">
 			<span class="close" id="compose_modal_close">&times;</span>
 			<form>
-				To:
-				<input type="email" name="email">
-				<br> From: email@email.com
-				<br> Subject:
-				<input type="text" name="subject">
-				<br>
+				<table>
+					<tr>
+						<td>To:</td><td><input id="compose_to_field" type="email" name="compose_to" multiple></td>
+					</tr>
+					<tr>
+						<td>CC:</td><td><input id="compose_cc_field" type="email" name="compose_cc" multiple></td>
+					</tr>
+					<tr>
+						<td>BCC:</td><td><input id="compose_bcc_field" type="email" name="compose_bcc" multiple></td>
+					</tr>
+					<tr>
+						<td>From:</td><td>email@email.com</td>
+					</tr>
+				</table>
+
 				<textarea rows="20" cols="60">
           Email content
         </textarea>
@@ -366,46 +407,60 @@
 	<!-- modal -->
 
 	<!-- The Read Email Modal -->
-<div id="read_email_modal" class="modal">
-	<!-- Modal content -->
-	<div class="modal-content">
-		<span class="close" id="read_email_modal_close">&times;</span>
-		<table>
-			<tr>
-				<td class="read_email_param">Subject:</td>
-				<td><span id="read_email_subject"></span></td>
+	<div id="read_email_modal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close" id="read_email_modal_close">&times;</span>
+			<div style="display:flex;">
+				<div>
+					<table>
+						<tr>
+							<td class="read_email_param">Subject:</td>
+							<td><span id="read_email_subject"></span></td>
+						</tr>
+						<tr>
+							<td class="read_email_param">To:</td>
+							<td><span id="read_email_to"></span></td>
+						</tr>
+						<tr>
+							<td class="read_email_param">CC:</td>
+							<td><span id="read_email_cc"></span></td>
+						</tr>
+						<tr>
+							<td class="read_email_param">BCC:</td>
+							<td><span id="read_email_bcc"></span></td>
+						</tr>
+						<tr>
+							<td class="read_email_param">From:</td>
+							<td><span id="read_email_from"></span></td>
+						</tr>
+						<tr>
+							<td colspan="2"><textarea id="read_email_content" rows="20" cols="60" readonly></textarea></td>
+						</tr>
 
-				<!-- Extra column for reply/forward forms -->
-				<td rowspan="4">
-					<!--#include file="html/reply_form.html" -->
-					<!--#include file="html/forward_form.html" -->
-				</td>
+					</table>
+				</div>
+			<div>
+			<!-- Extra column for reply/forward forms -->
 
-			</tr>
-			<tr>
-				<td class="read_email_param">To:</td>
-				<td><span id="read_email_to"></span></td>
-			</tr>
-			<tr>
-				<td class="read_email_param">From:</td>
-				<td><span id="read_email_from"></span></td>
-			</tr>
-			<tr>
-				<td colspan="2"><textarea id="read_email_content" rows="20" cols="60" readonly></textarea></td>
-			</tr>
-
-		</table>
-		<button id="delete_btn" class="styled">Delete</button>
-		<button id="reply_btn" class="styled">Reply</button>
-		<button id="forward_btn" class="styled">Forward</button>
-		<!-- modal-content -->
-	</div>
+				<!--#include file="html/reply_form.html" -->
+				<!--#include file="html/reply_all_form.html" -->
+				<!--#include file="html/forward_form.html" -->
+			</div>
+		</div>
+			<button id="delete_btn" class="styled">Delete</button>
+			<button id="reply_btn" class="styled">Reply</button>
+			<button id="reply_all_btn" class="styled">Reply All</button>
+			<button id="forward_btn" class="styled">Forward</button>
+	</div> <!-- modal-content -->
 </div>
 	<!-- End of read email modal -->
 
 	<!--#include file="html/footer.html" -->
 
+	<script src="js/email.js"></script>
 	<script src="js/scripts.js"></script>
+
 
 </body>
 
