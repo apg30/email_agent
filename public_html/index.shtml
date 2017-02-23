@@ -377,6 +377,7 @@
 			</table>
 			<button id="delete_btn" class="styled">Delete</button>
 			<button id="reply_btn" class="styled">Reply</button>
+			<button id="reply_all_btn" class="styled">Reply All</button>
 			<button id="forward_btn" class="styled">Forward</button>
 
 
