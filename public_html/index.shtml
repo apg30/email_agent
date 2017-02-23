@@ -21,7 +21,7 @@
 	<!--#include file="html/nav.html" -->
 	<main>
 		<div class="email-list">
-			<table cellspacing="2" cellpadding="2" class="email-toolbar">
+			<table class="email-toolbar">
 				<tr>
 					<td>
 						<button class="styled smaller_styled" type="button">Select All</button>
@@ -33,7 +33,7 @@
 				</tr>
 			</table>
 
-			<table cellspacing="2" cellpadding="2" class="email-inbox email">
+			<table class="email-inbox email">
 				<thead class="read_email">
 					<tr class="read_email">
 						<th class="read_email select">
