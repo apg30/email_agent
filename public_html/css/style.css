@@ -647,7 +647,7 @@ button.styled:active {
 /* Set widths of table columns for inbox etc. */
 
 td.actions, th.actions {
-    width: 12em;
+    width: 20em;
 }
 
 td.select, th.select {
