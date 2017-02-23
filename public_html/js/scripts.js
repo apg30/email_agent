@@ -231,6 +231,12 @@ function more_reply_function(email){
   show_reply_form();
 }
 
+//open the read modal and show forward options
+function more_forward_function(email){
+  display_message(email);
+  show_forward_form();
+}
+
 
 /********change backgrounds*******************/
 var backgrounds = new Array(
