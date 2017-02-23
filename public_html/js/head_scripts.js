@@ -20,7 +20,7 @@ function get_email_row_html(email) {
     email_html += "<button class = 'delete_button' onclick='not_yet_implemented();'></button>";
     email_html += "<div id='more_dropdown" + email.message_id + "' class='dropdown-content more-dropdown-content'>" +
 			            "<a id='more-reply-btn' onclick='more_reply_function(" + JSON.stringify(email) + ")'>Reply</a>" +
-	                "<a id='more-replyall-btn'>Reply All</a>" +
+                  "<a id='more-replyall-btn'>Reply All</a>" +
 			            "<a id='more-forward-btn' onclick='more_forward_function(" + JSON.stringify(email) + ")'>Forward</a>" +
 			            "<a id='more-markasread-btn' onclick='not_yet_implemented()'>Mark As Read</a>" +
 			            "<a id='more-moveto-btn' onclick='not_yet_implemented()'>Move To</a>" +

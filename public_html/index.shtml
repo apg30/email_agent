@@ -48,7 +48,7 @@
 				<tbody class="email read_email email-list-scroller">
 					<script>
 						var emails = [{
-							  "message_id": "123",
+								"message_id": "123",
 								"subject": "Cottage Cheese",
 								"content": "Dear Aidan,\r\nThe finest Cheese in all the land.\r\nCheers, Cheese Company Ltd.",
 								"to": "aidan@to.com",
@@ -385,9 +385,6 @@
 			<button id="delete_btn" class="styled">Delete</button>
 			<button id="reply_btn" class="styled">Reply</button>
 			<button id="forward_btn" class="styled">Forward</button>
-
-
-
 		<!-- modal-content -->
 	</div>
 	<!-- End of read email modal -->
