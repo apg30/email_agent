@@ -354,6 +354,13 @@
 				<tr>
 					<td class="read_email_param">Subject:</td>
 					<td><span id="read_email_subject"></span></td>
+
+					<!-- Extra column for reply/forward forms -->
+					<td rowspan="4">
+						<!--#include file="html/reply_form.html" -->
+						<!--#include file="html/forward_form.html" -->
+					</td>
+
 				</tr>
 				<tr>
 					<td class="read_email_param">To:</td>
@@ -366,42 +373,7 @@
 				<tr>
 					<td colspan="2"><textarea id="read_email_content" rows="20" cols="60" readonly></textarea></td>
 				</tr>
-				<tr>
-					<td colspan="2">
-						<!-- Write reply section -->
-						<div id="reply_content">
-							<form class="reply_form">
-								Reply:<br>
-								<textarea class= "reply_box" rows="20" cols="60">
-								</textarea>
-								<button id="send_reply_btn"  class="styled">Send Reply</button>
-								<button id="cancel_reply_btn" class="styled">Cancel Reply</button>
-							</form>
-						</div>
 
-						<!-- End write reply section -->
-						<!-- Forward email section -->
-						<div id="forward_content">
-							<form class="forward_form">
-							<table>
-								<tr>
-									<td>To:</td>
-									<td><input type="email" name="forward_to"></td>
-								</tr>
-								<tr>
-									<td>From: </td>
-									<td><input type="email" name="forward_from"></td>
-								</tr>
-							</table>
-
-							<button id="send_forward_btn" class="styled">Forward Email</button>
-							<button id="cancel_forward_btn" class="styled">Cancel</button>
-						</div>
-					</form>
-						<!-- End forward email section -->
-					</div>
-					</td>
-				</tr>
 			</table>
 			<button id="delete_btn" class="styled">Delete</button>
 			<button id="reply_btn" class="styled">Reply</button>
