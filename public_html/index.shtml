@@ -353,40 +353,41 @@
 	<!-- modal -->
 
 	<!-- The Read Email Modal -->
-	<div id="read_email_modal" class="modal">
-		<!-- Modal content -->
-		<div class="modal-content">
-			<span class="close" id="read_email_modal_close">&times;</span>
-			<table>
-				<tr>
-					<td class="read_email_param">Subject:</td>
-					<td><span id="read_email_subject"></span></td>
+<div id="read_email_modal" class="modal">
+	<!-- Modal content -->
+	<div class="modal-content">
+		<span class="close" id="read_email_modal_close">&times;</span>
+		<table>
+			<tr>
+				<td class="read_email_param">Subject:</td>
+				<td><span id="read_email_subject"></span></td>
 
-					<!-- Extra column for reply/forward forms -->
-					<td rowspan="4">
-						<!--#include file="html/reply_form.html" -->
-						<!--#include file="html/forward_form.html" -->
-					</td>
+				<!-- Extra column for reply/forward forms -->
+				<td rowspan="4">
+					<!--#include file="html/reply_form.html" -->
+					<!--#include file="html/forward_form.html" -->
+				</td>
 
-				</tr>
-				<tr>
-					<td class="read_email_param">To:</td>
-					<td><span id="read_email_to"></span></td>
-				</tr>
-				<tr>
-					<td class="read_email_param">From:</td>
-					<td><span id="read_email_from"></span></td>
-				</tr>
-				<tr>
-					<td colspan="2"><textarea id="read_email_content" rows="20" cols="60" readonly></textarea></td>
-				</tr>
+			</tr>
+			<tr>
+				<td class="read_email_param">To:</td>
+				<td><span id="read_email_to"></span></td>
+			</tr>
+			<tr>
+				<td class="read_email_param">From:</td>
+				<td><span id="read_email_from"></span></td>
+			</tr>
+			<tr>
+				<td colspan="2"><textarea id="read_email_content" rows="20" cols="60" readonly></textarea></td>
+			</tr>
 
-			</table>
-			<button id="delete_btn" class="styled">Delete</button>
-			<button id="reply_btn" class="styled">Reply</button>
-			<button id="forward_btn" class="styled">Forward</button>
+		</table>
+		<button id="delete_btn" class="styled">Delete</button>
+		<button id="reply_btn" class="styled">Reply</button>
+		<button id="forward_btn" class="styled">Forward</button>
 		<!-- modal-content -->
 	</div>
+</div>
 	<!-- End of read email modal -->
 
 	<!--#include file="html/footer.html" -->
