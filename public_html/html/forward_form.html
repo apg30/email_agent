@@ -1,18 +1,25 @@
 <!-- Forward email section -->
 <div id="forward_content">
-	<h1>Forward</h1>
 	<form class="forward_form">
+		<h1>Forward</h1>
 		<table>
 			<tr>
 				<td>To:</td>
 				<td><input type="email" name="forward_to"></td>
 			</tr>
 			<tr>
+				<td>CC:</td><td> <input id="reply_cc_field" type="email" name="reply_cc" multiple></td>
+			</tr>
+			<tr>
+				<td>BCC:</td><td>	<input id="reply_bcc_field" type="email" name="reply_bcc" multiple></td>
+			</tr>
+			<tr>
 				<td>From: </td>
 				<td><input type="email" name="forward_from"></td>
 			</tr>
 		</table>
-
+		<textarea class= "forward_box" rows="20" cols="60">
+		</textarea>
 		<button id="send_forward_btn" class="styled">Forward Email</button>
 		<button id="cancel_forward_btn" class="styled">Cancel</button>
 	</form>

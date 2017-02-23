@@ -48,6 +48,7 @@ function show_reply_all_form(){
 	//Display the reply buttons
 	document.getElementById("send_reply_all_btn").style.display = "inline";
 	document.getElementById("cancel_reply_all_btn").style.display = "inline";
+	return;
 }
 
 function hide_reply_all_form(){
@@ -74,6 +75,8 @@ function hide_reply_all_form(){
 
 function show_forward_form() {
 	hide_read_email_buttons();
+	hide_reply_form();
+	hide_reply_all_form();
 
 	//Display the reply text area
 	document.getElementById("forward_content").style.display = "inline";
@@ -116,6 +119,9 @@ cancel_reply_button.onclick = function() {
 var reply_all_button = document.getElementById('reply_all_btn');
 reply_all_button.onclick = function() {
 	show_reply_all_form();
+	//Set reply all to addresses to all from addresses + CC addresses
+	console.log(document.getElementById("reply_all_to_field").value);
+	document.getElementById("reply_all_to_field").value = document.getElementById("reply_all_to_field").value;
 }
 
 var cancel_reply_all_button = document.getElementById('cancel_reply_all_btn');

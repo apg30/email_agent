@@ -2,6 +2,17 @@
 <div id="reply_all_content">
 	<form class="reply_all_form">
 		<h1>Reply to all</h1>
+		<table>
+			<tr>
+				<td>To:</td><td><input id="reply_all_to_field" type="email" name="to_all" multiple></td>
+			</tr>
+			<tr>
+				<td>CC:</td><td> <input id="reply_all_cc_field" type="email" name="to_cc" multiple></td>
+			</tr>
+			<tr>
+				<td>BCC:</td><td>	<input id="reply_all_bcc_field" type="email" name="to_bcc" multiple></td>
+			</tr>
+		</table>
 		<textarea class= "reply_all_box" rows="20" cols="60">
 		</textarea>
 		<button id="send_reply_all_btn"  class="styled">Reply to All</button>

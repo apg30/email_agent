@@ -253,12 +253,21 @@
 		<div class="modal-content">
 			<span class="close" id="compose_modal_close">&times;</span>
 			<form>
-				To:
-				<input type="email" name="email">
-				<br> From: email@email.com
-				<br> Subject:
-				<input type="text" name="subject">
-				<br>
+				<table>
+					<tr>
+						<td>To:</td><td><input id="compose_to_field" type="email" name="compose_to" multiple></td>
+					</tr>
+					<tr>
+						<td>CC:</td><td><input id="compose_cc_field" type="email" name="compose_cc" multiple></td>
+					</tr>
+					<tr>
+						<td>BCC:</td><td><input id="compose_bcc_field" type="email" name="compose_bcc" multiple></td>
+					</tr>
+					<tr>
+						<td>From:</td><td>email@email.com</td>
+					</tr>
+				</table>
+
 				<textarea rows="20" cols="60">
           Email content
         </textarea>

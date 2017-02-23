@@ -2,6 +2,17 @@
 <div id="reply_content">
 	<form class="reply_form">
 		<h1>Reply</h1>
+		<table>
+			<tr>
+				<td>To:</td><td><input id="reply_to_field" type="email" name="reply_to" multiple></td>
+			</tr>
+			<tr>
+				<td>CC:</td><td> <input id="reply_cc_field" type="email" name="reply_cc" multiple></td>
+			</tr>
+			<tr>
+				<td>BCC:</td><td>	<input id="reply_bcc_field" type="email" name="reply_bcc" multiple></td>
+			</tr>
+		</table>
 		<textarea class= "reply_box" rows="20" cols="60">
 		</textarea>
 		<button id="send_reply_btn"  class="styled">Send Reply</button>
