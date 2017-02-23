@@ -320,7 +320,7 @@
 			<span class="close" id="chat_modal_close">&times;</span>
 			<table class="chat-top-table">
 				<tr>
-					<th>Chatters</th>
+					<th colspan="2">Chatters</th>
 				</tr>
 				<tr>
 					<td class="chat-menu-col">
