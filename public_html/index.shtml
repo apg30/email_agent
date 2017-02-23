@@ -21,13 +21,22 @@
 	<!--#include file="html/nav.html" -->
 	<main>
 		<div class="email-list">
+			<table class="email-toolbar">
+				<tr>
+					<td>
+						<button class="styled smaller_styled" type="button">Select All</button>
+						<button class="styled smaller_styled" type="button">Mark as read</button>
+						<button class="styled smaller_styled" type="button">Mark as unread</button>
+						<button class="styled smaller_styled" type="button">Mark as important</button>
+						<button class="styled smaller_styled" type="button">Delete selected</button> </td>
+					<td> </td>
+				</tr>
+			</table>
+
 			<table class="email-inbox email">
 				<thead class="read_email">
 					<tr class="read_email">
 						<th class="read_email select">
-							<div class="email-checkbox">
-								<input type="checkbox" value="1" id="email-checkbox1" name="select" />
-							</div>
 							Select
 						</th>
 						<th class="read_email from">From</th>
@@ -39,12 +48,12 @@
 				<tbody class="email read_email email-list-scroller">
 					<script>
 						var emails = [{
-							  "message_id": "123",
+								"message_id": "123",
 								"subject": "Cottage Cheese",
 								"content": "Dear Aidan,\r\nThe finest Cheese in all the land.\r\nCheers, Cheese Company Ltd.",
 								"to": "aidan@to.com",
 								"from": "from@from.com",
-								"time": "24/10/1994 05:35"
+								"time": "24/10/1994 05:35",
 							},
 							{
 								"message_id": "124",
@@ -196,7 +205,6 @@
 							var email = emails[i];
 							var email_html = get_email_row_html(email);
 							document.write(email_html);
-							console.log("test");
 						}
 					</script>
 				</tbody>
@@ -205,21 +213,19 @@
 		<!-- email-list-->
 	</main>
 
-<!-- The Help Modal -->
+	<!-- The Help Modal -->
 	<div id="help_modal" class="modal">
 		<!-- Modal content -->
 		<div class="modal-content">
 			<span class="close" id="help_modal_close">&times;</span>
 			<h1>Welcome to the help page</h1>
 			<p>
-				This page is designed to help you use this web application, YouWatt.
-				The below sections explain everything you need to know about YouWatt.
+				This page is designed to help you use this web application, YouWatt. The below sections explain everything you need to know about YouWatt.
 			</p>
 
 			<h2>Sending an email</h2>
 			<p>
-				If you seariously can't work out how to send an email using this thing,
-				then we probably have some major usability issues!
+				If you seariously can't work out how to send an email using this thing, then we probably have some major usability issues!
 			</p>
 
 			<h2>Reading your emails</h2>
@@ -241,19 +247,19 @@
 	</div>
 	<!-- End Help modal-->
 
-  <!-- The Compose Modal -->
-  <div id="compose_modal" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close" id="compose_modal_close">&times;</span>
-      <form>
-        To:
-        <input type="email" name="email">
-        <br> From: email@email.com
-        <br> Subject:
-        <input type="text" name="subject">
-        <br>
-        <textarea rows="20" cols="60">
+	<!-- The Compose Modal -->
+	<div id="compose_modal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close" id="compose_modal_close">&times;</span>
+			<form>
+				To:
+				<input type="email" name="email">
+				<br> From: email@email.com
+				<br> Subject:
+				<input type="text" name="subject">
+				<br>
+				<textarea rows="20" cols="60">
           Email content
         </textarea>
 				<br>
@@ -380,10 +386,6 @@
 			<button id="reply_btn" class="styled">Reply</button>
 			<button id="reply_all_btn" class="styled">Reply All</button>
 			<button id="forward_btn" class="styled">Forward</button>
-
-
-
-
 	</div> <!-- modal-content -->
 </div>
 	<!-- End of read email modal -->

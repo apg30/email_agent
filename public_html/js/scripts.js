@@ -143,6 +143,29 @@ inbox_button.onclick = function() {
 
 
 
+/* Mail more button functions*/
+
+var btns = document.getElementsByClassName("more-mail-btn");
+for (var i = 0; i < btns.length; i++){
+  btns[i].onclick = function(e){
+    console.log(e);
+    var id = e.target.id;
+    console.log(id);
+    moreDropdown(id);
+  }
+}
+
+//open the read modal and show the reply box
+function more_reply_function(email){
+  display_message(email);
+  show_reply_form();
+}
+
+//open the read modal and show forward options
+function more_forward_function(email){
+  display_message(email);
+  show_forward_form();
+}
 
 
 /********change backgrounds*******************/
