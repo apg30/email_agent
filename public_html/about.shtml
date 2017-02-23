@@ -25,17 +25,37 @@
 		<div class=class="modal advanced_search_modal">
       <h1>Email Agent</h1>
       <h2>Version</h2>
-      <p> You are running verson: 1.223.4542 </p>
-      <p> This is from branch: stable </p>
-      <p> Last commit: b0e4f90784050dc6c65e7693c135cc37388eff78 </p>
+      <p> If you are running the web app from the address <a href="http://www2.macs.hw.ac.uk/~cac30/">http://www2.macs.hw.ac.uk/~cac30/</a>
+			then you are running the latest version from branch stable. </p>
+
+			<img src="https://img.shields.io/github/release/qubyte/rubidium.svg"> <br>
+			<img src="https://img.shields.io/github/issues-raw/badges/shields/website.svg"> <br>
+			<img src="https://img.shields.io/github/commits-since/apg30/email_client/v0.1.0.svg"> <br>
+
+
+  		<h2>Bugs</h2>
+		  <p> We aim to make the software as robust as possible. If you discover what you believe to be a
+			we encourage you to report it on the repository</p>
+			<img src="https://img.shields.io/github/issues-pr/apg30/email_client.svg"> <br>
+			<img src="https://img.shields.io/github/issues-pr-closed/apg30/email_client.svg"> <br>
+			<img src="https://img.shields.io/github/issues/apg30/email_client.svg"> <br>
+
       <h2>Contribution</h2>
-      <p>This is an open source project. Follow the github  at https://github.com/apg30/email_agent</p>
+      <p>This is an open source project.  <a href="https://github.com/apg30/email_agent">Follow the github repository here.</a>
+				<br>
+				<img src="https://img.shields.io/github/forks/badges/shields.svg?style=social&label=Fork">
+				<img src="https://img.shields.io/github/followers/espadrine.svg?style=social&label=Follow">
+			  <img src="https://img.shields.io/github/downloads/apg30/email_client/total.svg">
+
+		</p>
       <h2>Donations</h2>
       <p>If you use this software and find it valuable please consider donating. Email cac30@hw.ac.uk with your
       bank account number, sort code, bank card number,pin number, that number on the back of the bank card and
       lastly your national insurance number.</p>
       <h2>Authors</h2>
       <p>This software was produced at Heriot Watt University.</p>
+			<br>
+			<img src="https://img.shields.io/github/contributors/apg30/email_client.svg"> <br>
 		</div>
 
 	</main>
