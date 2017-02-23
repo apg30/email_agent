@@ -26,18 +26,17 @@
 			<h2>Version</h2>
 			<p> If you are running the web app from the address: <a href="http://www2.macs.hw.ac.uk/~cac30/">http://www2.macs.hw.ac.uk/~cac30/</a> then you are running the latest version from branch stable. </p>
 			<img src="https://img.shields.io/github/release/qubyte/rubidium.svg"> <br>
-			<img src="https://img.shields.io/github/issues-raw/badges/shields/website.svg"> <br>
 			<img src="https://img.shields.io/github/commits-since/apg30/email_client/v0.1.0.svg"> <br>
 
 			<h2>Bugs</h2>
 			<p> We aim to make the software as robust as possible. If you discover what you believe to be a we encourage you to report it on the repository</p>
-			<img src="https://img.shields.io/github/issues-pr/apg30/email_client.svg"> <br>
-			<img src="https://img.shields.io/github/issues-pr-closed/apg30/email_client.svg"> <br>
 			<img src="https://img.shields.io/github/issues/apg30/email_client.svg"> <br>
 
 			<h2>Contribution</h2>
 			<p>This is an open source project. <a href="https://github.com/apg30/email_agent">Follow the github repository here.</a>
 				<br>
+				<img src="https://img.shields.io/github/issues-pr/apg30/email_client.svg"> <br>
+				<img src="https://img.shields.io/github/issues-pr-closed/apg30/email_client.svg"> <br>
 				<img src="https://img.shields.io/github/forks/badges/shields.svg?style=social&label=Fork">
 				<img src="https://img.shields.io/github/followers/espadrine.svg?style=social&label=Follow">
 				<img src="https://img.shields.io/github/downloads/apg30/email_client/total.svg">
@@ -76,14 +75,15 @@
 
 			<h2>Technologies</h2>
 			<p>No external files are used in YouWatt. All HTML, CSS and javascript components have been written by members of the group.
-				A conscience effort has been taken to avoid using Bootstrap,jQuery or Online HTML templates.
+				A conscience effort has been taken to avoid using Bootstrap,jQuery or Online HTML templates. <br>
+				<b>HTML5:</b> footer tag, header tag and nav tag. <br>
+				<b>CSS3:</b> transitions, animations, background resize and flex box.
 			</p>
 
 			<h2>Donations</h2>
 			<p>If you use this software and find it valuable please consider donating. Email cac30@hw.ac.uk with your bank account number, sort code, bank card number,pin number, that number on the back of the bank card and lastly your national insurance number.</p>
 
 		</div>
-
 	</main>
 
 	<!--#include file="html/footer.html" -->
