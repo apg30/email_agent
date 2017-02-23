@@ -25,7 +25,7 @@
 		<div class=class="modal advanced_search_modal">
       <h1>Email Agent</h1>
       <h2>Version</h2>
-      <p> If you are running the web app from the address <a href="http://www2.macs.hw.ac.uk/~cac30/">http://www2.macs.hw.ac.uk/~cac30/</a>
+      <p> If you are running the web app from the address: <a href="http://www2.macs.hw.ac.uk/~cac30/">http://www2.macs.hw.ac.uk/~cac30/</a>
 			then you are running the latest version from branch stable. </p>
 
 			<img src="https://img.shields.io/github/release/qubyte/rubidium.svg"> <br>
