@@ -131,16 +131,6 @@ window.onclick = function(event) {
     }
 }
 
-var btns = document.getElementsByClassName("more-mail-btn");
-for (var i = 0; i < btns.length; i++){
-  btns[i].onclick = function(e){
-    console.log(e);
-    var id = e.target.id;
-    console.log(id);
-    moreDropdown(id);
-  }
-}
-
 //Test message box
 var inbox_button = document.getElementById('inbox_button');
 inbox_button.onclick = function() {
@@ -223,6 +213,23 @@ cancel_forward_button.onclick = function() {
 	hide_forward_form();
 }
 
+/* Mail more button functions*/
+
+var btns = document.getElementsByClassName("more-mail-btn");
+for (var i = 0; i < btns.length; i++){
+  btns[i].onclick = function(e){
+    console.log(e);
+    var id = e.target.id;
+    console.log(id);
+    moreDropdown(id);
+  }
+}
+
+//open the read modal and show the reply box
+function more_reply_function(email){
+  display_message(email);
+  show_reply_form();
+}
 
 
 /********change backgrounds*******************/
