@@ -24,7 +24,7 @@
 	<main class="settings">
 			<table class="settings_table">
 				<tr>
-					<th colspan="2">Advanced Options</th>
+					<th colspan="2">Settings</th>
 				</tr>
 				<tr>
 					<td>Alias:</td>
