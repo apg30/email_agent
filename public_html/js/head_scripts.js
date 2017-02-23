@@ -65,7 +65,7 @@ function get_email_row_html(email) {
     email_html += email.time;
     email_html += '</td>';
     email_html += '<td class="read_email actions">';
-    email_html += "<button class ='styled' onclick='display_message(" + JSON.stringify(email) + ");'>Read</button>";
+    email_html += "<button class ='styled read-mail-btn' onclick='display_message(" + JSON.stringify(email) + ");'>Read</button>";
     email_html += "<button id='" + email.message_id + "' class ='styled more-mail-btn'>More</button>";
     email_html += "<button class = 'delete_button' onclick='not_yet_implemented();'></button>";
     email_html += "<div id='more_dropdown" + email.message_id + "' class='dropdown-content more-dropdown-content'>" +
