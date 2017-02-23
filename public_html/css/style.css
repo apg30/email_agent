@@ -397,10 +397,6 @@ tbody td:last-child, thead th:last-child {
     border-right: none !important;
 }
 
-td, th {
-    width: 20em;
-}
-
 
 /* Email table border raduis */
 
@@ -429,12 +425,14 @@ tbody td:last-child {
 tbody.read_email tr.read_email td.read_email {
     background: lightgray;
     color: black;
+    width: 20em;
 }
 
 thead.read_email tr.read_email th.read_email {
     background: lightgray;
     color: black;
     text-align: center;
+        width: 20em;
 }
 
 
@@ -471,13 +469,16 @@ div.email-list {
     width: 100%;
 }
 
-.email-toolbar {
+table.email-toolbar {
     background: lightgray;
     border-radius: 0.6em 0.6em 0.6em 0.6em;
     border-collapse: collapse;
     border-spacing: 0;
     white-space: nowrap;
     width: 100%;
+}
+td.email-toolbar{
+  white-space:nowrap
 }
 
 .email-checkbox {

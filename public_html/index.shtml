@@ -21,17 +21,12 @@
 	<!--#include file="html/nav.html" -->
 	<main>
 		<div class="email-list">
-			<table class="email-toolbar">
-				<tr>
-					<td>
-						<button class="styled smaller_styled" type="button">Select All</button>
-						<button class="styled smaller_styled" type="button">Mark as read</button>
-						<button class="styled smaller_styled" type="button">Mark as unread</button>
-						<button class="styled smaller_styled" type="button">Mark as important</button>
-						<button class="styled smaller_styled" type="button">Delete selected</button> </td>
-					<td> </td>
-				</tr>
-			</table>
+
+				<button class="styled smaller_styled" type="button">Select All</button>
+				<button class="styled smaller_styled" type="button">Mark as read</button>
+				<button class="styled smaller_styled" type="button">Mark as unread</button>
+				<button class="styled smaller_styled" type="button">Mark as important</button>
+				<button class="styled smaller_styled" type="button">Delete selected</button>
 
 			<table class="email-inbox email">
 				<thead class="read_email">
