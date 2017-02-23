@@ -647,7 +647,7 @@ button.styled:active {
 /* Set widths of table columns for inbox etc. */
 
 td.actions, th.actions {
-    width: 12em;
+    width: 20em;
 }
 
 td.select, th.select {
@@ -664,6 +664,10 @@ td.read_email_param {
     text-align: right;
     width: 10em;
 }
+
+.settings{
+  margin-bottom: 5em;
+  }
 
 /* Style for replying to email etc.*/
 div#reply_content,
