@@ -18,7 +18,7 @@
 	<!--#include file="html/header.html" -->
 	<!--#include file="html/nav.html" -->
 	<main class="settings">
-		<div class=class="modal advanced_search_modal">
+		<div class="modal advanced_search_modal">
 			<h1>About</h1>
 			<h2>Overview</h2>
 			<p>YouWatt is designed to be a simple email client with an inbuilt chat feature. </p>
@@ -29,18 +29,18 @@
 
 			<h2>Bugs</h2>
 			<p> We aim to make YouWatt as robust as possible. If you discover what you believe to be a bug then we strongly encourage you to report it as an issue on the <a href="https://github.com/apg30/email_agent">github repository</a>.</p>
-			<img src="https://img.shields.io/github/issues-closed/apg30/email_agent.svg"> <br>
-			<img src="https://img.shields.io/github/issues-raw/apg30/email_agent.svg">
+			<img src="https://img.shields.io/github/issues-closed/apg30/email_agent.svg" alt="closed issues badge"> <br>
+			<img src="https://img.shields.io/github/issues-raw/apg30/email_agent.svg" alt="all issues badge">
 
 
 			<h2>Contribution</h2>
 			<p>This is an open source project. We encourage users to send pull requests if they are interested in contributing to the system. You can follow <a href="https://github.com/apg30/email_agent">the github repository here.</a></p>
-				<img src="https://img.shields.io/github/issues-pr/apg30/email_agent.svg"> <br>
-				<img src="https://img.shields.io/github/issues-pr-closed/apg30/email_agent.svg"> <br>
-				<img src="https://img.shields.io/github/forks/apg30/email_agent.svg">
-				<img src="https://img.shields.io/github/stars/apg30/email_agent.svg">
-				<img src="https://img.shields.io/github/watchers/apg30/email_agent.svg">
-				<img src="https://img.shields.io/github/downloads/apg30/email_agent/total.svg">
+				<img src="https://img.shields.io/github/issues-pr/apg30/email_agent.svg" alt="pull requests badge"> <br>
+				<img src="https://img.shields.io/github/issues-pr-closed/apg30/email_agent.svg" alt="closed pull requests badge"> <br>
+				<img src="https://img.shields.io/github/forks/apg30/email_agent.svg" alt="github forks badge">
+				<img src="https://img.shields.io/github/stars/apg30/email_agent.svg"  alt="github stars badge">
+				<img src="https://img.shields.io/github/watchers/apg30/email_agent.svg"  alt="github watchers badge">
+				<img src="https://img.shields.io/github/downloads/apg30/email_agent/total.svg"  alt="github downloads badge">
 
 			<h2>Links</h2>
 			<p>The website is comprised of the following pages: </p>
