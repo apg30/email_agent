@@ -612,10 +612,13 @@ button.styled:active {
     border: solid 1px #203E5F;
 }
 
+.read-mail-btn{
+  float: left;
+}
 /* Delete Mail Button*/
 
 .delete_button{
-  float: right;
+  float: left;
   background: #4479BA;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -644,6 +647,10 @@ button.styled:active {
 
 .dropdown-content a:hover {
     background-color: #f1f1f1
+}
+
+.more-mail-btn{
+  float: left;
 }
 /* Set widths of table columns for inbox etc. */
 
@@ -695,3 +702,33 @@ button#cancel_forward_btn {
 	padding: 1em;
 }
 /* End of of style for replying to email etc. */
+
+/* chat modal */
+.chat-top-table{
+  width: 100%;
+}
+
+.chat-menu-col{
+  width: 10%;
+}
+
+.chat-message-row{
+  margin: 1em;
+}
+
+.message-underline{
+  border-bottom: 1px dotted #B3A9A9;
+  padding: 0.25em;
+}
+
+.poster-col{
+  width: 15%;
+}
+
+.message-col{
+  width: 70%;
+}
+
+.time-col{
+  width: 15%;
+}
