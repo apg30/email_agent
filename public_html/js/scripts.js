@@ -138,6 +138,84 @@ inbox_button.onclick = function() {
     message("error", "testing");
 }
 
+function show_reply_form(){
+	//Hide the buttons that are no longer relevant
+	document.getElementById("delete_btn").style.display = "none";
+	document.getElementById("reply_btn").style.display = "none";
+	document.getElementById("forward_btn").style.display = "none";
+
+	//Display the reply text area
+	document.getElementById("reply_content").style.display = "inline";
+
+	//Display the reply buttons
+	document.getElementById("send_reply_btn").style.display = "inline";
+	document.getElementById("cancel_reply_btn").style.display = "inline";
+}
+
+var reply_button = document.getElementById('reply_btn');
+reply_button.onclick = function() {
+	show_reply_form();
+}
+
+function hide_reply_form(){
+	//Hide the buttons that are no longer relevant
+	document.getElementById("delete_btn").style.display = "inline";
+	document.getElementById("reply_btn").style.display = "inline";
+	document.getElementById("forward_btn").style.display = "inline";
+
+	//Display the reply text area
+	document.getElementById("reply_content").style.display = "none";
+	//Hide all the stuff we shown for the reply option
+	//Display the reply buttons
+	document.getElementById("send_reply_btn").style.display = "none";
+	document.getElementById("cancel_reply_btn").style.display = "none";
+}
+
+var cancel_reply_button = document.getElementById('cancel_reply_btn');
+cancel_reply_button.onclick = function() {
+	hide_reply_form();
+}
+
+function show_forward_form() {
+	//Hide the buttons that are no longer relevant
+	document.getElementById("delete_btn").style.display = "none";
+	document.getElementById("reply_btn").style.display = "none";
+	document.getElementById("forward_btn").style.display = "none";
+
+	//Display the reply text area
+	document.getElementById("forward_content").style.display = "inline";
+
+	//Display the reply buttons
+	document.getElementById("send_forward_btn").style.display = "inline";
+	document.getElementById("cancel_forward_btn").style.display = "inline";
+}
+
+var forward_button = document.getElementById('forward_btn');
+forward_button.onclick = function() {
+	show_forward_form();
+}
+
+function hide_forward_form() {
+	//Hide the buttons that are no longer relevant
+	document.getElementById("delete_btn").style.display = "inline";
+	document.getElementById("reply_btn").style.display = "inline";
+	document.getElementById("forward_btn").style.display = "inline";
+
+	//Display the reply text area
+	document.getElementById("forward_content").style.display = "none";
+	//Hide all the stuff we shown for the reply option
+	//Display the reply buttons
+	document.getElementById("send_forward_btn").style.display = "none";
+	document.getElementById("cancel_forward_btn").style.display = "none";
+}
+
+var cancel_forward_button = document.getElementById('cancel_forward_btn');
+cancel_forward_button.onclick = function() {
+	hide_forward_form();
+}
+
+
+
 /********change backgrounds*******************/
 var backgrounds = new Array(
     'url(img/backgrounds/01.jpg)', 'url(img/backgrounds/02.jpg)', 'url(img/backgrounds/03.jpg)', 'url(img/backgrounds/04.jpg)', 'url(img/backgrounds/05.jpg)', 'url(img/backgrounds/06.jpg)', 'url(img/backgrounds/08.jpg)', 'url(img/backgrounds/10.jpg)', 'url(img/backgrounds/11.jpg)', 'url(img/backgrounds/12.jpg)'
