@@ -60,7 +60,7 @@ footer {
     background-color: #c1ceb8;
     /* Footer text is centred */
     text-align: left;
-    font-size: medfium;
+    font-size: medium;
     float: left;
     padding-left: 1%;
     padding-top: 0.3%;
@@ -567,10 +567,10 @@ table.email-inbox {
     font-size: 150%;
 }
 
-
 /* Message read*/
 
 button.styled {
+    margin: 0.25em;
     padding: 10px 15px;
     background: #4479BA;
     color: #FFF;
@@ -588,7 +588,6 @@ button.styled {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
 }
 
 button.smaller_styled {
@@ -612,11 +611,43 @@ button.styled:active {
     border: solid 1px #203E5F;
 }
 
+/* Delete Mail Button*/
 
+.delete_button{
+  float: right;
+  background: #4479BA;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: solid 1px #20538D;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  background-image: url('../img/icons/delete.png');
+  background-size: 2em;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 1.3em 1.3em;
+  margin: 0.25em;
+  outline: none;
+}
+
+
+/* More Mail Button*/
+
+.more-dropdown-content {
+    position: inherit;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
 /* Set widths of table columns for inbox etc. */
 
 td.actions, th.actions {
-    width: 10em;
+    width: 12em;
 }
 
 td.select, th.select {
@@ -637,3 +668,25 @@ td.read_email_param {
 .settings{
   margin-bottom: 5em;
   }
+
+/* Style for replying to email etc.*/
+div#reply_content,
+div#forward_content {
+	display:none;
+	background-color:lightgrey;
+}
+
+button#send_reply_btn,
+button#cancel_reply_btn,
+button#send_forward_btn,
+button#cancel_forward_btn {
+	display:none;
+}
+
+.forward_form,
+.reply_form {
+	background-color: yellowgreen;
+	border-radius: 1em;
+	padding: 1em;
+}
+/* End of of style for replying to email etc. */
