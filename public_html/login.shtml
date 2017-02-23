@@ -10,6 +10,7 @@
 
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/head_scripts.js"></script>
+	<script src="js/login.js"></script>
 	<!-- Hide some header elements -->
 	<style>
 		form.email_search,
@@ -27,26 +28,43 @@
 <body>
 	<!--#include file="html/header.html" -->
 	<main class="login">
-		<div class="login">
-			<form method="post" onSubmit="validate_login()" class="login" name="login_form">
-				<p><input type="text" name="username" value="" placeholder="Username"></p>
-				<p><input type="password" name="password" value="" placeholder="Password"></p>
-				<p class="remember_me">
-					<label>
-							<input type="checkbox" name="remember_me" id="remember_me">
-							Remember me on this computer
-						</label>
-				</p>
-				<p class="submit"><input type="submit" name="commit" value="Login"></p>
-			</form>
-			<button class="styled" onClick="not_yet_implemented()">test</button>
-		</div>
-
+		<table>
+			<tr>
+				<th class="login-page-header">Login</th>
+				<th class="login-page-header">Register</th>
+			</tr>
+			<tr>
+				<td>
+					<div class="login">
+						<form method="post" action="index.shtml" class="login" name="login_form">
+							<p><input type="text" name="username" value="" placeholder="Username"></p>
+							<p><input type="password" name="password" value="" placeholder="Password"></p>
+							<p class="remember_me">
+								<label>
+										<input type="checkbox" name="remember_me" id="remember_me">
+									Remember me on this computer
+								</label>
+							</p>
+							<p class="submit"><input type="submit" name="commit" value="Login"></p>
+						</form>
+					</div>
+				</td>
+				<td>
+					<div class="register">
+						<form method="post" action="/index.shtml" class="register" name="register_form">
+							<p><input type="text" name="email" value="" placeholder="Email..."></p>
+							<p><input type="text" name="username" value="" placeholder="Username"></p>
+							<p><input type="password" name="create-password" value="" placeholder="Create Password"></p>
+							<p><input type="password" name="confirm-password" value="" placeholder="Confirm Password"></p>
+							<p class="submit"><input type="submit" name="commit-register" value="Register"></p>
+						</form>
+					</div>
+				</td>
+			</tr>
+		</table>
 	</main>
 
 	<!--#include file="html/footer.html" -->
-
-	<script src="js/scripts.js"></script>
 
 </body>
 
