@@ -10,9 +10,10 @@ main {
     display: inline-block;
     background-color: white;
     width: 80%;
-    margin-left: 2em;
+    margin-left: 1em;
     padding: 1em;
-    margin-top: 2em;
+    margin-top: 1em;
+    border-radius: 1.7em;
 }
 
 main.login {
@@ -383,7 +384,7 @@ table.email-inbox tbody, table.email-inbox {
 }
 
 table.email-inbox tbody {
-    height: 20em;
+    height: 35em;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -398,7 +399,6 @@ tbody td:last-child, thead th:last-child {
 
 td, th {
     width: 20em;
-    padding: 0.5em 1em;
 }
 
 
@@ -428,12 +428,13 @@ tbody td:last-child {
 
 tbody.read_email tr.read_email td.read_email {
     background: lightgray;
-    color: #81b71a;
+    color: black;
 }
 
 thead.read_email tr.read_email th.read_email {
     background: lightgray;
-    color: #81b71a;
+    color: black;
+    text-align: center;
 }
 
 
@@ -468,6 +469,20 @@ tbody.read_email tr.read_email:hover td:last-child {
 
 div.email-list {
     width: 100%;
+}
+
+.email-toolbar {
+    background: lightgray;
+    border-radius: 0.6em 0.6em 0.6em 0.6em;
+    border-collapse: collapse;
+    border-spacing: 0;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.email-checkbox {
+    text-align: center;
+    vertical-align: middle;
 }
 
 table.email-inbox {
@@ -574,6 +589,13 @@ button.styled {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+button.smaller_styled {
+    padding: 0.2em 0.2em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 0.5em;
 }
 
 button.styled:hover {
