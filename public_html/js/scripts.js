@@ -116,6 +116,11 @@ function more_reply_function(email){
   show_reply_form();
 }
 
+function more_replyall_function(email){
+  display_message(email);
+  show_reply_all_form();
+}
+
 //open the read modal and show forward options
 function more_forward_function(email){
   display_message(email);
