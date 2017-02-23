@@ -8,7 +8,14 @@
 	<meta name="author" content="Cameron A. Craig, Stuart J. Thain, Aidan P. Gallagher, Lee Hamilton">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/head_scripts.js"></script>
-	<!-- Hide some header elements -->
+	<!-- Hide some nav elements -->
+	<style>
+	#compose_button,
+	#chat_button {
+		display:none;
+	}
+	</style>
+
 	<!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
