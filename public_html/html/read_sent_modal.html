@@ -1,0 +1,39 @@
+<!-- The Read Email Modal -->
+<div id="read_sent_modal" class="modal">
+	<!-- Modal content -->
+	<div class="modal-content">
+		<span class="close" id="read_sent_modal_close">&times;</span>
+		<table>
+			<tr>
+				<td class="read_email_param">Subject:</td>
+				<td><span id="read_sent_subject"></span></td>
+			</tr>
+			<tr>
+				<td class="read_email_param">To:</td>
+				<td><span id="read_sent_to"></span></td>
+			</tr>
+			<tr>
+				<td class="read_email_param">CC:</td>
+				<td><span id="read_sent_cc"></span></td>
+			</tr>
+			<tr>
+				<td class="read_email_param">BCC:</td>
+				<td><span id="read_sent_bcc"></span></td>
+			</tr>
+			<tr>
+				<td class="read_email_param">From:</td>
+				<td><span id="read_sent_from"></span></td>
+			</tr>
+			<tr>
+				<td colspan="2"><textarea id="read_sent_content" rows="20" cols="60" readonly></textarea></td>
+			</tr>
+		</table>
+		<br>
+		<button id="read_sent_forward_btn" class="styled">Forward</button>
+		<button id="read_sent_reply_btn" class="styled">Reply</button>
+		<button id="read_sent_delete_btn" class="styled">Delete</button>
+		<button id="read_sent_close_btn" class="styled">Close</button>
+	</div>
+
+</div>
+<!-- modal-content -->

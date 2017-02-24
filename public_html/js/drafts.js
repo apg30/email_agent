@@ -9,27 +9,34 @@ function edit_draft(email_message_json) {
 				hide_all_email_forms();
     }
 
-    var subject = document.getElementById('edit_draft_email_subject');
+    var subject = document.getElementById('edit_draft_subject');
     subject.innerHTML = email_message_json.subject;
 
-    var to = document.getElementById('read_email_to');
+    var to = document.getElementById('edit_draft_to');
     to.innerHTML = email_message_json.to;
 
-		var cc = document.getElementById('read_email_cc');
+		var cc = document.getElementById('edit_draft_cc');
     cc.innerHTML = email_message_json.cc;
 
-		var bcc = document.getElementById('read_email_bcc');
+		var bcc = document.getElementById('edit_draft_bcc');
 		bcc.innerHTML = email_message_json.bcc;
 
-    var from = document.getElementById('read_email_from');
+    var from = document.getElementById('edit_draft_from');
     from.innerHTML = email_message_json.from;
 
-    var content = document.getElementById('read_email_content');
+    var content = document.getElementById('edit_draft_content');
     content.innerHTML = email_message_json.content;
 
     // Display modal
     modal.style.display = "block";
     return true;
+}
+
+function delete_draft(email_message_json) {
+	if(confirm("Are you sure you want to delete?")){
+		//Ajax call to server to delete email
+	}
+  return true;
 }
 
 /* Takes in email JSON and returns HTML to display email in inbox */
@@ -72,6 +79,6 @@ function set_drafts(emails){
 document.getElementById("drafts_button").onclick = function() {
 	//emails is a global set in index.html
 	console.log(emails);
-set_drafts(emails);
+	set_drafts(emails);
 
 }
