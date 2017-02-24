@@ -13,6 +13,7 @@ main {
     margin-left: 1em;
     padding: 1em;
     margin-top: 1em;
+    margin-bottom: 5em;
     border-radius: 1.7em;
 }
 
@@ -536,7 +537,13 @@ table.email-inbox {
     width: 80%;
     /* Could be more or less, depending on screen size */
 }
-
+.chat-modal{
+  position: absolute;
+  bottom: 0;
+  padding: 0;
+  margin-left:10%;
+  margin-bottom: 5.8em;
+}
 
 /* The close button at top rght of modal window*/
 
@@ -697,6 +704,15 @@ button.compose-nav{
   float: left;
   width: 11.5em;
   margin-top: 2.5em;
+}
+
+button.chat-btn{
+  display: inline-block;
+  float: left;
+  width: 11.5em;
+  margin-bottom: 4em;
+  position: absolute;
+  bottom: 0;
 }
 
 .settings{

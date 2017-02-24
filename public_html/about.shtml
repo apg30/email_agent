@@ -27,7 +27,7 @@
 	<main class="settings">
 			<h1>About</h1>
 			<h2>Overview</h2>
-			<p>YouWatt is designed to be a simple email client with an inbuilt chat feature. </p>
+			<p>YouWatt is designed to be a relavity simple email client with an inbuilt chat feature. </p>
 
 			<h2>Version</h2>
 			<p> If you are running the web app from the address: <a href="http://www2.macs.hw.ac.uk/~cac30/">http://www2.macs.hw.ac.uk/~cac30/</a> then you are running the latest version from <img src="https://img.shields.io/badge/Branch-stable-green.svg" alt="branch badge"> </p>
@@ -80,7 +80,10 @@
 				<img src="https://img.shields.io/github/contributors/apg30/email_agent.svg" alt="contributors to repository">
 
 			<h2>Technologies</h2>
-			<p>No external files are used in YouWatt. All HTML, CSS and javascript components have been written by members of the group. A conscience effort has been taken to avoid using Bootstrap,jQuery or Online HTML templates. The developers have tried to include
+			<p>No external files are used in YouWatt. All HTML, CSS and javascript components have been written by members of the group. SHTML files
+				are used to tell the web server the files should be processed using Server Side Includes (SSI). The SHTML features are used to include
+				common features across all the pages; the common features are the header, footer and navigation bar.
+				A conscience effort has been taken to avoid using Bootstrap,jQuery or Online HTML templates. The developers have tried to include
 				new technologies from HTML5 and CSS3. Below are some the new components used in the system.<br>
 				<b>HTML5:</b> footer tag, header tag and nav tag. <br>
 				<b>CSS3:</b> transitions, animations, background resize and flex box.
