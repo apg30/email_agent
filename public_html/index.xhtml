@@ -1,0 +1,474 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Email Client</title>
+	<meta name="description" content="Email client">
+	<meta name="author" content="Cameron A. Craig, Stuart J. Thain, Aidan P. Gallagher, Lee A. Hamilton">
+
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/head.js"></script>
+
+	<!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+	<!--#include file="html/header.html" -->
+	<!--#include file="html/nav.html" -->
+	<main>
+		<div class="email-list">
+
+				<button class="styled smaller_styled" type="button">Select All</button>
+				<button class="styled smaller_styled" type="button">Mark as read</button>
+				<button class="styled smaller_styled" type="button">Mark as unread</button>
+				<button class="styled smaller_styled" type="button">Mark as important</button>
+				<button class="styled smaller_styled" type="button">Delete selected</button>
+
+			<table class="email-inbox email">
+				<thead class="read_email">
+					<tr class="read_email">
+						<th class="read_email select">
+							Select
+						</th>
+						<th id="email_col_2" class="read_email from">From</th>
+						<th class="read_email subject">Subject</th>
+						<th class="read_email time">Time</th>
+						<th class="read_email actions">Actions</th>
+					</tr>
+				</thead>
+				<tbody id="email_table_body" class="email read_email email-list-scroller">
+					<script>
+						var emails = [{
+								"message_id": "123",
+								"subject": "Cottage Cheese",
+								"content": "Dear Aidan,\r\nThe finest Cheese in all the land.\r\nCheers, Cheese Company Ltd.",
+								"to": "aidan@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
+								"from": "from@from.com",
+								"time": "24/10/1994 05:35",
+							},
+							{
+								"message_id": "124",
+								"subject": "Important Meeting",
+								"content": "Test Content",
+								"to": "stuart@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
+								"from": "from@from.com",
+								"time": "24/10/2008 05:35"
+							},
+							{
+								"message_id": "125",
+								"subject": "Please fill in this survey",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"message_id": "126",
+								"subject": "Free Amazon Voucher (after Questionnaire)",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"message_id": "127",
+								"subject": "Subjective Ideas",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"message_id": "128",
+								"subject": "Important Content",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"message_id": "129",
+								"subject": "RE: Job Offer",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"message_id": "130",
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"message_id": "131",
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"message_id": "132",
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"message_id": "133",
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"message_id": "134",
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"message_id": "135",
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"message_id": "136",
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"message_id": "137",
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"message_id": "138",
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"message_id": "139",
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"message_id": "140",
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							},
+							{
+								"message_id": "141",
+								"subject": "Test Subject",
+								"content": "Test Content",
+								"to": "cameron@to.com",
+								"cc": "cctest@test.com",
+								"bcc": "cctest@test.com",
+								"from": "from@from.com",
+								"time": "24/01/2017 05:35"
+							}
+						];
+
+						for (var i = 0; i < emails.length; i++) {
+							var email = emails[i];
+							var email_html = get_email_row_html(email);
+							document.write(email_html);
+						}
+					</script>
+				</tbody>
+			</table>
+		</div>
+		<!-- email-list-->
+	</main>
+
+	<!-- The Help Modal -->
+	<div id="help_modal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close" id="help_modal_close">&times;</span>
+			<h1>Welcome to the help page</h1>
+			<p>
+				This page is designed to help you use this web application, YouWatt. The below sections explain everything you need to know about YouWatt.
+			</p>
+
+			<h2>Sending an email</h2>
+			<p>
+				If you seariously can't work out how to send an email using this thing, then we probably have some major usability issues!
+			</p>
+
+			<h2>Reading your emails</h2>
+			<p>
+				Navigate your way to the inbox, your email is displayed in a table.
+			</p>
+
+			<h2>IMAP settings</h2>
+			<p>
+				Hmmm, should be on the settings page.
+			</p>
+
+			<h2>POP Settings</h2>
+			<p>
+				This should also be on the settings page.
+			</p>
+		</div>
+		<!-- modal-content -->
+	</div>
+	<!-- End Help modal-->
+
+	<!-- The Compose Modal -->
+	<div id="compose_modal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close" id="compose_modal_close">&times;</span>
+			<form>
+				<table>
+					<tr>
+						<td>To:</td><td><input id="compose_to_field" type="email" name="compose_to" multiple></td>
+					</tr>
+					<tr>
+						<td>CC:</td><td><input id="compose_cc_field" type="email" name="compose_cc" multiple></td>
+					</tr>
+					<tr>
+						<td>BCC:</td><td><input id="compose_bcc_field" type="email" name="compose_bcc" multiple></td>
+					</tr>
+					<tr>
+						<td>From:</td><td>email@email.com</td>
+					</tr>
+				</table>
+
+				<textarea rows="20" cols="60">
+          Email content
+        </textarea>
+				<br>
+				<input type="file" class="styled" multiple>
+				<button class="styled" onclick="not_yet_implemented()">Send</button>
+			</form>
+		</div>
+		<!-- modal-content -->
+	</div>
+	<!-- End compose modal-->
+
+	<!-- The Read Email Modal -->
+	<div id="read_email_modal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close" id="read_email_modal_close">&times;</span>
+			<div style="display:flex;">
+				<div>
+					<table>
+						<tr>
+							<td class="read_email_param">Subject:</td>
+							<td><span id="read_email_subject"></span></td>
+						</tr>
+						<tr>
+							<td class="read_email_param">To:</td>
+							<td><span id="read_email_to"></span></td>
+						</tr>
+						<tr>
+							<td class="read_email_param">CC:</td>
+							<td><span id="read_email_cc"></span></td>
+						</tr>
+						<tr>
+							<td class="read_email_param">BCC:</td>
+							<td><span id="read_email_bcc"></span></td>
+						</tr>
+						<tr>
+							<td class="read_email_param">From:</td>
+							<td><span id="read_email_from"></span></td>
+						</tr>
+						<tr>
+							<td colspan="2"><textarea id="read_email_content" rows="20" cols="60" readonly></textarea></td>
+						</tr>
+
+					</table>
+				</div>
+			<div>
+			<!-- Extra column for reply/forward forms -->
+
+				<!--#include file="html/reply_form.html" -->
+				<!--#include file="html/reply_all_form.html" -->
+				<!--#include file="html/forward_form.html" -->
+			</div>
+		</div>
+			<button id="delete_btn" class="styled">Delete</button>
+			<button id="reply_btn" class="styled">Reply</button>
+			<button id="reply_all_btn" class="styled">Reply All</button>
+			<button id="forward_btn" class="styled">Forward</button>
+	</div> <!-- modal-content -->
+</div>
+	<!-- End of read email modal -->
+
+	<!-- The Chat Modal -->
+	<div id="chat_modal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content chat-modal">
+			<span class="close" id="chat_modal_close">&times;</span>
+			<table class="chat-top-table">
+				<tr>
+					<th colspan="2">Chatters</th>
+				</tr>
+				<tr>
+					<td class="chat-menu-col">
+						<div class="chat_menu">
+							<ul class="chat-nav basic-nav">
+								<li class="basic-nav chat-nav"><a href="#todo">Cameron</a></li>
+								<li class="basic-nav chat-nav"><a href="#todo">Stuart</a></li>
+								<li class="basic-nav chat-nav"><a href="#todo">Lee</a></li>
+								<li class="basic-nav chat-nav"><a href="#todo">Aidan</a></li>
+								<li class="basic-nav chat-nav"><a href="#todo">Trump</a></li>
+							</ul>
+						</div>
+					</td>
+					<td>
+						<table>
+							<tr>
+								<th>User</th>
+								<th>Message</th>
+								<th>Time</th>
+							</tr>
+							<tr>
+								<td class="poster-col message-underline">
+									<div class="chat_box">
+												<div class="chat-body clearfix">
+													<div class="header">
+														<strong class="primary-font">Jack Sparrow</strong>
+													</div>
+												</div>
+									</div>
+								</td>
+								<td class="message-col message-underline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</td>
+								<td class="time-col message-underline">12 Mins ago</td>
+							</tr>
+							<tr>
+								<td class="poster-col message-underline">
+									<div class="chat_box">
+												<div class="chat-body clearfix">
+													<div class="header">
+														<strong class="primary-font">Bhaumik Patel</strong>
+													</div>
+												</div>
+									</div>
+								</td>
+								<td class="message-col message-underline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</td>
+								<td class="time-col message-underline">13 mins ago</td>
+							</tr>
+							<tr>
+								<td class="poster-col message-underline">
+									<div class="chat_box">
+												<div class="chat-body clearfix">
+													<div class="header">
+														<strong class="primary-font">Jack Sparrow</strong>
+													</div>
+												</div>
+									</div>
+								</td>
+								<td class="message-col message-underline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</td>
+								<td class="time-col message-underline">14 mins ago</td>
+							</tr>
+							<tr>
+								<td class="poster-col message-underline">
+									<div class="chat_box">
+												<div class="chat-body clearfix">
+													<div class="header">
+														<strong class="primary-font">Bhaumik Patel</strong>
+													</div>
+												</div>
+									</div>
+								</td>
+								<td class="message-col message-underline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</td>
+								<td class="time-col message-underline">15 mins ago</td>
+							</tr>
+						</table>
+			</table>
+			<div class="message_input">
+				<form>
+					<input id="btn-input" class="form-control input-sm" placeholder="Type your message here..." type="text">
+					<input type="submit" class="styled button" id="message_send_button" name="message_send_button" value="Send">
+				</form>
+			</div>
+		</div>
+		<!-- modal-content-->
+	</div>
+	<!-- modal -->
+	<!-- End of read email modal -->
+
+	<!--#include file="html/edit_draft_modal.html" -->
+	<!--#include file="html/read_sent_modal.shtml" -->
+
+	<!--#include file="html/footer.html" -->
+
+	<script src="js/email.js"></script>
+	<script src="js/drafts.js"></script>
+	<script src="js/sent.js"></script>
+	<script src="js/scripts.js"></script>
+
+
+
+</body>
+
+</html>
