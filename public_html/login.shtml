@@ -28,7 +28,7 @@
 <body>
 	<!--#include file="html/header.html" -->
 	<main class="login">
-		<table>
+		<table class="login-table">
 			<tr>
 				<th class="login-page-header">Login</th>
 				<th class="login-page-header">Register</th>
