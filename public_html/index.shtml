@@ -455,9 +455,6 @@
 		<!-- modal-content-->
 	</div>
 	<!-- modal -->
-
-	
-</div>
 	<!-- End of read email modal -->
 
 	<!--#include file="html/edit_draft_modal.html" -->
