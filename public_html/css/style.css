@@ -660,6 +660,8 @@ button.styled:active {
 
 .more-dropdown-content {
     position: inherit;
+    float: left;
+    margin-left: 1em;
 }
 
 .dropdown-content a:hover {
