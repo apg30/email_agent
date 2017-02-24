@@ -7,7 +7,7 @@
 	<meta name="description" content="Email agent">
 	<meta name="author" content="Cameron A. Craig, Stuart J. Thain, Aidan P. Gallagher, Lee A. Hamilton">
 	<link rel="stylesheet" href="css/style.css">
-	<script src="js/head_scripts.js"></script>
+	<script src="js/head.js"></script>
 	<!-- Hide some nav elements -->
 	<style>
 	#compose_button,
