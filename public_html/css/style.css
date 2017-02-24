@@ -10,16 +10,17 @@ main {
     display: inline-block;
     background-color: white;
     width: 80%;
-    margin-left: 2em;
+    margin-left: 1em;
     padding: 1em;
-    margin-top: 2em;
+    margin-top: 1em;
+    border-radius: 1.7em;
 }
 
 main.login {
     display: inline;
-    width: 20em;
+    width: 40em;
     height: 15em;
-    background-color: white;
+    background-color: lightblue;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -28,8 +29,8 @@ main.login {
     margin: auto;
 }
 
-form.login {
-    margin: 1em 2em;
+.login-page-header{
+  font-size: 120%;
 }
 
 
@@ -61,7 +62,7 @@ footer {
     background-color: #c1ceb8;
     /* Footer text is centred */
     text-align: left;
-    font-size: medfium;
+    font-size: medium;
     float: left;
     padding-left: 1%;
     padding-top: 0.3%;
@@ -84,12 +85,7 @@ ul.basic-nav {
     margin-top: 5em;
 }
 
-button.compose-nav{
-  display: inline-block;
-  float: left;
-  width: 12em;
-  margin-top: 2.5em;
-}
+
 
 li.basic-nav a {
     display: inline-block;
@@ -198,6 +194,7 @@ li.basic-nav a {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    cursor: pointer;
 }
 
 .dropdown a:hover {
@@ -392,7 +389,7 @@ table.email-inbox tbody, table.email-inbox {
 }
 
 table.email-inbox tbody {
-    height: 20em;
+    height: 35em;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -403,11 +400,6 @@ thead tr th {
 
 tbody td:last-child, thead th:last-child {
     border-right: none !important;
-}
-
-td, th {
-    width: 20em;
-    padding: 0.5em 1em;
 }
 
 
@@ -437,12 +429,15 @@ tbody td:last-child {
 
 tbody.read_email tr.read_email td.read_email {
     background: lightgray;
-    color: #81b71a;
+    color: black;
+    width: 20em;
 }
 
 thead.read_email tr.read_email th.read_email {
     background: lightgray;
-    color: #81b71a;
+    color: black;
+    text-align: center;
+        width: 20em;
 }
 
 
@@ -477,6 +472,23 @@ tbody.read_email tr.read_email:hover td:last-child {
 
 div.email-list {
     width: 100%;
+}
+
+table.email-toolbar {
+    background: lightgray;
+    border-radius: 0.6em 0.6em 0.6em 0.6em;
+    border-collapse: collapse;
+    border-spacing: 0;
+    white-space: nowrap;
+    width: 100%;
+}
+td.email-toolbar{
+  white-space:nowrap
+}
+
+.email-checkbox {
+    text-align: center;
+    vertical-align: middle;
 }
 
 table.email-inbox {
@@ -561,10 +573,10 @@ table.email-inbox {
     font-size: 150%;
 }
 
-
 /* Message read*/
 
 button.styled {
+    margin: 0.25em;
     padding: 10px 15px;
     background: #4479BA;
     color: #FFF;
@@ -582,7 +594,14 @@ button.styled {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
+    cursor: pointer;
+}
+
+button.smaller_styled {
+    padding: 0.2em 0.2em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 0.5em;
 }
 
 button.styled:hover {
@@ -599,11 +618,56 @@ button.styled:active {
     border: solid 1px #203E5F;
 }
 
+.read-mail-btn{
+  float: left;
+}
+/* Delete Mail Button*/
 
+.delete_button{
+  float: left;
+  background: #4479BA;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: solid 1px #20538D;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  background-image: url('../img/icons/delete.png');
+  background-size: 2em;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 1.3em 1.3em;
+  margin: 0.25em;
+  outline: none;
+  cursor: pointer;
+}
+
+.delete_button:hover{
+  background-color: #356094;
+  border: solid 1px #2A4E77;
+  text-decoration: none;
+}
+
+/* More Mail Button*/
+
+.more-dropdown-content {
+    position: inherit;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.more-mail-btn{
+  float: left;
+}
 /* Set widths of table columns for inbox etc. */
 
 td.actions, th.actions {
-    width: 10em;
+    width: 20em;
 }
 
 td.select, th.select {
@@ -619,4 +683,71 @@ td.select, th.select {
 td.read_email_param {
     text-align: right;
     width: 10em;
+}
+
+button.compose-nav{
+  display: inline-block;
+  float: left;
+  width: 11.5em;
+  margin-top: 2.5em;
+}
+
+.settings{
+  margin-bottom: 5em;
+  }
+
+/* Style for replying to email etc.*/
+div#reply_content,
+div#forward_content,
+div#reply_all_content {
+	display:none;
+	background-color:lightgrey;
+}
+
+button#send_reply_btn,
+button#cancel_reply_btn,
+button#send_reply_all_btn,
+button#cancel_reply_all_btn,
+button#send_forward_btn,
+button#cancel_forward_btn {
+	display:none;
+}
+
+.forward_form,
+.reply_form,
+.reply_all_form {
+	background-color: yellowgreen;
+	border-radius: 1em;
+	padding: 1em;
+}
+/* End of of style for replying to email etc. */
+
+/* chat modal */
+.chat-top-table{
+  width: 100%;
+}
+
+.chat-menu-col{
+  width: 10%;
+}
+
+.chat-message-row{
+  margin: 1em;
+}
+
+.message-underline{
+  border-bottom: 1px dotted #B3A9A9;
+  padding: 0.25em;
+}
+
+.poster-col{
+  width: 15%;
+}
+
+.message-col{
+  width: 70%;
+}
+
+.time-col{
+  width: 15%;
 }
