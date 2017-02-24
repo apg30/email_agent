@@ -1,14 +1,16 @@
-<!doctype html>
+<!DOCTYPE html[
+	<!ENTITY times "&#215;">
+]>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
 <head>
-	<meta charset="utf-8">
+	<meta charset="utf-8"></meta>
 
 	<title>Email Client</title>
-	<meta name="description" content="Email client">
-	<meta name="author" content="Cameron A. Craig, Stuart J. Thain, Aidan P. Gallagher, Lee A. Hamilton">
+	<meta name="description" content="Email client"></meta>
+	<meta name="author" content="Cameron A. Craig, Stuart J. Thain, Aidan P. Gallagher, Lee A. Hamilton"></meta>
 
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.css"></link>
 	<script src="js/head.js"></script>
 
 	<!--[if lt IE 9]>
@@ -233,13 +235,8 @@
 								"time": "24/01/2017 05:35"
 							}
 						];
-
-						for (var i = 0; i < emails.length; i++) {
-							var email = emails[i];
-							var email_html = get_email_row_html(email);
-							document.write(email_html);
-						}
 					</script>
+					<script src="js/write_inbox.js"></script>
 				</tbody>
 			</table>
 		</div>
@@ -288,13 +285,13 @@
 			<form>
 				<table>
 					<tr>
-						<td>To:</td><td><input id="compose_to_field" type="email" name="compose_to" multiple></td>
+						<td>To:</td><td><input id="compose_to_field" type="email" name="compose_to" multiple=""></input></td>
 					</tr>
 					<tr>
-						<td>CC:</td><td><input id="compose_cc_field" type="email" name="compose_cc" multiple></td>
+						<td>CC:</td><td><input id="compose_cc_field" type="email" name="compose_cc" multiple=""></input></td>
 					</tr>
 					<tr>
-						<td>BCC:</td><td><input id="compose_bcc_field" type="email" name="compose_bcc" multiple></td>
+						<td>BCC:</td><td><input id="compose_bcc_field" type="email" name="compose_bcc" multiple=""></input></td>
 					</tr>
 					<tr>
 						<td>From:</td><td>email@email.com</td>
@@ -304,8 +301,8 @@
 				<textarea rows="20" cols="60">
           Email content
         </textarea>
-				<br>
-				<input type="file" class="styled" multiple>
+				<br></br>
+				<input type="file" class="styled" multiple=""></input>
 				<button class="styled" onclick="not_yet_implemented()">Send</button>
 			</form>
 		</div>
@@ -342,7 +339,7 @@
 							<td><span id="read_email_from"></span></td>
 						</tr>
 						<tr>
-							<td colspan="2"><textarea id="read_email_content" rows="20" cols="60" readonly></textarea></td>
+							<td colspan="2"><textarea id="read_email_content" rows="20" cols="60" readonly=""></textarea></td>
 						</tr>
 
 					</table>
@@ -444,11 +441,13 @@
 								<td class="time-col message-underline">15 mins ago</td>
 							</tr>
 						</table>
+					</td>
+				</tr>
 			</table>
 			<div class="message_input">
 				<form>
-					<input id="btn-input" class="form-control input-sm" placeholder="Type your message here..." type="text">
-					<input type="submit" class="styled button" id="message_send_button" name="message_send_button" value="Send">
+					<input id="btn-input" class="form-control input-sm" placeholder="Type your message here..." type="text"></input>
+					<input type="submit" class="styled button" id="message_send_button" name="message_send_button" value="Send"></input>
 				</form>
 			</div>
 		</div>
