@@ -41,6 +41,8 @@ nav.email-nav {
     width: 10em;
 }
 
+
+
 div.chat_menu {
     display: inline-block;
     float: left;
@@ -79,7 +81,14 @@ ul.basic-nav {
     margin: 0;
     padding: 0;
     background-color: #f1f1f1;
-    margin-top: 2em;
+    margin-top: 5em;
+}
+
+button.compose-nav{
+  display: inline-block;
+  float: left;
+  width: 12em;
+  margin-top: 2.5em;
 }
 
 li.basic-nav a {
