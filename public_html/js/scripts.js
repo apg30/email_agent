@@ -82,6 +82,8 @@ setup_modal(help_modal, help_modal_btn, help_modal_close);
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     var read_modal = document.getElementById('read_email_modal');
+    var read_sent_modal = document.getElementById('read_sent_modal');
+    var edit_draft_modal = document.getElementById('edit_draft_modal');
     if (event.target == compose_modal) {
         compose_modal.style.display = "none";
     } else if (event.target == chat_modal) {
@@ -92,6 +94,10 @@ window.onclick = function(event) {
         help_modal.style.display = "none";
     } else if (event.target == read_modal) {
         read_modal.style.display = "none";
+    } else if (event.target == read_sent_modal) {
+        read_sent_modal.style.display = "none";
+    } else if (event.target == edit_draft_modal) {
+        edit_draft_modal.style.display = "none";
     }
     if (!event.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("myDropdown");
