@@ -711,7 +711,7 @@ button.chat-btn{
   float: left;
   width: 11.5em;
   margin-bottom: 4em;
-  position: absolute;
+  position: fixed;
   bottom: 0;
 }
 
