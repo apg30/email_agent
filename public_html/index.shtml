@@ -456,8 +456,6 @@
 	</div>
 	<!-- modal -->
 
-<<<<<<< HEAD
-=======
 	<!-- The Read Email Modal -->
 	<div id="read_email_modal" class="modal">
 		<!-- Modal content -->
@@ -511,7 +509,6 @@
 	<!--#include file="html/edit_draft_modal.html" -->
 	<!--#include file="html/read_sent_modal.shtml" -->
 
->>>>>>> 7d6b0c29b2715523b8932b0f01ffaf4ba208fbc3
 	<!--#include file="html/footer.html" -->
 
 	<script src="js/email.js"></script>
