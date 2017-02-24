@@ -457,14 +457,15 @@
 	<!-- End of read email modal -->
 
 	<!--#include file="html/edit_draft_modal.html" -->
-	<!--#include file="html/read_sent_modal.html" -->
+	<!--#include file="html/read_sent_modal.shtml" -->
 
 	<!--#include file="html/footer.html" -->
 
 	<script src="js/email.js"></script>
-	<script src="js/scripts.js"></script>
 	<script src="js/drafts.js"></script>
 	<script src="js/sent.js"></script>
+	<script src="js/scripts.js"></script>
+
 
 
 </body>

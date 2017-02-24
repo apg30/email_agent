@@ -1,0 +1,99 @@
+<!-- The Read Email Modal -->
+<div id="read_sent_modal" class="modal">
+	<!-- Modal content -->
+	<div class="modal-content">
+		<span class="close" id="read_sent_modal_close">&times;</span>
+		<div style="display:flex;">
+			<div>
+				<table>
+					<tr>
+						<td class="read_email_param">Subject:</td>
+						<td><span id="read_sent_subject"></span></td>
+					</tr>
+					<tr>
+						<td class="read_email_param">To:</td>
+						<td><span id="read_sent_to"></span></td>
+					</tr>
+					<tr>
+						<td class="read_email_param">CC:</td>
+						<td><span id="read_sent_cc"></span></td>
+					</tr>
+					<tr>
+						<td class="read_email_param">BCC:</td>
+						<td><span id="read_sent_bcc"></span></td>
+					</tr>
+					<tr>
+						<td class="read_email_param">From:</td>
+						<td><span id="read_sent_from"></span></td>
+					</tr>
+					<tr>
+						<td colspan="2"><textarea id="read_sent_content" rows="20" cols="60" readonly></textarea></td>
+					</tr>
+				</table>
+				<br>
+				<button id="read_sent_forward_btn" class="styled">Forward</button>
+				<button id="read_sent_reply_btn" class="styled">Reply</button>
+				<button id="read_sent_delete_btn" class="delete_button"></button>
+				<button id="read_sent_close_btn" class="styled">Close</button>
+			</div>
+			<div>
+			<!-- Extra column for reply/forward forms -->
+
+			<!-- Write reply section -->
+			<div id="read_reply_content">
+				<form class="reply_form">
+					<h1>Reply</h1>
+					<table>
+						<tr>
+							<td>To:</td><td><input id="read_reply_to_field" type="email" name="reply_to" multiple></td>
+						</tr>
+						<tr>
+							<td>CC:</td><td> <input id="read_reply_cc_field" type="email" name="reply_cc" multiple></td>
+						</tr>
+						<tr>
+							<td>BCC:</td><td>	<input id="read_reply_bcc_field" type="email" name="reply_bcc" multiple></td>
+						</tr>
+					</table>
+					<textarea class= "reply_box" rows="20" cols="60">
+					</textarea>
+					<br>
+					<button id="read_send_reply_btn"  class="styled">Send Reply</button>
+					<button id="read_cancel_reply_btn" class="styled">Cancel Reply</button>
+				</form>
+			</div>
+			<!-- End write reply section -->
+				<!-- Forward email section -->
+				<div id="read_forward_content">
+					<form class="forward_form">
+						<h1>Forward</h1>
+						<table>
+							<tr>
+								<td>To:</td>
+								<td><input type="email" name="forward_to"></td>
+							</tr>
+							<tr>
+								<td>CC:</td><td> <input id="read_forward_cc_field" type="email" name="forward_cc" multiple></td>
+							</tr>
+							<tr>
+								<td>BCC:</td><td>	<input id="read_forward_bcc_field" type="email" name="forward_bcc" multiple></td>
+							</tr>
+							<tr>
+								<td>From: </td>
+								<td><input type="email" name="forward_from"></td>
+							</tr>
+						</table>
+						<textarea class= "forward_box" rows="20" cols="60">
+						</textarea>
+						<br>
+						<button id="read_send_forward_btn" class="styled">Forward Email</button>
+						<button id="read_cancel_forward_btn" class="styled">Cancel</button>
+					</form>
+				</div>
+
+				<!-- End forward email section -->
+			</div>
+
+	</div>
+
+</div>
+<!-- modal-content -->

@@ -57,7 +57,7 @@ function get_drafts_row_html(email) {
     email_html += '</td>';
     email_html += '<td class="read_email actions">';
     email_html += "<button class ='styled read-mail-btn' onclick='edit_draft(" + JSON.stringify(email) + ");'>Edit</button>";
-    email_html += "<button class ='styled read-mail-btn' onclick='delete_draft(" + JSON.stringify(email) + ");'>Delete</button>";
+    email_html += "<button class ='delete_button read-mail-btn' onclick='delete_draft(" + JSON.stringify(email) + ");'></button>";
     email_html += '</td>';
     email_html += "</tr>";
     return email_html;
