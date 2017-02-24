@@ -313,10 +313,60 @@
 	</div>
 	<!-- End compose modal-->
 
+	<!-- The Read Email Modal -->
+	<div id="read_email_modal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close" id="read_email_modal_close">&times;</span>
+			<div style="display:flex;">
+				<div>
+					<table>
+						<tr>
+							<td class="read_email_param">Subject:</td>
+							<td><span id="read_email_subject"></span></td>
+						</tr>
+						<tr>
+							<td class="read_email_param">To:</td>
+							<td><span id="read_email_to"></span></td>
+						</tr>
+						<tr>
+							<td class="read_email_param">CC:</td>
+							<td><span id="read_email_cc"></span></td>
+						</tr>
+						<tr>
+							<td class="read_email_param">BCC:</td>
+							<td><span id="read_email_bcc"></span></td>
+						</tr>
+						<tr>
+							<td class="read_email_param">From:</td>
+							<td><span id="read_email_from"></span></td>
+						</tr>
+						<tr>
+							<td colspan="2"><textarea id="read_email_content" rows="20" cols="60" readonly></textarea></td>
+						</tr>
+
+					</table>
+				</div>
+			<div>
+			<!-- Extra column for reply/forward forms -->
+
+				<!--#include file="html/reply_form.html" -->
+				<!--#include file="html/reply_all_form.html" -->
+				<!--#include file="html/forward_form.html" -->
+			</div>
+		</div>
+			<button id="delete_btn" class="styled">Delete</button>
+			<button id="reply_btn" class="styled">Reply</button>
+			<button id="reply_all_btn" class="styled">Reply All</button>
+			<button id="forward_btn" class="styled">Forward</button>
+	</div> <!-- modal-content -->
+</div>
+	<!-- End of read email modal -->
+
 	<!-- The Chat Modal -->
 	<div id="chat_modal" class="modal">
 		<!-- Modal content -->
-		<div class="modal-content">
+		<div class="modal-content chat-modal">
 			<span class="close" id="chat_modal_close">&times;</span>
 			<table class="chat-top-table">
 				<tr>
@@ -405,56 +455,6 @@
 		<!-- modal-content-->
 	</div>
 	<!-- modal -->
-
-	<!-- The Read Email Modal -->
-	<div id="read_email_modal" class="modal">
-		<!-- Modal content -->
-		<div class="modal-content">
-			<span class="close" id="read_email_modal_close">&times;</span>
-			<div style="display:flex;">
-				<div>
-					<table>
-						<tr>
-							<td class="read_email_param">Subject:</td>
-							<td><span id="read_email_subject"></span></td>
-						</tr>
-						<tr>
-							<td class="read_email_param">To:</td>
-							<td><span id="read_email_to"></span></td>
-						</tr>
-						<tr>
-							<td class="read_email_param">CC:</td>
-							<td><span id="read_email_cc"></span></td>
-						</tr>
-						<tr>
-							<td class="read_email_param">BCC:</td>
-							<td><span id="read_email_bcc"></span></td>
-						</tr>
-						<tr>
-							<td class="read_email_param">From:</td>
-							<td><span id="read_email_from"></span></td>
-						</tr>
-						<tr>
-							<td colspan="2"><textarea id="read_email_content" rows="20" cols="60" readonly></textarea></td>
-						</tr>
-
-					</table>
-				</div>
-			<div>
-			<!-- Extra column for reply/forward forms -->
-
-				<!--#include file="html/reply_form.html" -->
-				<!--#include file="html/reply_all_form.html" -->
-				<!--#include file="html/forward_form.html" -->
-			</div>
-		</div>
-			<button id="delete_btn" class="styled">Delete</button>
-			<button id="reply_btn" class="styled">Reply</button>
-			<button id="reply_all_btn" class="styled">Reply All</button>
-			<button id="forward_btn" class="styled">Forward</button>
-	</div> <!-- modal-content -->
-</div>
-	<!-- End of read email modal -->
 
 	<!--#include file="html/footer.html" -->
 

@@ -532,7 +532,13 @@ table.email-inbox {
     width: 80%;
     /* Could be more or less, depending on screen size */
 }
-
+.chat-modal{
+  position: absolute;
+  bottom: 0;
+  padding: 0;
+  margin-left:10%;
+  margin-bottom: 5.8em;
+}
 
 /* The close button at top rght of modal window*/
 
