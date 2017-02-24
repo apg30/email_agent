@@ -11,6 +11,7 @@ function setup_modal(modal, button, close) {
     close.onclick = function() {
         modal.style.display = "none";
 				hide_all_email_forms();
+				hide_all_send_modal_forms();
     }
 }
 
@@ -31,6 +32,7 @@ function display_message(email_message_json) {
     close_button.onclick = function() {
         modal.style.display = "none";
 				hide_all_email_forms();
+				hide_all_send_modal_forms();
     }
 
     var subject = document.getElementById('read_email_subject');
@@ -79,6 +81,7 @@ setup_modal(help_modal, help_modal_btn, help_modal_close);
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
+    var read_modal = document.getElementById('read_email_modal');
     if (event.target == compose_modal) {
         compose_modal.style.display = "none";
     } else if (event.target == chat_modal) {
@@ -87,7 +90,23 @@ window.onclick = function(event) {
         advanced_search_modal.style.display = "none";
     } else if (event.target == help_modal) {
         help_modal.style.display = "none";
+    } else if (event.target == read_modal) {
+        read_modal.style.display = "none";
     }
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("myDropdown");
+        for (var d = 0; d < dropdowns.length; d++) {
+            var openDropdown = dropdowns[d];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+
+/* Email more button */
+function moreDropdown(id) {
+    document.getElementById("more_dropdown" + id).classList.toggle("show");
 }
 
 //Test message box

@@ -32,6 +32,11 @@ main.login {
 
 .login-page-header{
   font-size: 120%;
+  width: 95%;
+}
+
+.login-table{
+    width: 95%;
 }
 
 
@@ -662,6 +667,8 @@ button.styled:active {
 
 .more-dropdown-content {
     position: inherit;
+    float: left;
+    margin-left: 1em;
 }
 
 .dropdown-content a:hover {
@@ -715,7 +722,9 @@ button.chat-btn{
 /* Style for replying to email etc.*/
 div#reply_content,
 div#forward_content,
-div#reply_all_content {
+div#reply_all_content,
+div#read_reply_content,
+div#read_forward_content {
 	display:none;
 	background-color:lightgrey;
 }

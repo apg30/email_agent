@@ -34,13 +34,13 @@
 						<th class="read_email select">
 							Select
 						</th>
-						<th class="read_email from">From</th>
+						<th id="email_col_2" class="read_email from">From</th>
 						<th class="read_email subject">Subject</th>
 						<th class="read_email time">Time</th>
 						<th class="read_email actions">Actions</th>
 					</tr>
 				</thead>
-				<tbody class="email read_email email-list-scroller">
+				<tbody id="email_table_body" class="email read_email email-list-scroller">
 					<script>
 						var emails = [{
 								"message_id": "123",
@@ -456,10 +456,69 @@
 	</div>
 	<!-- modal -->
 
+<<<<<<< HEAD
+=======
+	<!-- The Read Email Modal -->
+	<div id="read_email_modal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close" id="read_email_modal_close">&times;</span>
+			<div style="display:flex;">
+				<div>
+					<table>
+						<tr>
+							<td class="read_email_param">Subject:</td>
+							<td><span id="read_email_subject"></span></td>
+						</tr>
+						<tr>
+							<td class="read_email_param">To:</td>
+							<td><span id="read_email_to"></span></td>
+						</tr>
+						<tr>
+							<td class="read_email_param">CC:</td>
+							<td><span id="read_email_cc"></span></td>
+						</tr>
+						<tr>
+							<td class="read_email_param">BCC:</td>
+							<td><span id="read_email_bcc"></span></td>
+						</tr>
+						<tr>
+							<td class="read_email_param">From:</td>
+							<td><span id="read_email_from"></span></td>
+						</tr>
+						<tr>
+							<td colspan="2"><textarea id="read_email_content" rows="20" cols="60" readonly></textarea></td>
+						</tr>
+
+					</table>
+				</div>
+			<div>
+			<!-- Extra column for reply/forward forms -->
+
+				<!--#include file="html/reply_form.html" -->
+				<!--#include file="html/reply_all_form.html" -->
+				<!--#include file="html/forward_form.html" -->
+			</div>
+		</div>
+			<button id="delete_btn" class="styled">Delete</button>
+			<button id="reply_btn" class="styled">Reply</button>
+			<button id="reply_all_btn" class="styled">Reply All</button>
+			<button id="forward_btn" class="styled">Forward</button>
+	</div> <!-- modal-content -->
+</div>
+	<!-- End of read email modal -->
+
+	<!--#include file="html/edit_draft_modal.html" -->
+	<!--#include file="html/read_sent_modal.shtml" -->
+
+>>>>>>> 7d6b0c29b2715523b8932b0f01ffaf4ba208fbc3
 	<!--#include file="html/footer.html" -->
 
 	<script src="js/email.js"></script>
+	<script src="js/drafts.js"></script>
+	<script src="js/sent.js"></script>
 	<script src="js/scripts.js"></script>
+
 
 
 </body>
