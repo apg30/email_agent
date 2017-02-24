@@ -115,22 +115,12 @@ function moreDropdown(id) {
     document.getElementById("more_dropdown" + id).classList.toggle("show");
 }
 
-//Test message box
-var inbox_button = document.getElementById('inbox_button');
-inbox_button.onclick = function() {
-    message("error", "testing");
-}
-
-
-
 /* Mail more button functions*/
 
 var btns = document.getElementsByClassName("more-mail-btn");
 for (var i = 0; i < btns.length; i++){
   btns[i].onclick = function(e){
-    console.log(e);
     var id = e.target.id;
-    console.log(id);
     moreDropdown(id);
   }
 }

@@ -78,7 +78,6 @@ function set_drafts(emails){
 
 document.getElementById("drafts_button").onclick = function() {
 	//emails is a global set in index.html
-	console.log(emails);
 	set_drafts(emails);
 
 }

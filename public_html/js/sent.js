@@ -46,7 +46,6 @@ function set_sent(emails){
 
 document.getElementById("sent_button").onclick = function() {
 	//emails is a global set in index.html
-	console.log(emails);
 	set_sent(emails);
 }
 
