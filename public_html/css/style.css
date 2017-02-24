@@ -692,6 +692,15 @@ button.compose-nav{
   margin-top: 2.5em;
 }
 
+button.chat-btn{
+  display: inline-block;
+  float: left;
+  width: 11.5em;
+  margin-bottom: 4em;
+  position: absolute;
+  bottom: 0;
+}
+
 .settings{
   margin-bottom: 5em;
   }
