@@ -1,7 +1,15 @@
-<header>
+	<script src="js/sotw.js"></script>
+
+	<header>
 	<a href="index.shtml">
-	<img class="logo" src="img/icons/you_watt.png" alt="logo">
+		<img class="logo" src="img/icons/you_watt.png" alt="logo">
 	</a>
+	<div style="max-width: 20em; width: auto; float:left; margin: 1.5em 1em; overflow: hidden; white-space: nowrap">
+		<span id="scroll" onload="go()" onmouseover="enabled = false" onmouseout = "enabled = true; go()">
+			Snack of the Week: Creme Eggs
+		</span>
+	</div>
+
 	<div class="dropdown">
 		<img src="img/icons/settings.png" alt="settings_logo" onclick="myFunction()" class="dropbtn">
 		<div id="myDropdown" class="dropdown-content myDropdown">
@@ -13,10 +21,12 @@
 			<a id="logout_btn" href="login.shtml">Logout</a>
 		</div>
 	</div>
+
 	<button class="advanced_search_button" title="Advanced Search" id="advanced_search_form"></button>
 	<form class="email_search" onsubmit="not_yet_implemented()">
 		<input type="search" name="email_search_input" placeholder="Search Email...">
 	</form>
+
 	<!-- The Advanced Search Modal -->
 	<div id="ad_search_modal" class="modal advanced_search_modal">
 		<!-- Modal content -->
