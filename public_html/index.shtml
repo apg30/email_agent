@@ -34,13 +34,13 @@
 						<th class="read_email select">
 							Select
 						</th>
-						<th class="read_email from">From</th>
+						<th id="email_col_2" class="read_email from">From</th>
 						<th class="read_email subject">Subject</th>
 						<th class="read_email time">Time</th>
 						<th class="read_email actions">Actions</th>
 					</tr>
 				</thead>
-				<tbody class="email read_email email-list-scroller">
+				<tbody id="email_table_body" class="email read_email email-list-scroller">
 					<script>
 						var emails = [{
 								"message_id": "123",
@@ -456,10 +456,16 @@
 </div>
 	<!-- End of read email modal -->
 
+	<!--#include file="html/edit_draft_modal.html" -->
+	<!--#include file="html/read_sent_modal.shtml" -->
+
 	<!--#include file="html/footer.html" -->
 
 	<script src="js/email.js"></script>
+	<script src="js/drafts.js"></script>
+	<script src="js/sent.js"></script>
 	<script src="js/scripts.js"></script>
+
 
 
 </body>

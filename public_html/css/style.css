@@ -706,7 +706,9 @@ button.compose-nav{
 /* Style for replying to email etc.*/
 div#reply_content,
 div#forward_content,
-div#reply_all_content {
+div#reply_all_content,
+div#read_reply_content,
+div#read_forward_content {
 	display:none;
 	background-color:lightgrey;
 }

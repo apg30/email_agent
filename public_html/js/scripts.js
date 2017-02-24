@@ -11,6 +11,7 @@ function setup_modal(modal, button, close) {
     close.onclick = function() {
         modal.style.display = "none";
 				hide_all_email_forms();
+				hide_all_send_modal_forms();
     }
 }
 
@@ -31,6 +32,7 @@ function display_message(email_message_json) {
     close_button.onclick = function() {
         modal.style.display = "none";
 				hide_all_email_forms();
+				hide_all_send_modal_forms();
     }
 
     var subject = document.getElementById('read_email_subject');
