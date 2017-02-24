@@ -42,6 +42,8 @@ nav.email-nav {
     width: 10em;
 }
 
+
+
 div.chat_menu {
     display: inline-block;
     float: left;
@@ -80,8 +82,10 @@ ul.basic-nav {
     margin: 0;
     padding: 0;
     background-color: #f1f1f1;
-    margin-top: 2em;
+    margin-top: 5em;
 }
+
+
 
 li.basic-nav a {
     display: inline-block;
@@ -190,6 +194,7 @@ li.basic-nav a {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    cursor: pointer;
 }
 
 .dropdown a:hover {
@@ -589,6 +594,7 @@ button.styled {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    cursor: pointer;
 }
 
 button.smaller_styled {
@@ -636,8 +642,14 @@ button.styled:active {
   padding: 1.3em 1.3em;
   margin: 0.25em;
   outline: none;
+  cursor: pointer;
 }
 
+.delete_button:hover{
+  background-color: #356094;
+  border: solid 1px #2A4E77;
+  text-decoration: none;
+}
 
 /* More Mail Button*/
 
@@ -671,6 +683,13 @@ td.select, th.select {
 td.read_email_param {
     text-align: right;
     width: 10em;
+}
+
+button.compose-nav{
+  display: inline-block;
+  float: left;
+  width: 11.5em;
+  margin-top: 2.5em;
 }
 
 .settings{
