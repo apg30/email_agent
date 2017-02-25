@@ -1,2 +1,8 @@
 # Ignore log files
 *.log
+
+#Ignore node_modules directory
+node_modules/
+
+#Ignore gedit temp files
+*.*~
