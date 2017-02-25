@@ -7,12 +7,14 @@
 var express = require('express');
 var http = require('http');
 var bodyParser = require('body-parser');
-var multer = require('multer'); 
+var multer = require('multer');  
 var app = express();
 
 //Import user created libraries
 var smtp = require('./lib/smtp');
 var html = require('./lib/html');
+var db = require('./lib/db');
+var schemas = require('./lib/models');
 
 // for parsing application/json
 app.use(bodyParser.json());
@@ -20,6 +22,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 // for parsing multipart/form-data
 app.use(multer({dest:'./uploads/'}).array('multiInputFileName'));
+
+var conn = db.init("hamish", "abchamish354", "mongo-server-1", 27017);
+
+var mystore = null;
+conn.once('open', function() { 
+  console.log('Connected to YouWatt MongoDB database') 
+  conn.db.collection("you_watt_users", function(err, coll) { mystore = coll; });
+});
 
 
 /* Handle SMTP delivery protocol requests */
