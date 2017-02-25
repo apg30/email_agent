@@ -38,7 +38,8 @@ module.exports = {
 			} else {
 				page = page.replace(/\r\n/g, "<br/>\r\n");
 				try {
-					response.send(html.head + page + html.tail);
+					console.log(page);
+					response.sendStatus(200);
 					} catch (exc) {}
 				client.end();
 			}
