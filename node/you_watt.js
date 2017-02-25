@@ -13,8 +13,9 @@ var app = express();
 //Import user created libraries
 var smtp = require('./lib/smtp');
 var html = require('./lib/html');
+var http2 = require('./lib/http');
 var db = require('./lib/db');
-var schemas = require('./lib/models');
+var models = require('./lib/models');
 
 // for parsing application/json
 app.use(bodyParser.json());
@@ -24,11 +25,51 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(multer({dest:'./uploads/'}).array('multiInputFileName'));
 
 var conn = db.init("hamish", "abchamish354", "mongo-server-1", 27017);
+var db = conn.db;
 
+//var user_collection = db.collection(conn, "you_watt_users");
 var mystore = null;
 conn.once('open', function() { 
   console.log('Connected to YouWatt MongoDB database') 
-  conn.db.collection("you_watt_users", function(err, coll) { mystore = coll; });
+  //conn.db.collection("you_watt_users", function(err, coll) { mystore = coll; });
+});
+
+//test
+//var user_collection = conn.db.collection("you_watt_users");
+
+
+
+models.User.find({}, function(err, users) {
+	if (err){
+		if ( err.code === 11000 ) {
+			//req.flash('error', 'User already exists');
+			//res.redirect('/signup');
+			console.log("User already exists");
+			return;
+		} else {
+			console.log(err);
+			console.log(err.code);
+		}
+	} 
+
+  // object of all the users
+  console.log(users);
+});
+
+app.post('/register', function handler(request, response) {
+	var post_params = request.body;
+
+	var new_user = models.User({
+		username: post_params["username"],
+		password: post_params["password"]
+	});
+
+	new_user.save(function(err) {
+	  if (err) throw err;
+
+	  console.log('User saved successfully!');
+	  response.redirect(http2.root + "index.shtml");
+	});
 });
 
 

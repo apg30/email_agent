@@ -51,11 +51,11 @@
 				</td>
 				<td>
 					<div class="register">
-						<form method="post" action="index.shtml" class="register" name="register_form">
+						<form method="post" action="http://amaterasu.macs.hw.ac.uk:8001/register" class="register" name="register_form">
 							<p><input type="text" name="email" value="" placeholder="Email..."></p>
 							<p><input type="text" name="username" value="" placeholder="Username"></p>
-							<p><input type="password" name="create-password" value="" placeholder="Create Password"></p>
-							<p><input type="password" name="confirm-password" value="" placeholder="Confirm Password"></p>
+							<p><input type="password" name="password" value="" placeholder="Create Password"></p>
+							<p><input type="password" name="confirm_password" value="" placeholder="Confirm Password"></p>
 							<p class="submit"><button class="styled">Register</button></p>
 						</form>
 					</div>

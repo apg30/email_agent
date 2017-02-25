@@ -36,7 +36,7 @@ var message_schema = new mongoose.Schema({
 });
 
 module.exports = {
-	user : mongoose.model('User', user_schema),
-	settings : mongoose.model('Settings', settings_schema),
-	message : mongoose.model('Message', message_schema)
+	User : mongoose.model('User', user_schema),
+	Settings : mongoose.model('Settings', settings_schema),
+	Message : mongoose.model('Message', message_schema)
 };
