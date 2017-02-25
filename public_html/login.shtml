@@ -36,7 +36,7 @@
 			<tr>
 				<td>
 					<div class="login">
-						<form method="post" action="index.shtml" class="login" name="login_form">
+						<form method="post" action="http://amaterasu.macs.hw.ac.uk:8001/login" class="login" name="login_form">
 							<p><input type="text" name="username" value="" placeholder="Username"></p>
 							<p><input type="password" name="password" value="" placeholder="Password"></p>
 							<p class="remember_me">

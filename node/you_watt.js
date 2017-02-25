@@ -39,7 +39,7 @@ conn.once('open', function() {
 
 
 
-models.User.find({}, function(err, users) {
+/*models.User.find({}, function(err, users) {
 	if (err){
 		if ( err.code === 11000 ) {
 			//req.flash('error', 'User already exists');
@@ -54,7 +54,7 @@ models.User.find({}, function(err, users) {
 
   // object of all the users
   console.log(users);
-});
+});*/
 
 app.post('/register', function handler(request, response) {
 	var post_params = request.body;
@@ -70,6 +70,26 @@ app.post('/register', function handler(request, response) {
 	  console.log('User saved successfully!');
 	  response.redirect(http2.root + "index.shtml");
 	});
+});
+
+app.post('/login', function handler(request, response) {
+	var post_params = request.body;
+
+	models.User.findOne({
+			username: post_params["username"],
+			password: post_params["password"]
+		}, function(err, document) {
+			if(err || !document){
+				//response.flash("Login unsuccesful");
+				//response.sendStatus(500);
+				response.redirect(http2.root + "login.shtml");
+				
+			} else {
+				console.log(document);
+				console.log("Logged in");
+				response.redirect(http2.root + "index.shtml");
+			}
+		});
 });
 
 
