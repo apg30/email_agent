@@ -38,7 +38,7 @@
 						</th>
 						<th id="email_col_2" class="read_email from">From</th>
 						<th class="read_email subject">Subject</th>
-						<th class="read_email time">Time</th>
+						<th class="read_email time">Date/Time</th>
 						<th class="read_email actions">Actions</th>
 					</tr>
 				</thead>
