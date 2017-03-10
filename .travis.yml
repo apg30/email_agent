@@ -10,7 +10,7 @@ install:
  - pip install requests
 
 script:
-  # Validate index.shtml
+  # Validate index.html
   - mkdir ssi_parsed_public_html
-  - ./ssi_parse.py -i public_html/index.shtml -o ssi_parsed_public_html/index.shtml -r public_html/
-  - ./validate.py -i ssi_parsed_public_html/index.shtml
+  - ./ssi_parse.py -i public_html/index.html -o ssi_parsed_public_html/index.html -r public_html/
+  - ./validate.py -i ssi_parsed_public_html/index.html
