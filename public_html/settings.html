@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+	<meta charset="utf-8"></meta>
+
+	<title>Email Client</title>
+	<meta name="description" content="Email client"></meta>
+	<meta name="author" content="Cameron A. Craig, Stuart J. Thain, Aidan P. Gallagher, Lee A. Hamilton"></meta>
+
+	<link rel="stylesheet" href="css/style.css"></link>
+	<script src="js/head.js"></script>
+	<!-- Hide some nav elements -->
+	<style>
+	#compose_button,
+	#chat_button {
+		display:none;
+	}
+	</style>
+
+
+	<!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+	<!--#include file="html/header.html" -->
+	<!--#include file="html/nav.html" -->
+	<main class="settings">
+			<table class="settings_table">
+				<tr>
+					<th colspan="2">Settings</th>
+				</tr>
+				<tr>
+					<td>Alias:</td>
+					<td><input type="search" name="Alias"></input></td>
+				</tr>
+				<tr>
+					<td>Pop server:</td>
+					<td><input type="search" name="Pop_server"></input></td>
+				</tr>
+				<tr>
+					<td>IMAP server:</td>
+					<td><input type="search" name="IMAP_server"></input></td>
+				</tr>
+				<tr>
+					<td>Username:</td>
+					<td><input type="search" name="Username"></input></td>
+				</tr>
+				<tr>
+					<td>Password:</td>
+					<td><input type="search" name="Password"></input></td>
+				</tr>
+				<tr>
+					<td colspan="2"><button class="styled" onclick="not_yet_implemented()">Apply</button></td>
+				</tr>
+			</table>
+
+	</main>
+
+	<!--#include file="html/footer.html" -->
+
+	<script src="js/scripts.js"></script>
+
+</body>
+
+</html>
