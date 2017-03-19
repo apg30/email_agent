@@ -1,0 +1,30 @@
+{
+  "name": "email_agent",
+  "version": "0.1.0",
+  "description": "Web email client and messageing service.",
+  "keywords": [
+    "email",
+    "messaging"
+  ],
+  "author": "Aidan P. Gallagher, Cameron A. Craig, Stuart J. Thain",
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/apg30/email_agent",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/apg30/email_agent.git"
+  },
+  "bugs": {
+    "url": "https://github.com/apg30/email_agent/issues"
+  },
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "connect-ensure-login": "^0.1.1",
+    "cookie-parser": "^1.3.5",
+    "ejs": "^2.3.3",
+    "express": "^4.13.3",
+    "express-session": "^1.11.3",
+    "morgan": "^1.6.1",
+    "passport": "^0.2.2",
+    "passport-local": "^1.0.0"
+  }
+}

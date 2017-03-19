@@ -20,6 +20,18 @@ The email client uses SMTP and POP3 to communicate with email servers.
 
 The email client is supported in Chrome, Firefox and (hopeefully) IE (latest versions).
 
+# Installation and Deployment
+
+The `node` application can be started by running `node you_watt.js` on the chosen server.
+
+```
+ssh <username>@<server>
+...
+cd ~/git/email_agent/
+npm install
+node you_watt.js
+```
+
 # Features
 
 ## Email

@@ -17,8 +17,8 @@
 </head>
 
 <body>
-	<!--#include file="html/header.html" -->
-	<!--#include file="html/nav.html" -->
+	<% include ../public_html/html/header.html %>
+	<% include ../public_html/html/nav.html %>
 	<main>
 		<div class="email-list">
 
@@ -345,9 +345,9 @@
 			<div>
 			<!-- Extra column for reply/forward forms -->
 
-				<!--#include file="html/reply_form.html" -->
-				<!--#include file="html/reply_all_form.html" -->
-				<!--#include file="html/forward_form.html" -->
+				<% include ../public_html/html/reply_form.html %>
+				<% include ../public_html/html/reply_all_form.html %>
+				<% include ../public_html/html/forward_form.html %>
 			</div>
 		</div>
 			<button id="delete_btn" class="styled">Delete</button>
@@ -454,10 +454,10 @@
 	<!-- modal -->
 	<!-- End of read email modal -->
 
-	<!--#include file="html/edit_draft_modal.html" -->
-	<!--#include file="html/read_sent_modal.html" -->
+	<% include ../public_html/html/edit_draft_modal.html %>
+	<% include ../public_html/html/read_sent_modal.html %>
 
-	<!--#include file="html/footer.html" -->
+	<% include ../public_html/html/footer.html %>
 
 	<script src="js/email.js"></script>
 	<script src="js/drafts.js"></script>

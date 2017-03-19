@@ -7,7 +7,11 @@
 var express = require('express');
 var http = require('http');
 var bodyParser = require('body-parser');
-var multer = require('multer');  
+var multer = require('multer');
+var passport = require('passport');
+var cookieParser = require('cookie-parser');
+var cookieSession = require('express-session');
+var LocalStrategy = require('passport-local').Strategy;
 var app = express();
 
 //Import user created libraries
@@ -24,19 +28,61 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // for parsing multipart/form-data
 app.use(multer({dest:'./uploads/'}).array('multiInputFileName'));
 
-var conn = db.init("hamish", "abchamish354", "mongo-server-1", 27017);
+// datebase connection
+var conn = db.init("cac30", "abccac30354", "mongo-server-1", 27017);
 var db = conn.db;
-
-//var user_collection = db.collection(conn, "you_watt_users");
 var mystore = null;
 conn.once('open', function() { 
   console.log('Connected to YouWatt MongoDB database') 
-  //conn.db.collection("you_watt_users", function(err, coll) { mystore = coll; });
 });
 
-//test
-//var user_collection = conn.db.collection("you_watt_users");
+// authentication initialisation
+passport.use(new LocalStrategy(
+  function(username, password, done) {
+    models.User.findOne({ username: username }, function(err, user) {
+      if (err) { return done(err); }
+      if (!user) {
+        return done(null, false, { message: 'Incorrect username.' });
+      }
+      if (user.password != password) {
+        return done(null, false, { message: 'Incorrect password.' });
+      }
+      return done(null, user);
+    });
+  }
+));
 
+passport.serializeUser(function(user, done) {
+  done(null, user.id);
+});
+
+passport.deserializeUser(function(id, done) {
+  models.User.findById(id, function(err, user) {
+    done(err, user);
+  });
+});
+
+// for passport lib
+app.use(express.static('public'));
+app.use(cookieParser);
+app.use(bodyParser);
+app.use(cookieSession({
+  name: 'session',
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true,
+  // Cookie Options 
+  maxAge: 24 * 60 * 60 * 1000 // 24 hours 
+}))
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.post('/login', function handler (request, response) {
+	console.log("Login started");
+	passport.authenticate('local', { successRedirect: http2.root + "index.shtml",
+                                   failureRedirect: http2.root + '/login.shtml',
+                                   failureFlash: false });
+});
 
 
 /*models.User.find({}, function(err, users) {
@@ -72,7 +118,7 @@ app.post('/register', function handler(request, response) {
 	});
 });
 
-app.post('/login', function handler(request, response) {
+/*app.post('/login', function handler(request, response) {
 	var post_params = request.body;
 
 	models.User.findOne({
@@ -90,7 +136,7 @@ app.post('/login', function handler(request, response) {
 				response.redirect(http2.root + "index.shtml");
 			}
 		});
-});
+});*/
 
 
 /* Handle SMTP delivery protocol requests */
@@ -113,6 +159,8 @@ app.post('/you_watt_smtp', function handler(request, response) {
 		response.sendStatus(500);
 	}
 });
+  
+
 
 /* Start the server application */
 var svr = http.createServer(app);
