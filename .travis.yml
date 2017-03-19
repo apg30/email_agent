@@ -10,7 +10,25 @@ install:
  - pip install requests
 
 script:
-  # Validate index.shtml
   - mkdir ssi_parsed_public_html
-  - ./ssi_parse.py -i public_html/index.shtml -o ssi_parsed_public_html/index.shtml -r public_html/
-  - ./validate.py -i ssi_parsed_public_html/index.shtml
+  # Validate index.(x)html
+  - ./ssi_parse.py -i public_html/index.html -o ssi_parsed_public_html/index.html -r public_html/
+  - ./validate.py -i ssi_parsed_public_html/index.html
+  - ./ssi_parse.py -i public_html/index.xhtml -o ssi_parsed_public_html/index.xhtml -r public_html/
+  - ./validate.py -i ssi_parsed_public_html/index.xhtml
+  #Validate settings.(x)html
+  - ./ssi_parse.py -i public_html/settings.html -o ssi_parsed_public_html/settings.html -r public_html/
+  - ./validate.py -i ssi_parsed_public_html/settings.html
+  - ./ssi_parse.py -i public_html/settings.xhtml -o ssi_parsed_public_html/settings.xhtml -r public_html/
+  - ./validate.py -i ssi_parsed_public_html/settings.xhtml
+  # Validate login.(x)html
+  - ./ssi_parse.py -i public_html/login.html -o ssi_parsed_public_html/login.html -r public_html/
+  - ./validate.py -i ssi_parsed_public_html/login.html
+  - ./ssi_parse.py -i public_html/login.xhtml -o ssi_parsed_public_html/login.xhtml -r public_html/
+  - ./validate.py -i ssi_parsed_public_html/login.xhtml
+  # Validate about.x(html)
+  - ./ssi_parse.py -i public_html/about.html -o ssi_parsed_public_html/about.html -r public_html/
+  - ./validate.py -i ssi_parsed_public_html/about.html
+  - ./ssi_parse.py -i public_html/about.xhtml -o ssi_parsed_public_html/about.xhtml -r public_html/
+  - ./validate.py -i ssi_parsed_public_html/about.xhtml
+

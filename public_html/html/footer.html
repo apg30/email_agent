@@ -3,14 +3,11 @@
 
 	<script type="text/javascript">
 		window.onload = function() {
-			document.getElementById("html_validation").setAttribute("href", 'http://validator.w3.org/check?uri=' + window.location.href);
+			document.getElementById("xhtml_validation").setAttribute("href", 'http://validator.w3.org/check?uri=' + window.location.href.substr(0, window.location.href.lastIndexOf('.')) + '.xhtml');
 		};
 	</script>
 
-	<a id="html_validation" class="validate_link" href="#">Validate HTML 5</a>
+	<a id="xhtml_validation" class="validate_link">Validate XHTML 5</a>
 	<a id="css_validation" class="validate_link" href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a>
-	<a id="travis_validation" class="validate_link" href="https://travis-ci.org/apg30/email_agent"> <img src="https://api.travis-ci.org/apg30/email_agent.svg?branch=stable" alt="travis passing"></a>
-
-
-
+	<a id="travis_validation" class="validate_link" href="https://travis-ci.org/apg30/email_agent"> <img src="https://api.travis-ci.org/apg30/email_agent.svg?branch=stable" alt="travis passing" /></a>
 </footer>

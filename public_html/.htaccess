@@ -1,0 +1,4 @@
+AddHandler server-parsed .xhtml
+AddHandler server-parsed .html
+#DirectoryIndex index.xhtml
+#Options -Indexes
