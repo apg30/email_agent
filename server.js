@@ -1,6 +1,6 @@
 var express = require('express');
 var passport = require('passport');
-var Strategy = require('passport-local').Strategy;
+var LocalStrategy = require('passport-local').Strategy;
 
 //Import user created libraries
 var smtp = require('./lib/smtp');
@@ -13,7 +13,7 @@ var models = require('./lib/models');
 var conn = db.init("cac30", "abccac30354", "mongo-server-1", 27017);
 var db = conn.db;
 conn.once('open', function() { 
-  console.log('Connected to YouWatt MongoDB database') 
+	console.log('Connected to YouWatt MongoDB database') 
 });
 
 
@@ -23,51 +23,9 @@ conn.once('open', function() {
 // (`username` and `password`) submitted by the user.  The function must verify
 // that the password is correct and then invoke `cb` with a user object, which
 // will be set at `req.user` in route handlers after authentication.
-passport.use(new Strategy(
-	function(username, password, cb) {
-		models.User.findOne({ username: username }, function(err, user) {
-			console.log(user);
-			console.log("User id: " + user.id);
-			if (err) {
-				console.log('Error: ' + err);
-				return cb(err);
-			}
-			if (!user) {
-				console.log("NOt user?");
-				return cb(null, false);
-			}
-			if (user.password != password) {
-				console.log("Password incorrect");
-				return cb(null, false);
-			}
-			console.log("Success loggin in!");
-			return cb(null, user);
-		});
- }));
-
-
-// Configure Passport authenticated session persistence.
-//
-// In order to restore authentication state across HTTP requests, Passport needs
-// to serialize users into and deserialize users out of the session.  The
-// typical implementation of this is as simple as supplying the user ID when
-// serializing, and querying the user record by ID from the database when
-// deserializing.
-passport.serializeUser(function(user, cb) {
-  cb(null, user.id);
-});
-
-passport.deserializeUser(function(id, cb) {
-	models.User.findOne({ id: id }, function (err, user) {
-		if (err) {
-			console.log("Error deserialising!");
-			return cb(err);
-		}
-		console.log("Success deserialising!");
-		cb(null, user);
-	});
-});
-
+passport.use(new LocalStrategy(models.User.authenticate()));
+passport.serializeUser(models.User.serializeUser());
+passport.deserializeUser(models.User.deserializeUser());
 
 
 
@@ -93,25 +51,22 @@ app.use(passport.session());
 app.use(express.static(__dirname + '/public_html'));
 
 // Define routes.
-app.post('/register', function handler(req, res) {
-	var post_params = req.body;
+app.post('/register',
+	function (req, res) {
+		console.log("username : " + req.body.username);
+		var password = req.body.password;
+		console.log("password : " + password);
+		models.User.register(new models.User({ username : req.body.username}), password, function(err, account) {
+			if (err) {
+				console.log("Error : " + err);
+				return res.render('login');
+			}
 
-	var new_user = models.User({
-		username: post_params["username"],
-		password: post_params["password"]
-	});
-
-	new_user.save(function(err) {
-	  if (err){
-		  console.log('Failed: ' + err);
-		  return res.render("login", {info: "Sorry. That username already exists. Try again."});
-		}
-
-	  console.log('User saved successfully!');
-	  passport.authenticate('local')(req, res, function () {
-            res.redirect('/');
-          });
-	});
+			console.log('User saved successfully!');
+			passport.authenticate('local')(req, res, function () {
+				res.redirect('/');
+			});
+		});
 });
 
 app.get('/',
