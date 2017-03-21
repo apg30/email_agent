@@ -8,12 +8,18 @@ var html = require('./lib/html');
 var http2 = require('./lib/http');
 var db = require('./lib/db');
 var models = require('./lib/models');
+var config = require("./config.js");
 
 // datebase connection
-var conn = db.init("cac30", "abccac30354", "mongo-server-1", 27017);
+var conn = db.init(config.mongodb_username,
+	config.mongodb_password,
+	config.mongodb_server,
+	config.mongodb_port
+);
+
 var db = conn.db;
-conn.once('open', function() { 
-	console.log('Connected to YouWatt MongoDB database') 
+conn.once('open', function() {
+	console.log('Connected to YouWatt MongoDB database')
 });
 
 
