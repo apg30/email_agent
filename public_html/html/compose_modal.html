@@ -1,0 +1,32 @@
+<!-- The Compose Modal -->
+<div id="compose_modal" class="modal">
+	<!-- Modal content -->
+	<div class="modal-content">
+		<span class="close" id="compose_modal_close">&#215;</span>
+		<form>
+			<table>
+				<tr>
+					<td>To:</td><td><input id="compose_to_field" type="email" name="compose_to" multiple="" /></td>
+				</tr>
+				<tr>
+					<td>CC:</td><td><input id="compose_cc_field" type="email" name="compose_cc" multiple="" /></td>
+				</tr>
+				<tr>
+					<td>BCC:</td><td><input id="compose_bcc_field" type="email" name="compose_bcc" multiple="" /></td>
+				</tr>
+				<tr>
+					<td>From:</td><td>email@email.com</td>
+				</tr>
+			</table>
+
+			<textarea rows="20" cols="60">
+	  			Email content
+			</textarea>
+			<br/>
+			<input type="file" class="styled" multiple="" />
+			<button class="styled" onclick="not_yet_implemented()">Send</button>
+		</form>
+	</div>
+	<!-- modal-content -->
+</div>
+<!-- End compose modal-->
