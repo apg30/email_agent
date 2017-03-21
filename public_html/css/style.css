@@ -88,7 +88,7 @@ ul.basic-nav {
     margin: 0;
     padding: 0;
     background-color: #f1f1f1;
-    margin-top: 5em;
+    margin-top: 5.5em;
 }
 
 
@@ -703,7 +703,6 @@ button.compose-nav{
   display: inline-block;
   float: left;
   width: 11.5em;
-  margin-top: 2.5em;
 }
 
 button.chat-btn{
@@ -775,4 +774,14 @@ button#cancel_forward_btn {
 
 .time-col{
   width: 15%;
+}
+
+div.nav-status {
+	list-style-type: none;
+	display: inline-block;
+    margin-top: 0.5em;
+    padding: 0.5em 0em;
+    background-color: #f1f1f1;
+    float: left;
+    width: 10em;
 }
