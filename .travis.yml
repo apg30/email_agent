@@ -3,7 +3,7 @@ sudo: required
 
 install:
   # Get the scripts required to validate shtml files
- - wget https://gist.githubusercontent.com/camieac/ba85ae8df60c5d158e2b6dae93932ceb/raw/3322a3914292923e83484c376eb6ec26ffd2f0bc/ejs_parse.py
+ - wget https://gist.githubusercontent.com/camieac/ba85ae8df60c5d158e2b6dae93932ceb/raw/c170e4ea39bce51596bdac72f3a3f931c1c0ecdb/ejs_parse.py
  - wget https://gist.githubusercontent.com/camieac/d9d54f6ad4996d2b2b287fd4d82bdd6a/raw/447f52661a60bd1a653d1ec92d951406c02f6b7d/validate.py
  - chmod +x ejs_parse.py
  - chmod +x validate.py
