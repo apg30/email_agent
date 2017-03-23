@@ -3,32 +3,23 @@ sudo: required
 
 install:
   # Get the scripts required to validate shtml files
- - wget https://gist.githubusercontent.com/camieac/26e5e7f70c5b687854eafdb76a393e39/raw/fa0aa07b222d1323532dada647ddbc4c147ba6e0/ssi_parse.py
+ - wget https://gist.githubusercontent.com/camieac/ba85ae8df60c5d158e2b6dae93932ceb/raw/c170e4ea39bce51596bdac72f3a3f931c1c0ecdb/ejs_parse.py
  - wget https://gist.githubusercontent.com/camieac/d9d54f6ad4996d2b2b287fd4d82bdd6a/raw/447f52661a60bd1a653d1ec92d951406c02f6b7d/validate.py
- - chmod +x ssi_parse.py
+ - chmod +x ejs_parse.py
  - chmod +x validate.py
  - pip install requests
 
 script:
-  - mkdir ssi_parsed_public_html
+  - mkdir ejs_parsed_public_html
   # Validate index.(x)html
-  - ./ssi_parse.py -i public_html/index.html -o ssi_parsed_public_html/index.html -r public_html/
-  - ./validate.py -i ssi_parsed_public_html/index.html
-  - ./ssi_parse.py -i public_html/index.xhtml -o ssi_parsed_public_html/index.xhtml -r public_html/
-  - ./validate.py -i ssi_parsed_public_html/index.xhtml
+  - ./ejs_parse.py -i views/index.ejs -o ejs_parsed_public_html/index.html -r views/
+  - ./validate.py -i ejs_parsed_public_html/index.html
   #Validate settings.(x)html
-  - ./ssi_parse.py -i public_html/settings.html -o ssi_parsed_public_html/settings.html -r public_html/
-  - ./validate.py -i ssi_parsed_public_html/settings.html
-  - ./ssi_parse.py -i public_html/settings.xhtml -o ssi_parsed_public_html/settings.xhtml -r public_html/
-  - ./validate.py -i ssi_parsed_public_html/settings.xhtml
+  - ./ejs_parse.py -i views/settings.ejs -o ejs_parsed_public_html/settings.html -r views/
+  - ./validate.py -i ejs_parsed_public_html/settings.html
   # Validate login.(x)html
-  - ./ssi_parse.py -i public_html/login.html -o ssi_parsed_public_html/login.html -r public_html/
-  - ./validate.py -i ssi_parsed_public_html/login.html
-  - ./ssi_parse.py -i public_html/login.xhtml -o ssi_parsed_public_html/login.xhtml -r public_html/
-  - ./validate.py -i ssi_parsed_public_html/login.xhtml
+  - ./ejs_parse.py -i views/login.ejs -o ejs_parsed_public_html/login.html -r views/
+  - ./validate.py -i ejs_parsed_public_html/login.html
   # Validate about.x(html)
-  - ./ssi_parse.py -i public_html/about.html -o ssi_parsed_public_html/about.html -r public_html/
-  - ./validate.py -i ssi_parsed_public_html/about.html
-  - ./ssi_parse.py -i public_html/about.xhtml -o ssi_parsed_public_html/about.xhtml -r public_html/
-  - ./validate.py -i ssi_parsed_public_html/about.xhtml
-
+  - ./ejs_parse.py -i views/about.ejs -o ejs_parsed_public_html/about.html -r views/
+  - ./validate.py -i ejs_parsed_public_html/about.html

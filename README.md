@@ -8,9 +8,9 @@ An email client and instant messenger. User authentication via login page. Regis
 
 # Technical
 
-An HTML5/CSS3 frontent and Node.js backend.
+An HTML5/CSS3/Javascript frontent and Node.js backend.
 
-A minimum number of third pary libraries are used, we try not to use:
+A minimum number of third party libraries are used, we try not to use:
 
 - Bootstrap
 - jQuery
@@ -19,6 +19,18 @@ A minimum number of third pary libraries are used, we try not to use:
 The email client uses SMTP and POP3 to communicate with email servers.
 
 The email client is supported in Chrome, Firefox and (hopeefully) IE (latest versions).
+
+# Installation and Deployment
+
+The `node` application can be started by running `node server.js` on the chosen server.
+
+```
+ssh <username>@<server>
+...
+cd ~/git/email_agent/
+npm install
+node server.js
+```
 
 # Features
 
@@ -60,6 +72,7 @@ branch           | purpose
 Merge developer branch into `stable` when the branch is ready for merging. Feature branches can also be used for more complex features. The criteria for being `stable` is:
 
 - Valid HTML5
+- Valid XHTML
 - Valid CSS3
 - No errors in browser console
 
@@ -67,23 +80,46 @@ Merge developer branch into `stable` when the branch is ready for merging. Featu
 
 ```
 .
-├── public_html                    // Root folder
-│   ├── css                        // CSS files
-│   │   └── style.css
-│   ├── html                       // HTML 'snippet' files (included by .shtml files)
-│   │   ├── compose_email.html
-│   │   ├── footer.html
-│   │   ├── header.html
-│   │   └── nav.html
-│   ├── img                        // Images
-│   │   └── backgrounds
-│   │       ├── 01.jpg
-│   │       ├── 02.jpg
-│   │       ...
-│   ├── index.shtml                // Main html file
-│   ├── js                         // Javascript files
-│   │   └── scripts.js
-│   ├── page_template.shtml
-│   └── read_email.shtml
-└── README.md
+├── config.js
+├── lib
+│   ├── db.js
+│   ├── html.js
+│   ├── http.js
+│   ├── models.js
+│   ├── pop3.js
+│   ├── routes.js
+│   └── smtp.js
+├── LICENSE
+├── node_modules
+│   ├── bcrypt-nodejs
+│   ├── body-parser
+│   ├── connect-ensure-login
+│   ├── cookie-parser
+│   ├── ejs
+│   ├── express
+│   ├── express-session
+│   ├── html-validator
+│   ├── mongoose
+│   ├── morgan
+│   ├── multer
+│   ├── passport
+│   ├── passport-local
+│   ├── passport-local-mongoose
+│   └── socket.io
+├── package.json
+├── public_html
+│   ├── cgi-bin
+│   ├── css
+│   ├── html
+│   ├── img
+│   └── js
+├── README.md
+├── server.js
+├── uploads
+└── views
+    ├── about.ejs
+    ├── index.ejs
+    ├── login.ejs
+    └── settings.ejs
+
 ```

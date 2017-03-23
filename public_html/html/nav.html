@@ -1,10 +1,15 @@
-
 <nav class="basic-nav email-nav">
+	<div class = "nav-status">
+		Logged in as <%= user.username %>
+	</div>
+
 	<button id="compose_button" class="styled compose-nav">Compose</button>
+
 	<ul class="basic-nav email-nav">
-		<li id="inbox_button" class="basic-nav email-nav"><a href="index.xhtml">Inbox</a></li>
+		<li id="inbox_button" class="basic-nav email-nav"><a href="/">Inbox</a></li>
 		<li id="sent_button" class="basic-nav email-nav"><a href="#sent">Sent</a></li>
 		<li id="drafts_button" class="basic-nav email-nav"><a href="#drafts">Drafts</a></li>
 	</ul>
+
 	<button id="chat_button" class="styled chat-btn">Chat</button>
 </nav>
