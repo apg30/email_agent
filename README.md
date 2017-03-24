@@ -31,6 +31,9 @@ cd ~/git/email_agent/
 npm install
 node server.js
 ```
+## Configuration
+
+Rename `default-config.js` to `config.js` and set appropriate credentials in the file.
 
 # Features
 
