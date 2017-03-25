@@ -25,37 +25,38 @@
 </head>
 
 <body>
-	<% include ../public_html/html/header.html %>
+	<% include partials/header.ejs %>
 	<% include ../public_html/html/nav.html %>
 	<main class="settings">
-			<table class="settings_table">
-				<tr>
-					<th colspan="2">Settings</th>
-				</tr>
-				<tr>
-					<td>Alias:</td>
-					<td><input type="search" name="Alias" /></td>
-				</tr>
-				<tr>
-					<td>Pop server:</td>
-					<td><input type="search" name="Pop_server" /></td>
-				</tr>
-				<tr>
-					<td>IMAP server:</td>
-					<td><input type="search" name="IMAP_server" /></td>
-				</tr>
-				<tr>
-					<td>Username:</td>
-					<td><input type="search" name="Username" /></td>
-				</tr>
-				<tr>
-					<td>Password:</td>
-					<td><input type="search" name="Password" /></td>
-				</tr>
-				<tr>
-					<td colspan="2"><button class="styled" onclick="not_yet_implemented()">Apply</button></td>
-				</tr>
-			</table>
+		<form>
+			<fieldset>
+    			<legend>User</legend>
+				Alias:<input class = "settings" type="email" name="Alias" value="<%= settings.email_alias  %>"/>
+				Username:<input class = "settings" type="text" name="Username" value="<%= settings.email_alias  %>" />
+				Old Password:<input class = "settings" type="password" name="old_password" />
+				Password:<input class = "settings" type="password" name="new_password_1" />
+				Repeat Password:<input class = "settings" type="password" name="new_password_2" />
+			</fieldset>
+			<button class="styled" onclick="not_yet_implemented()">Apply</button></td>
+		</form>
+		<form action="settings" method="post">
+
+			<fieldset>
+    			<legend>POP3 Server:</legend>
+				POP3 host:<input class = "settings" type="text" name="pop3_host" value="<%= settings.pop3_host  %>" />
+				POP3 port:<input class = "settings" type="text" name="pop3_port" value="<%= settings.pop3_port  %>" />
+				POP3 username:<input class = "settings" type="text" name="pop3_username" value="<%= settings.pop3_username  %>" />
+				POP3 password:<input class = "settings" type="text" name="pop3_password" value="<%= settings.pop3_password  %>" />
+			</fieldset>
+
+			<!--<fieldset>
+    			<legend>SMTP Server:</legend>
+				SMTP server:<input class = "settings" type="search" name="IMAP_server" />
+			</fieldset>-->
+
+			<button class="styled" >Apply</button></td>
+
+		</form>
 
 	</main>
 
