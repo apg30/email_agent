@@ -8,4 +8,4 @@ before_script:
   - npm install -g gulp
   - cp default-config.js config.js
 script:
-  - gulp
+  - gulp test
