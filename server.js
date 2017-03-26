@@ -9,6 +9,7 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var bodyParser = require('body-parser');
 var multer = require('multer');
+var flash = require('connect-flash');
 
 //Import user created libraries
 var smtp = require('./lib/smtp');
@@ -60,6 +61,9 @@ app.use(multer({dest:'./uploads/'}).array('multiInputFileName'));
 // session.
 app.use(passport.initialize());
 app.use(passport.session());
+
+//Allow flash messages
+app.use(flash());
 
 // Set the directory to look for CSS/JS etc.
 app.use(express.static(__dirname + '/public_html'));
