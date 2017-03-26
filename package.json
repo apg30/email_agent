@@ -34,6 +34,8 @@
 	"connect-flash": "^0.1.1",
 	"gulp": "^3.9.1",
 	"gulp-ejs": "^3.0.0",
-	"gulp-html-validator": "latest"
+	"gulp-html-validator": "latest",
+	"filehound": "^1.16.1",
+	"gulp-series": "^1.0.2"
   }
 }
