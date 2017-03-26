@@ -6,3 +6,6 @@ node_modules/
 
 #Ignore gedit temp files
 *.*~
+
+#Ignore config file (has passwords and stuff)
+config.js
