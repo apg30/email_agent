@@ -9,3 +9,6 @@ node_modules/
 
 #Ignore config file (has passwords and stuff)
 config.js
+
+#Ignore build directory used by Gulp
+build/
