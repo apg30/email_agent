@@ -24,7 +24,7 @@ function list_recv(json_data){
 function retr_recv(data){
 	console.log("RETR receieved!");
 	console.log(data);
-	simpleParser(data, function done(err, mail){
+	simpleParser(data.content, function done(err, mail){
 		console.log(mail);
 	});
 	pop3c.close();
