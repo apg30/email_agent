@@ -3,6 +3,16 @@
  * Date: 25/02/2016
  */
 
+require('check-dependencies')(config)
+    .then(function (output) {
+		if(!output.depsWereOk){
+			for(var i = 0; i < output.error.length; i++){
+				console.log(output.error[i]);
+			}
+		}
+
+     });
+
 // Import external libraries
 var express = require('express');
 var passport = require('passport');
