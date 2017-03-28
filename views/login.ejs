@@ -36,7 +36,7 @@
 			<tr>
 				<td>
 					<div class="login">
-						<form method="post" action="/login" class="login" name="login_form">
+						<form method="post" action="/login" class="login" name="login_form" onsubmit="return validate_login()">
 							<p><input type="text" name="username" value="" placeholder="Username" required=""></p>
 							<p><input type="password" name="password" value="" placeholder="Password" required=""></p>
 							<p class="remember_me">
@@ -51,7 +51,7 @@
 				</td>
 				<td>
 					<div class="register">
-						<form method="post" action="/register" class="register" name="register_form">
+						<form method="post" action="/register" class="register" name="register_form" onsubmit="return validate_register()">
 							<p><input type="email" name="email" value="" placeholder="Email..." required=""></p>
 							<p><input type="text" name="username" value="" placeholder="Username" required=""></p>
 							<p><input type="password" name="password" value="" placeholder="Create Password" required=""></p>
