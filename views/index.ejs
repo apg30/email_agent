@@ -6,7 +6,7 @@
 
 	<title>Email Client</title>
 	<meta name="description" content="Email client"/>
-	<meta name="author" content="Cameron A. Craig, Stuart J. Thain, Aidan P. Gallagher, Lee A. Hamilton" />
+	<meta name="author" content="Stuart Thain" />
 
 	<link rel="stylesheet" href="css/style.css" />
 	<script src="js/head.js"></script>
@@ -243,7 +243,7 @@
 
 	<% include ../public_html/html/help_modal.html %>
 
-	<% include ../public_html/html/compose_modal.html %>
+	<% include partials/compose_modal.ejs %>
 
 	<!-- The Read Email Modal -->
 	<div id="read_email_modal" class="modal">
@@ -294,8 +294,8 @@
 		</div> <!-- modal-content -->
 	</div> <!-- End of read email modal -->
 
-	<% include ../public_html/html/chat_modal.html %>
 
+	<% include ../public_html/html/chat_modal.html %>
 	<% include ../public_html/html/edit_draft_modal.html %>
 	<% include ../public_html/html/read_sent_modal.html %>
 
