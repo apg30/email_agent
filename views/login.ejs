@@ -37,8 +37,8 @@
 				<td>
 					<div class="login">
 						<form method="post" action="/login" class="login" name="login_form">
-							<p><input type="text" name="username" value="" placeholder="Username"></p>
-							<p><input type="password" name="password" value="" placeholder="Password"></p>
+							<p><input type="text" name="username" value="" placeholder="Username" required=""></p>
+							<p><input type="password" name="password" value="" placeholder="Password" required=""></p>
 							<p class="remember_me">
 								<label>
 										<input type="checkbox" name="remember_me" id="remember_me">
@@ -52,10 +52,10 @@
 				<td>
 					<div class="register">
 						<form method="post" action="/register" class="register" name="register_form">
-							<p><input type="text" name="email" value="" placeholder="Email..."></p>
-							<p><input type="text" name="username" value="" placeholder="Username"></p>
-							<p><input type="password" name="password" value="" placeholder="Create Password"></p>
-							<p><input type="password" name="confirm_password" value="" placeholder="Confirm Password"></p>
+							<p><input type="text" name="email" value="" placeholder="Email..." required=""></p>
+							<p><input type="text" name="username" value="" placeholder="Username" required=""></p>
+							<p><input type="password" name="password" value="" placeholder="Create Password" required=""></p>
+							<p><input type="password" name="confirm_password" value="" placeholder="Confirm Password" required=""></p>
 							<p class="submit"><button class="styled">Register</button></p>
 						</form>
 					</div>
