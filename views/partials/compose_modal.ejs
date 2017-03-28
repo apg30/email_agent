@@ -3,7 +3,7 @@
 	<!-- Modal content -->
 	<div class="modal-content">
 		<span class="close" id="compose_modal_close">&#215;</span>
-		<form method="post" action="/smtp_send">
+		<form method="post" action="/smtp_send" id="form_compose">
 			<table>
 				<tr>
 					<td>To:</td><td><input id="compose_to_field" type="email" name="compose_to" multiple="" /></td>
@@ -15,13 +15,13 @@
 					<td>BCC:</td><td><input id="compose_bcc_field" type="email" name="compose_bcc" multiple="" /></td>
 				</tr>
 				<tr>
+					<td>Subject:</td><td><input id="compose_subject_field" type="text" name="compose_subject" multiple="" /></td>				
+				</tr>
+				<tr>
 					<td>From:</td><td><input id="compose_from_field" type="email" name="compose_from" value="<%=user.email%>" readonly=""/></td>
 				</tr>
 			</table>
-
-			<textarea rows="20" cols="60">
-	  			Email content
-			</textarea>
+			<textarea form="form_compose" name="compose_content" style="width: 300px; height: 200px;"></textarea>
 			<br/>
 			<input type="file" class="styled" multiple="" />
 			<button class="styled">Send</button>
