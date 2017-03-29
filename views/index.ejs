@@ -42,15 +42,16 @@
 				</thead>
 				<tbody id="email_table_body" class="email read_email email-list-scroller">
 					<% for(var i=0; i < inbox.length; i++) { %>
+						<%= inbox[i] %>
 						<tr class="read_email">
 						<td class = "read_email select">
 							<div class="email-checkbox">
 								<input type="checkbox" value="1" id="email-checkbox-<%= inbox[i].id %>" name="select" />
 							</div>
 						</td>
-						<td class="read_email from"><%= inbox[i].emails_from %></td>
+						<td class="read_email from"><%= inbox[i].from_emails %></td>
 						<td class="read_email subject"><%= inbox[i].subject %></td>
-						<td class="read_email date"><%= inbox[i].date %></td>
+						<td class="read_email date"><%= inbox[i].time %></td>
 						<td class="read_email actions">
 						<button class ='styled read-mail-btn' onclick='display_message(<%= JSON.stringify(inbox[i]) %>);'>Read</button>
 						<button id='more-<%= inbox[i].id %>' class ='styled more-mail-btn'>More</button>
