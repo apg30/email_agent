@@ -6,7 +6,7 @@
 	</a>
 	<div style="max-width: 20em; width: auto; float:left; margin: 1.5em 1em; overflow: hidden; white-space: nowrap">
 		<span id="scroll" onload="go()" onmouseover="enabled = false" onmouseout = "enabled = true; go()">
-			Snack of the Week: Creme Eggs
+			Linux command of the Week: gpg
 		</span>
 	</div>
 
@@ -78,4 +78,17 @@
 
 </header>
 
-<div id="message_location"></div>
+<div id="message_location">
+	<% if(typeof messages != 'undefined') { %>
+		<% if(messages.info) { %>
+			<% for(var i=0; i<messages.info.length; i++) { %>
+				<div class="message_box info_text"><i class="info_icon"></i><span class = "info_text"><%= messages.info[i] %></span></div>
+			<% } %>
+		<% } %>
+		<script type="text/javascript">
+			setTimeout(function() {
+				document.getElementById("message_location").innerHTML = "";
+			}, 4100);
+		</script>
+	<% } %>
+</div>
