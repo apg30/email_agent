@@ -795,3 +795,16 @@ input.settings {
   -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
+
+.iframe{
+  position: fixed;
+  left: 0.7%;
+  right: 0.7%;
+
+  height: 10em;
+  bottom: 8%;
+  float: middle;
+  width: 80%;
+  padding-left: 12em;
+  border:none;
+}

@@ -15,21 +15,23 @@ function setup_modal(modal, button, close) {
     }
 }
 
+var show=false;
 function setup_chat(button, close) {
     if ((button == null) || (close == null)) {
         return;
     }
     // When the user clicks the button, open the modal
     button.onclick = function() {
-        var url = window.location.href.split(':');
-        window.open("http:" + url[1] + ":3001");
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    close.onclick = function() {
-        modal.style.display = "none";
-				hide_all_email_forms();
-				hide_all_send_modal_forms();
+        if(show==false){
+          var url = window.location.href.split(':');
+          //window.open("http:" + url[1] + ":3001");
+          document.getElementById('chat_iframe').src = "http:" + url[1] + ":3001";
+          show=true;
+        }
+        else{
+          document.getElementById('chat_iframe').src = "";
+          show=false;
+        }
     }
 }
 
