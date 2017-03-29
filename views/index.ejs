@@ -42,7 +42,7 @@
 				</thead>
 				<tbody id="email_table_body" class="email read_email email-list-scroller">
 					<% for(var i=0; i < inbox.length; i++) { %>
-						<%= inbox[i] %>
+						<%= //inbox[i] %>
 						<tr class="read_email">
 						<td class = "read_email select">
 							<div class="email-checkbox">
@@ -105,7 +105,7 @@
 							<td><span id="read_email_from"></span></td>
 						</tr>
 						<tr>
-							<td colspan="2"><textarea id="read_email_content" rows="20" cols="60" readonly=""></textarea></td>
+							<td colspan="2"><div id="read_email_content" style="width: 100%;    border: 1px solid #ccc;    padding: 5px;"></div></td>
 						</tr>
 
 					</table>
