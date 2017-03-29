@@ -51,7 +51,7 @@
 						</td>
 						<td class="read_email from"><%= inbox[i].from_emails %></td>
 						<td class="read_email subject"><%= inbox[i].subject %></td>
-						<td class="read_email date"><%= inbox[i].time %></td>
+						<td class="read_email date"><%= inbox[i].date %></td>
 						<td class="read_email actions">
 						<button class ='styled read-mail-btn' onclick='display_message(<%= JSON.stringify(inbox[i]) %>);'>Read</button>
 						<button id='more-<%= inbox[i].id %>' class ='styled more-mail-btn'>More</button>

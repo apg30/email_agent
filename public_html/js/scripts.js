@@ -112,7 +112,7 @@ window.onclick = function(event) {
 
 /* Email more button */
 function moreDropdown(id) {
-    document.getElementById("more_dropdown" + id).classList.toggle("show");
+    document.getElementById("more_dropdown-" + id).classList.toggle("show");
 }
 
 /* Mail more button functions*/
