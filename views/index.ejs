@@ -120,9 +120,9 @@
 			<div>
 			<!-- Extra column for reply/forward forms -->
 
-				<% include ../public_html/html/reply_form.html %>
-				<% include ../public_html/html/reply_all_form.html %>
-				<% include ../public_html/html/forward_form.html %>
+				<% include ../views/partials/reply_form.ejs %>
+				<% include ../views/partials/reply_all_form.ejs %>
+				<% include ../views/partials/forward_form.ejs %>
 			</div>
 		</div>
 			<button id="delete_btn" class="styled">Delete</button>
@@ -135,7 +135,7 @@
 
 
 	<% include ../public_html/html/edit_draft_modal.html %>
-	<% include ../public_html/html/read_sent_modal.html %>
+	<% include ../views/partials/read_sent_modal.ejs %>
 
 	<iframe id="chat_iframe" class="iframe"></iframe>
 	<% include partials/footer.ejs %>

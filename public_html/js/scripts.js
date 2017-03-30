@@ -50,7 +50,7 @@ function display_message(email_message_json) {
     var modal = document.getElementById('read_email_modal');
 
     var close_button = document.getElementById('read_email_modal_close');
-
+	document.getElementById('email_read_id').value = JSON.stringify(email_message_json);
     // When the user clicks on <span> (x), close the modal
     close_button.onclick = function() {
         modal.style.display = "none";
