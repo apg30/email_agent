@@ -103,10 +103,31 @@ function hide_all_email_forms() {
 	hide_reply_all_form();
 }
 
+var divider = "\r\n=======================================================================\r\n";
+
+function more_reply_info(email) {
+	display_message(email);
+	show_reply_form();
+	//Set reply all to addresses to all from addresses + CC addresses
+	var reply_to = document.getElementById("read_email_from").innerHTML.split(',');
+	document.getElementById("reply_to_field").value = reply_to;
+	var reply_subject = document.getElementById("read_email_subject").innerHTML;
+	document.getElementById("reply_subject_field").value = "Re: " + reply_subject;
+	var reply_content = document.getElementById("read_email_content").innerHTML;
+	var reply_from = document.getElementById("read_email_from").innerHTML;
+	var reply_cc = document.getElementById("read_email_cc").innerHTML;
+	var reply_bcc = document.getElementById("read_email_bcc").innerHTML;
+	document.getElementById("original_content").value = divider
+														+ "FROM: " + reply_from + "\r\n" 
+														+ "TO: " + reply_to + "\r\n" 
+														+ "CC: " + reply_cc + "\r\n" 
+														+ "Subject: " + reply_subject + "\r\n" 
+														+ "\r\n" + reply_content
+														;
+}
 /* Reply stuff */
-var divider = "\r\n=======================================================================\r\n"
 var reply_button = document.getElementById('reply_btn');
-reply_button.onclick = function() {
+reply_button.onclick = function reply_info() {
 	show_reply_form();
 	//Set reply all to addresses to all from addresses + CC addresses
 	var reply_to = document.getElementById("read_email_from").innerHTML.split(',');
@@ -126,11 +147,36 @@ reply_button.onclick = function() {
 														;
 }
 
+//var more_reply_button = document.getElementById('more_reply_btn');
+//more_reply_button.onclick = reply_info();
+
 var cancel_reply_button = document.getElementById('cancel_reply_btn');
 cancel_reply_button.onclick = function() {
 	hide_reply_form();
 }
 
+function more_reply_all_info(email) {
+	display_message(email);
+	show_reply_all_form();
+	//Set reply all to addresses to all from addresses + CC addresses
+	var reply_to = document.getElementById("read_email_from").innerHTML + "," + document.getElementById("read_email_to").innerHTML;
+	var reply_cc = document.getElementById("read_email_cc").innerHTML;
+	document.getElementById("reply_all_to_field").value = reply_to;
+	document.getElementById("reply_all_cc_field").value = reply_cc;
+	var reply_subject = document.getElementById("read_email_subject").innerHTML;
+	document.getElementById("reply_all_subject_field").value = "Re: " + reply_subject;
+	var reply_content = document.getElementById("read_email_content").innerHTML;
+	var reply_from = document.getElementById("read_email_from").innerHTML;
+	var reply_cc = document.getElementById("read_email_cc").innerHTML;
+	var reply_bcc = document.getElementById("read_email_bcc").innerHTML;
+	document.getElementById("original_all_content").value = divider
+														+ "FROM: " + reply_from + "\r\n" 
+														+ "TO: " + reply_to + "\r\n" 
+														+ "CC: " + reply_cc + "\r\n" 
+														+ "Subject: " + reply_subject + "\r\n" 
+														+ "\r\n" + reply_content
+														;
+}
 
 /* Reply all stuff */
 var reply_all_button = document.getElementById('reply_all_btn');
@@ -163,9 +209,45 @@ cancel_reply_all_button.onclick = function() {
 
 
 /* Forward stuff */
+
+function more_forward_info(email) {
+	display_message(email);
+	show_forward_form();
+	var reply_to = document.getElementById("read_email_to").innerHTML;
+	var reply_cc = document.getElementById("read_email_cc").innerHTML;
+	var reply_subject = document.getElementById("read_email_subject").innerHTML;
+	document.getElementById("forward_subject_field").value = "Fw: " + reply_subject;
+	var reply_content = document.getElementById("read_email_content").innerHTML;
+	var reply_from = document.getElementById("read_email_from").innerHTML;
+	var reply_cc = document.getElementById("read_email_cc").innerHTML;
+	var reply_bcc = document.getElementById("read_email_bcc").innerHTML;
+	document.getElementById("original_forward_content").value = divider
+														+ "FROM: " + reply_from + "\r\n" 
+														+ "TO: " + reply_to + "\r\n" 
+														+ "CC: " + reply_cc + "\r\n" 
+														+ "Subject: " + reply_subject + "\r\n" 
+														+ "\r\n" + reply_content
+														;
+}
+
 var forward_button = document.getElementById('forward_btn');
 forward_button.onclick = function() {
 	show_forward_form();
+	var reply_to = document.getElementById("read_email_to").innerHTML;
+	var reply_cc = document.getElementById("read_email_cc").innerHTML;
+	var reply_subject = document.getElementById("read_email_subject").innerHTML;
+	document.getElementById("forward_subject_field").value = "Fw: " + reply_subject;
+	var reply_content = document.getElementById("read_email_content").innerHTML;
+	var reply_from = document.getElementById("read_email_from").innerHTML;
+	var reply_cc = document.getElementById("read_email_cc").innerHTML;
+	var reply_bcc = document.getElementById("read_email_bcc").innerHTML;
+	document.getElementById("original_forward_content").value = divider
+														+ "FROM: " + reply_from + "\r\n" 
+														+ "TO: " + reply_to + "\r\n" 
+														+ "CC: " + reply_cc + "\r\n" 
+														+ "Subject: " + reply_subject + "\r\n" 
+														+ "\r\n" + reply_content
+														;
 }
 
 var cancel_forward_button = document.getElementById('cancel_forward_btn');
