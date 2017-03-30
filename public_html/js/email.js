@@ -104,12 +104,26 @@ function hide_all_email_forms() {
 }
 
 /* Reply stuff */
+var divider = "\r\n=======================================================================\r\n"
 var reply_button = document.getElementById('reply_btn');
 reply_button.onclick = function() {
 	show_reply_form();
 	//Set reply all to addresses to all from addresses + CC addresses
-	var reply_to = document.getElementById("read_email_to").innerHTML;
-	document.getElementById("reply_to_field").value = reply_to;
+	var reply_to = document.getElementById("read_email_to").innerHTML.split(',');
+	document.getElementById("reply_to_field").value = reply_to[0];
+	var reply_subject = document.getElementById("read_email_subject").innerHTML;
+	document.getElementById("reply_subject_field").value = "Re: " + reply_subject;
+	var reply_content = document.getElementById("read_email_content").innerHTML;
+	var reply_from = document.getElementById("read_email_from").innerHTML;
+	var reply_cc = document.getElementById("read_email_cc").innerHTML;
+	var reply_bcc = document.getElementById("read_email_bcc").innerHTML;
+	document.getElementById("original_content").value = divider
+														+ "FROM: " + reply_from + "\r\n" 
+														+ "TO: " + reply_to + "\r\n" 
+														+ "CC: " + reply_cc + "\r\n" 
+														+ "Subject: " + reply_subject + "\r\n" 
+														+ "\r\n" + reply_content
+														;
 }
 
 var cancel_reply_button = document.getElementById('cancel_reply_btn');
@@ -125,7 +139,8 @@ reply_all_button.onclick = function() {
 	//Set reply all to addresses to all from addresses + CC addresses
 	var reply_to = document.getElementById("read_email_to").innerHTML;
 	var reply_cc = document.getElementById("read_email_cc").innerHTML;
-	document.getElementById("reply_all_to_field").value = reply_to + ", " + reply_cc;
+	document.getElementById("reply_all_to_field").value = reply_to;
+	dociment.getElementById("reply_all_cc_field").value = reply_cc;
 }
 
 var cancel_reply_all_button = document.getElementById('cancel_reply_all_btn');

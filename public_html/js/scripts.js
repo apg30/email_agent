@@ -50,7 +50,6 @@ function display_message(email_message_json) {
     var modal = document.getElementById('read_email_modal');
 
     var close_button = document.getElementById('read_email_modal_close');
-	document.getElementById('email_read_id').value = JSON.stringify(email_message_json);
     // When the user clicks on <span> (x), close the modal
     close_button.onclick = function() {
         modal.style.display = "none";
@@ -176,10 +175,8 @@ function getToggle(){
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.responseText != "") {
-			console.log("200");
 			console.log(this.responseText);
 			var cur = this.responseText;
-			console.log("cur: " + cur);
 			if(cur == "true"){
 				toggle = true;
 				return true;
@@ -225,7 +222,6 @@ function update_background(toggle) {
 }
 
 function change_background() {
-	console.log("toggle: " + toggle);
     if (toggle) {
         current++;
         document.body.style.backgroundImage = backgrounds[current];
