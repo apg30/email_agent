@@ -21,7 +21,8 @@ gulps.registerTasks({
 		  	   settings: {
 		  		   email_alias: "gulp_user",
 		  	   },
-					 inbox: []
+					 inbox: [],
+					 port: 3001
 		     }, {ext:'.html'}))
 		     .pipe(gulp.dest(config.build_dest + parsed_folder));
 		}),

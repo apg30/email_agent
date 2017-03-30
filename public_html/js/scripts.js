@@ -19,7 +19,8 @@ var show=false;
 function setup_chat(port, button) {
 
   var url = window.location.href.split(':');
-  console.log("http:" + url[1] + ":" + port);
+  var chat_url = "http:" + url[1] + ":" + port;
+
     if ((button == null)) {
         console.log("button not defined");
         return;
@@ -27,10 +28,7 @@ function setup_chat(port, button) {
     // When the user clicks the button, open the modal
     button.onclick = function() {
         if(show==false){
-          var url = window.location.href.split(':');
-          //window.open("http:" + url[1] + ":3001");
-          console.log("http:" + url[1] + ":" + port);
-          document.getElementById('chat_iframe').src = "http:" + url[1] + ":" + port;
+          document.getElementById('chat_iframe').src = chat_url;
           show=true;
         }
         else{
