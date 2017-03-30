@@ -1,0 +1,58 @@
+<footer>
+	Copyright (C) 2017 Cameron A. Craig, Stuart J. Thain, Aidan P. Gallagher, Lee A. Hamilton
+
+	<script type="text/javascript">
+		function validate(doctype) {
+			//See https://github.com/validator/validator/wiki/Service-%C2%BB-Input-%C2%BB-textarea
+			var pre_head;
+			var parser;
+			if(doctype == "xhtml"){
+				pre_head = '<!DOCTYPE html ><html xmlns="http://www.w3.org/1999/xhtml" lang="en">';
+				parser = "xml";
+			} else{
+				pre_head = '<!DOCTYPE html ><html lang="en">';
+				parser = "html5";
+			}
+			var html = document.documentElement.innerHTML;
+			console.log(html);
+			var validation_url = "https://validator.nu/";
+		    // The rest of this code assumes you are not using a library.
+		    // It can be made less wordy if you use one.
+		    var form = document.createElement("form");
+		    form.setAttribute("method", "post");
+		    form.setAttribute("action", validation_url);
+			form.setAttribute("enctype", "multipart/form-data");
+
+			var parserField = document.createElement("input");
+			parserField.setAttribute("type", "hidden");
+			parserField.setAttribute("name", "parser");
+			parserField.setAttribute("value", parser);
+
+            var hiddenField = document.createElement("input");
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", "content");
+            hiddenField.setAttribute("value", pre_head + html);
+
+			form.appendChild(parserField);
+			// Content MUST be last input
+            form.appendChild(hiddenField);
+
+		    document.body.appendChild(form);
+		    form.submit();
+		}
+
+
+	</script>
+
+  <script src="js/scripts.js"></script>
+	<script>
+	  var button = document.getElementById("chat_button");
+		//setup_modal(chat_modal, chat_btn, chat_modal_close);
+		setup_chat(<%= port %>, button);
+	</script>
+
+	<a id="xhtml_validation" class="validate_link" onclick="validate('xhtml')" href="javascript:void(0);">Validate XHTML 5</a>
+	<a id="html_validation" class="validate_link" onclick="validate('html')" href="javascript:void(0);">Validate HTML 5</a>
+	<a id="css_validation" class="validate_link" href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a>
+	<a id="travis_validation" class="validate_link" href="https://travis-ci.org/apg30/email_agent"> <img src="https://api.travis-ci.org/apg30/email_agent.svg?branch=stable" alt="travis passing" /></a>
+</footer>
