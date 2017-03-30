@@ -167,9 +167,7 @@ var backgrounds = new Array(
     'url(img/backgrounds/01.jpg)', 'url(img/backgrounds/02.jpg)', 'url(img/backgrounds/03.jpg)', 'url(img/backgrounds/04.jpg)', 'url(img/backgrounds/05.jpg)', 'url(img/backgrounds/06.jpg)', 'url(img/backgrounds/08.jpg)', 'url(img/backgrounds/10.jpg)', 'url(img/backgrounds/11.jpg)', 'url(img/backgrounds/12.jpg)'
 );
 var current = 0;
-var change = 1;
 var toggle = getToggle();
-
 
 
 var background_change = document.getElementById('background_change_btn');
@@ -183,26 +181,27 @@ function getToggle(){
 			var cur = this.responseText;
 			console.log("cur: " + cur);
 			if(cur == "true"){
+				toggle = true;
 				return true;
 			}
 			else{
+				toggle = false;
 				return false;
 			}
 		}
 	};
 	xhttp.open("GET", "/get_background", true);
 	xhttp.send();
+	
 }
 
 background_change.onclick = function() {
 	
     if (toggle) {
-        change = 0;
         toggle = false;
         message("info", "The background will stop changing periodically.");
     } else {
         message("info", "The background will start changing periodially.");
-        change = 1;
         toggle = true;
     }
     update_background(toggle);
@@ -226,6 +225,7 @@ function update_background(toggle) {
 }
 
 function change_background() {
+	console.log("toggle: " + toggle);
     if (toggle) {
         current++;
         document.body.style.backgroundImage = backgrounds[current];
@@ -234,4 +234,4 @@ function change_background() {
         }
     }
 }
-setInterval(change_background, 50000);
+setInterval(change_background, 10000);
