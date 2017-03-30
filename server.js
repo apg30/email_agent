@@ -17,7 +17,9 @@ var html = require('./lib/html');
 var http2 = require('./lib/http');
 var db = require('./lib/db');
 var models = require('./lib/models');
+var chat = require("./lib/chat.js");
 var config = require("./config.js");
+var path = require('path');
 
 // datebase connection
 var conn = db.init(config.mongodb_username,
@@ -72,3 +74,5 @@ app.use(express.static(__dirname + '/public_html'));
 require('./lib/routes')(app);
 
 app.listen(config.port);
+
+chat.start();

@@ -35,6 +35,10 @@ node server.js
 
 Rename `default-config.js` to `config.js` and set appropriate credentials in the file.
 
+## Testing
+
+gulp test
+
 # Features
 
 ## Email
