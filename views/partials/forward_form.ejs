@@ -1,11 +1,10 @@
 <!-- Forward email section -->
 <div id="forward_content">
-	<form class="forward_form">
+	<form class="forward_form" id="form_forward" method="post" action="/smtp_forward">
 		<h1>Forward</h1>
 		<table>
 			<tr>
-				<td>To:</td>
-				<td><input type="email" name="forward_to" /></td>
+				<td>To:</td><td><input type="email" name="forward_to" /></td>
 			</tr>
 			<tr>
 				<td>CC:</td><td> <input id="forward_cc_field" type="email" name="forward_cc" multiple="" /></td>
@@ -14,16 +13,19 @@
 				<td>BCC:</td><td>	<input id="forward_bcc_field" type="email" name="forward_bcc" multiple="" /></td>
 			</tr>
 			<tr>
-				<td>From: </td>
-				<td><input type="email" name="forward_from" value="<%=user.email%>" readonly=""/></td>
+				<td>Subject:</td><td><input id="forward_subject_field" type="text" name="forward_subject" /></td>
+			</tr>
+			<tr>
+				<td>From:</td><td><input id="forward_from_field" type="email" name="forward_from" value="<%=user.email%>" readonly=""/></td>
 			</tr>
 		</table>
-		<textarea class= "forward_box" rows="20" cols="60">
-		</textarea>
+		<textarea class= "reply_box" form="form_forward" name="forward_content"  rows="20" cols="60"></textarea>
+		<input id="original_forward_content" type="hidden" name="forward_content" value=""/>
+		<input id="forward_name" type="hidden" name="name" value="forward" />
 		<br/>
 		<button id="send_forward_btn" class="styled">Forward Email</button>
-		<button id="cancel_forward_btn" class="styled">Cancel</button>
 	</form>
+	<button id="cancel_forward_btn" class="styled">Cancel</button>
 </div>
 
 <!-- End forward email section -->

@@ -63,11 +63,11 @@ function display_message(email_message_json) {
     var to = document.getElementById('read_email_to');
     to.innerHTML = email_message_json.to_emails;
 
-		var cc = document.getElementById('read_email_cc');
+	var cc = document.getElementById('read_email_cc');
     cc.innerHTML = email_message_json.cc_emails;
 
-		var bcc = document.getElementById('read_email_bcc');
-		bcc.innerHTML = email_message_json.bcc_emails;
+	var bcc = document.getElementById('read_email_bcc');
+	bcc.innerHTML = email_message_json.bcc_emails;
 
     var from = document.getElementById('read_email_from');
     from.innerHTML = email_message_json.from_emails;
