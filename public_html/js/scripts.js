@@ -16,16 +16,19 @@ function setup_modal(modal, button, close) {
 }
 
 var show=false;
-function setup_chat(button, close) {
-    if ((button == null) || (close == null)) {
+function setup_chat(port, button) {
+
+  var url = window.location.href.split(':');
+  var chat_url = "http:" + url[1] + ":" + port;
+
+    if ((button == null)) {
+        console.log("button not defined");
         return;
     }
     // When the user clicks the button, open the modal
     button.onclick = function() {
         if(show==false){
-          var url = window.location.href.split(':');
-          //window.open("http:" + url[1] + ":3001");
-          document.getElementById('chat_iframe').src = "http:" + url[1] + ":3001";
+          document.getElementById('chat_iframe').src = chat_url;
           show=true;
         }
         else{
@@ -59,19 +62,19 @@ function display_message(email_message_json) {
     subject.innerHTML = email_message_json.subject;
 
     var to = document.getElementById('read_email_to');
-    to.innerHTML = email_message_json.to;
+    to.innerHTML = email_message_json.to_emails;
 
 		var cc = document.getElementById('read_email_cc');
-    cc.innerHTML = email_message_json.cc;
+    cc.innerHTML = email_message_json.cc_emails;
 
 		var bcc = document.getElementById('read_email_bcc');
-		bcc.innerHTML = email_message_json.bcc;
+		bcc.innerHTML = email_message_json.bcc_emails;
 
     var from = document.getElementById('read_email_from');
-    from.innerHTML = email_message_json.from;
+    from.innerHTML = email_message_json.from_emails;
 
     var content = document.getElementById('read_email_content');
-    content.innerHTML = email_message_json.content;
+    content.innerHTML = email_message_json.html;
 
     // Display modal
     modal.style.display = "block";
@@ -84,11 +87,6 @@ var compose_btn = document.getElementById("compose_button");
 var compose_modal_close = document.getElementById("compose_modal_close");
 setup_modal(compose_modal, compose_btn, compose_modal_close);
 
-var chat_modal = document.getElementById('chat_modal');
-var chat_btn = document.getElementById("chat_button");
-var chat_modal_close = document.getElementById("chat_modal_close");
-//setup_modal(chat_modal, chat_btn, chat_modal_close);
-setup_chat(chat_btn, chat_modal_close);
 
 var advanced_search_modal = document.getElementById('ad_search_modal');
 var advanced_search_btn = document.getElementById("advanced_search_form");
@@ -107,8 +105,8 @@ window.onclick = function(event) {
     var edit_draft_modal = document.getElementById('edit_draft_modal');
     if (event.target == compose_modal) {
         compose_modal.style.display = "none";
-    } else if (event.target == chat_modal) {
-        chat_modal.style.display = "none";
+  //  } else if (event.target == chat_modal) {
+  //      chat_modal.style.display = "none";
     } else if (event.target == advanced_search_modal) {
         advanced_search_modal.style.display = "none";
     } else if (event.target == help_modal) {
@@ -133,7 +131,7 @@ window.onclick = function(event) {
 
 /* Email more button */
 function moreDropdown(id) {
-    document.getElementById("more_dropdown" + id).classList.toggle("show");
+    document.getElementById("dropdown-" + id).classList.toggle("show");
 }
 
 /* Mail more button functions*/
