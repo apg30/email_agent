@@ -109,7 +109,7 @@ var reply_button = document.getElementById('reply_btn');
 reply_button.onclick = function() {
 	show_reply_form();
 	//Set reply all to addresses to all from addresses + CC addresses
-	var reply_to = document.getElementById("read_email_to").innerHTML.split(',');
+	var reply_to = document.getElementById("read_email_from").innerHTML.split(',');
 	document.getElementById("reply_to_field").value = reply_to[0];
 	var reply_subject = document.getElementById("read_email_subject").innerHTML;
 	document.getElementById("reply_subject_field").value = "Re: " + reply_subject;
@@ -137,7 +137,7 @@ var reply_all_button = document.getElementById('reply_all_btn');
 reply_all_button.onclick = function() {
 	show_reply_all_form();
 	//Set reply all to addresses to all from addresses + CC addresses
-	var reply_to = document.getElementById("read_email_to").innerHTML;
+	var reply_to = document.getElementById("read_email_from").innerHTML;
 	var reply_cc = document.getElementById("read_email_cc").innerHTML;
 	document.getElementById("reply_all_to_field").value = reply_to;
 	document.getElementById("reply_all_cc_field").value = reply_cc;
