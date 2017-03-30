@@ -15,6 +15,26 @@ function setup_modal(modal, button, close) {
     }
 }
 
+var show=false;
+function setup_chat(button, close) {
+    if ((button == null) || (close == null)) {
+        return;
+    }
+    // When the user clicks the button, open the modal
+    button.onclick = function() {
+        if(show==false){
+          var url = window.location.href.split(':');
+          //window.open("http:" + url[1] + ":3001");
+          document.getElementById('chat_iframe').src = "http:" + url[1] + ":3001";
+          show=true;
+        }
+        else{
+          document.getElementById('chat_iframe').src = "";
+          show=false;
+        }
+    }
+}
+
 /* Call this function when serverside functionality should follow,
    but is not yet supported.
 */
@@ -67,7 +87,8 @@ setup_modal(compose_modal, compose_btn, compose_modal_close);
 var chat_modal = document.getElementById('chat_modal');
 var chat_btn = document.getElementById("chat_button");
 var chat_modal_close = document.getElementById("chat_modal_close");
-setup_modal(chat_modal, chat_btn, chat_modal_close);
+//setup_modal(chat_modal, chat_btn, chat_modal_close);
+setup_chat(chat_btn, chat_modal_close);
 
 var advanced_search_modal = document.getElementById('ad_search_modal');
 var advanced_search_btn = document.getElementById("advanced_search_form");
