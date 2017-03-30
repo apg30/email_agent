@@ -44,6 +44,7 @@
 					</tr>
 				</thead>
 				<tbody id="email_table_body" class="email read_email email-list-scroller">
+					<% if(typeof inbox != 'undefined') { %>
 					<% if(inbox.length > 0) { %>
 						<% for(var i=0; i < inbox.length; i++) { %>
 							<%= //inbox[i] %>
@@ -72,6 +73,7 @@
 						<% } %>
 					<% } else { %>
 						<tr><td colspan="5"><span >No emails yet! <a href="/settings">Configure settings</a> and refresh.</span></td></tr>
+					<% } %>
 					<% } %>
 				</tbody>
 			</table>
@@ -133,7 +135,7 @@
 	</div> <!-- End of read email modal -->
 
 
-
+	<% include ../public_html/html/chat_modal.html %>
 	<% include ../public_html/html/edit_draft_modal.html %>
 	<% include ../public_html/html/read_sent_modal.html %>
 

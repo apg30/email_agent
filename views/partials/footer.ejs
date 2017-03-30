@@ -45,6 +45,7 @@
 	<script>
 	  var button = document.getElementById("chat_button");
 		//setup_modal(chat_modal, chat_btn, chat_modal_close);
+		<% if (typeof port == 'undefined') {var port = 3001;} %>
 		setup_chat(<%= port %>, button);
 	</script>
 

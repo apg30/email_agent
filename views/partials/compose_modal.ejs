@@ -15,10 +15,11 @@
 					<td>BCC:</td><td><input id="compose_bcc_field" type="email" name="compose_bcc" multiple="" /></td>
 				</tr>
 				<tr>
-					<td>Subject:</td><td><input id="compose_subject_field" type="text" name="compose_subject" /></td>				
+					<td>Subject:</td><td><input id="compose_subject_field" type="text" name="compose_subject" /></td>
 				</tr>
 				<tr>
-					<td>From:</td><td><input id="compose_from_field" type="email" name="compose_from" value="<%=user.email%>" readonly=""/></td>
+					<% if (typeof user != 'undefined') {var email = user.email;} else {var email = "";} %>
+					<td>From:</td><td><input id="compose_from_field" type="email" name="compose_from" value="<%=email%>" readonly=""/></td>
 				</tr>
 			</table>
 			<textarea form="form_compose" name="compose_content" style="width: 300px; height: 200px;"></textarea>
