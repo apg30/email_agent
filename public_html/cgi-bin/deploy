@@ -1,0 +1,58 @@
+#!/usr/bin/perl
+
+# Starts or restarts the YouWatt node application
+
+# Gets current timestamp
+sub get_log_time {
+
+    my ( $sec, $min, $hour, $mday, $mon, $year, $wday, $yday, $isdst ) =
+      localtime(time);
+    my $nice_timestamp = sprintf(
+        "%04d%02d%02d %02d:%02d:%02d",
+        $year + 1900,
+        $mon + 1, $mday, $hour, $min, $sec
+    );
+    return $nice_timestamp;
+}
+
+# Display result in browser
+print "Content-type: text/html", "\n\n";
+print "<html>", "\n";
+print "<head><title>YouWatt server start/restart</title></head>", "\n";
+print "<body>", "\n";
+print "<h1>", "YouWatt server start/restart", "</h1>", "<hr>", "\n";
+print "Sit back and relax :)<br><br>", "\n";
+
+print "git pull result: ", "\n";
+my $identify = `hostname`;
+print $identify;
+
+my $cmd_install = `cd /home/ce5/cac30/git/email_agent/;npm install`;
+my $cmd = `cd /home/ce5/cac30/git/email_agent/;node server.js`;
+
+my $filename  = "/home/ce5/cac30/git/email_agent/public_html/logs/node_log.log";
+my $timestamp = get_log_time();
+
+print "Log:<br>", "\n";
+
+# Open log file for appending
+open( my $log_file, ">>", $filename ) or die "Error opening $filename: $!";
+
+#Write a line to the log file
+print $log_file "Time: ", $timestamp, ", ", "Result: ", $cmd, "\n";
+close $log_file;
+
+#Open log file for reading
+open( my $log_read, "<", $filename ) or die "Error opening $filename: $!";
+
+#Displays the contents of the log file on web page
+print STDOUT "<textarea style='width: 40em; height:20em;'>";
+while (<$log_read>) {
+    print STDOUT $_;
+}
+print STDOUT "</textarea>";
+close $log_read;
+
+print "</body></html>", "\n";
+
+exit(0);
