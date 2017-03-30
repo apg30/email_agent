@@ -8,6 +8,7 @@ module.exports = {
 	mongodb_port: 27017,
 
 	port: 3000,
+	chat_port: 3001,
 
 	build_dest: "./build/"
 

@@ -16,16 +16,19 @@ function setup_modal(modal, button, close) {
 }
 
 var show=false;
-function setup_chat(button, close) {
-    if ((button == null) || (close == null)) {
+function setup_chat(port, button) {
+
+  var url = window.location.href.split(':');
+  var chat_url = "http:" + url[1] + ":" + port;
+
+    if ((button == null)) {
+        console.log("button not defined");
         return;
     }
     // When the user clicks the button, open the modal
     button.onclick = function() {
         if(show==false){
-          var url = window.location.href.split(':');
-          //window.open("http:" + url[1] + ":3001");
-          document.getElementById('chat_iframe').src = "http:" + url[1] + ":3001";
+          document.getElementById('chat_iframe').src = chat_url;
           show=true;
         }
         else{
@@ -84,11 +87,6 @@ var compose_btn = document.getElementById("compose_button");
 var compose_modal_close = document.getElementById("compose_modal_close");
 setup_modal(compose_modal, compose_btn, compose_modal_close);
 
-var chat_modal = document.getElementById('chat_modal');
-var chat_btn = document.getElementById("chat_button");
-var chat_modal_close = document.getElementById("chat_modal_close");
-//setup_modal(chat_modal, chat_btn, chat_modal_close);
-setup_chat(chat_btn, chat_modal_close);
 
 var advanced_search_modal = document.getElementById('ad_search_modal');
 var advanced_search_btn = document.getElementById("advanced_search_form");
@@ -107,8 +105,8 @@ window.onclick = function(event) {
     var edit_draft_modal = document.getElementById('edit_draft_modal');
     if (event.target == compose_modal) {
         compose_modal.style.display = "none";
-    } else if (event.target == chat_modal) {
-        chat_modal.style.display = "none";
+  //  } else if (event.target == chat_modal) {
+  //      chat_modal.style.display = "none";
     } else if (event.target == advanced_search_modal) {
         advanced_search_modal.style.display = "none";
     } else if (event.target == help_modal) {
@@ -170,20 +168,65 @@ var backgrounds = new Array(
 );
 var current = 0;
 var change = 1;
+var toggle = getToggle();
+
+
 
 var background_change = document.getElementById('background_change_btn');
+
+function getToggle(){
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.responseText != "") {
+			console.log("200");
+			console.log(this.responseText);
+			var cur = this.responseText;
+			console.log("cur: " + cur);
+			if(cur == "true"){
+				return true;
+			}
+			else{
+				return false;
+			}
+		}
+	};
+	xhttp.open("GET", "/get_background", true);
+	xhttp.send();
+}
+
 background_change.onclick = function() {
-    if (change == 1) {
+	
+    if (toggle) {
         change = 0;
+        toggle = false;
         message("info", "The background will stop changing periodically.");
     } else {
         message("info", "The background will start changing periodially.");
         change = 1;
+        toggle = true;
     }
+    update_background(toggle);
+}
+
+function update_background(toggle) {
+	var method = "post";
+	var form = document.createElement("form");
+	form.setAttribute("method", method);
+	form.setAttribute("action", "/update_background");
+	
+	var hiddenField = document.createElement("input");
+    hiddenField.setAttribute("type", "hidden");
+    hiddenField.setAttribute("name", "update_background");
+    hiddenField.setAttribute("value", toggle);
+            
+    form.appendChild(hiddenField);
+            
+    document.body.appendChild(form);
+	form.submit();
 }
 
 function change_background() {
-    if (change == 1) {
+    if (toggle) {
         current++;
         document.body.style.backgroundImage = backgrounds[current];
         if (current == backgrounds.length) {
@@ -191,4 +234,4 @@ function change_background() {
         }
     }
 }
-setInterval(change_background, 10000);
+setInterval(change_background, 50000);
