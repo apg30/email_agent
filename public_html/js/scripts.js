@@ -149,20 +149,65 @@ var backgrounds = new Array(
 );
 var current = 0;
 var change = 1;
+var toggle = getToggle();
+
+
 
 var background_change = document.getElementById('background_change_btn');
+
+function getToggle(){
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.responseText != "") {
+			console.log("200");
+			console.log(this.responseText);
+			var cur = this.responseText;
+			console.log("cur: " + cur);
+			if(cur == "true"){
+				return true;
+			}
+			else{
+				return false;
+			}
+		}
+	};
+	xhttp.open("GET", "/get_background", true);
+	xhttp.send();
+}
+
 background_change.onclick = function() {
-    if (change == 1) {
+	
+    if (toggle) {
         change = 0;
+        toggle = false;
         message("info", "The background will stop changing periodically.");
     } else {
         message("info", "The background will start changing periodially.");
         change = 1;
+        toggle = true;
     }
+    update_background(toggle);
+}
+
+function update_background(toggle) {
+	var method = "post";
+	var form = document.createElement("form");
+	form.setAttribute("method", method);
+	form.setAttribute("action", "/update_background");
+	
+	var hiddenField = document.createElement("input");
+    hiddenField.setAttribute("type", "hidden");
+    hiddenField.setAttribute("name", "update_background");
+    hiddenField.setAttribute("value", toggle);
+            
+    form.appendChild(hiddenField);
+            
+    document.body.appendChild(form);
+	form.submit();
 }
 
 function change_background() {
-    if (change == 1) {
+    if (toggle) {
         current++;
         document.body.style.backgroundImage = backgrounds[current];
         if (current == backgrounds.length) {
@@ -170,4 +215,4 @@ function change_background() {
         }
     }
 }
-setInterval(change_background, 10000);
+setInterval(change_background, 50000);
