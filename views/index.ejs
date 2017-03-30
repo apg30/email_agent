@@ -65,9 +65,9 @@
 							<button class = 'delete_button' ></button>
 							</form>
 							<div id='dropdown-more-<%= inbox[i].id %>' class='dropdown-content more-dropdown-content'>
-								<a id='more-reply-btn-<%= inbox[i].id %>' onclick='more_reply_function(<%= JSON.stringify(inbox[i]) %>)'>Reply</a>
-								<a id='more-replyall-btn-<%= inbox[i].id %>' onclick='more_replyall_function(<%= JSON.stringify(inbox[i]) %>)'>Reply All</a>
-								<a id='more-forward-btn-<%= inbox[i].id %>' onclick='more_forward_function(<%= JSON.stringify(inbox[i]) %>)'>Forward</a>
+								<a id='more-reply-btn-<%= inbox[i].id %>' onclick='more_reply_info(<%= JSON.stringify(inbox[i]) %>)'>Reply</a>
+								<a id='more-replyall-btn-<%= inbox[i].id %>' onclick='more_reply_all_info(<%= JSON.stringify(inbox[i]) %>)'>Reply All</a>
+								<a id='more-forward-btn-<%= inbox[i].id %>' onclick='more_forward_info(<%= JSON.stringify(inbox[i]) %>)'>Forward</a>
 								<a id='more-markasread-btn-<%= inbox[i].id %>' onclick='not_yet_implemented()'>Mark As Read</a>
 								<a id='more-moveto-btn-<%= inbox[i].id %>' onclick='not_yet_implemented()'>Move To</a>
 							</div>
