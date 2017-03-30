@@ -4,13 +4,10 @@
 	<script type="text/javascript">
 		function validate(doctype) {
 			//See https://github.com/validator/validator/wiki/Service-%C2%BB-Input-%C2%BB-textarea
-			var pre_head;
 			var parser;
 			if(doctype == "xhtml"){
-				pre_head = '<!DOCTYPE html ><html xmlns="http://www.w3.org/1999/xhtml" lang="en">';
 				parser = "xml";
 			} else{
-				pre_head = '<!DOCTYPE html ><html lang="en">';
 				parser = "html5";
 			}
 			var html = document.documentElement.innerHTML;
@@ -31,7 +28,7 @@
             var hiddenField = document.createElement("input");
             hiddenField.setAttribute("type", "hidden");
             hiddenField.setAttribute("name", "content");
-            hiddenField.setAttribute("value", pre_head + html);
+            hiddenField.setAttribute("value", html);
 
 			form.appendChild(parserField);
 			// Content MUST be last input
