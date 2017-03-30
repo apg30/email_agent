@@ -64,19 +64,19 @@ function display_message(email_message_json) {
     subject.innerHTML = email_message_json.subject;
 
     var to = document.getElementById('read_email_to');
-    to.innerHTML = email_message_json.to;
+    to.innerHTML = email_message_json.to_emails;
 
 		var cc = document.getElementById('read_email_cc');
-    cc.innerHTML = email_message_json.cc;
+    cc.innerHTML = email_message_json.cc_emails;
 
 		var bcc = document.getElementById('read_email_bcc');
-		bcc.innerHTML = email_message_json.bcc;
+		bcc.innerHTML = email_message_json.bcc_emails;
 
     var from = document.getElementById('read_email_from');
-    from.innerHTML = email_message_json.from;
+    from.innerHTML = email_message_json.from_emails;
 
     var content = document.getElementById('read_email_content');
-    content.innerHTML = email_message_json.content;
+    content.innerHTML = email_message_json.html;
 
     // Display modal
     modal.style.display = "block";
@@ -133,7 +133,7 @@ window.onclick = function(event) {
 
 /* Email more button */
 function moreDropdown(id) {
-    document.getElementById("more_dropdown" + id).classList.toggle("show");
+    document.getElementById("dropdown-" + id).classList.toggle("show");
 }
 
 /* Mail more button functions*/
