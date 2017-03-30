@@ -140,7 +140,7 @@ reply_all_button.onclick = function() {
 	var reply_to = document.getElementById("read_email_to").innerHTML;
 	var reply_cc = document.getElementById("read_email_cc").innerHTML;
 	document.getElementById("reply_all_to_field").value = reply_to;
-	dociment.getElementById("reply_all_cc_field").value = reply_cc;
+	document.getElementById("reply_all_cc_field").value = reply_cc;
 }
 
 var cancel_reply_all_button = document.getElementById('cancel_reply_all_btn');
