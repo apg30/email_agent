@@ -189,11 +189,11 @@ function getToggle(){
 	};
 	xhttp.open("GET", "/get_background", true);
 	xhttp.send();
-	
+
 }
 
 background_change.onclick = function() {
-	
+
     if (toggle) {
         toggle = false;
         message("info", "The background will stop changing periodically.");
@@ -209,14 +209,14 @@ function update_background(toggle) {
 	var form = document.createElement("form");
 	form.setAttribute("method", method);
 	form.setAttribute("action", "/update_background");
-	
+
 	var hiddenField = document.createElement("input");
     hiddenField.setAttribute("type", "hidden");
     hiddenField.setAttribute("name", "update_background");
     hiddenField.setAttribute("value", toggle);
-            
+
     form.appendChild(hiddenField);
-            
+
     document.body.appendChild(form);
 	form.submit();
 }
