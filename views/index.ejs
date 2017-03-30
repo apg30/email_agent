@@ -27,6 +27,9 @@
 				<button class="styled smaller_styled" type="button">Mark as unread</button>
 				<button class="styled smaller_styled" type="button">Mark as important</button>
 				<button class="styled smaller_styled" type="button">Delete selected</button>
+				<form method="get" action="/pop3_retr">
+					<button class="styled smaller_styled">Update</button>
+				</form>
 
 			<table class="email-inbox email">
 				<thead class="read_email">
@@ -41,200 +44,35 @@
 					</tr>
 				</thead>
 				<tbody id="email_table_body" class="email read_email email-list-scroller">
-					<script>
-						var emails = [{
-								"message_id": "123",
-								"subject": "Cottage Cheese",
-								"content": "Dear Aidan,\r\nThe finest Cheese in all the land.\r\nCheers, Cheese Company Ltd.",
-								"to": "aidan@to.com",
-								"cc": "cctest@test.com",
-								"bcc": "cctest@test.com",
-								"from": "from@from.com",
-								"time": "24/10/1994 05:35",
-							},
-							{
-								"message_id": "124",
-								"subject": "Important Meeting",
-								"content": "Test Content",
-								"to": "stuart@to.com",
-								"cc": "cctest@test.com",
-								"bcc": "cctest@test.com",
-								"from": "from@from.com",
-								"time": "24/10/2008 05:35"
-							},
-							{
-								"message_id": "125",
-								"subject": "Please fill in this survey",
-								"content": "Test Content",
-								"to": "cameron@to.com",
-								"cc": "cctest@test.com",
-								"bcc": "cctest@test.com",
-								"from": "from@from.com",
-								"time": "24/01/2017 05:35"
-							},
-							{
-								"message_id": "126",
-								"subject": "Free Amazon Voucher (after Questionnaire)",
-								"content": "Test Content",
-								"to": "cameron@to.com",
-								"cc": "cctest@test.com",
-								"bcc": "cctest@test.com",
-								"from": "from@from.com",
-								"time": "24/01/2017 05:35"
-							},
-							{
-								"message_id": "127",
-								"subject": "Subjective Ideas",
-								"content": "Test Content",
-								"to": "cameron@to.com",
-								"cc": "cctest@test.com",
-								"bcc": "cctest@test.com",
-								"from": "from@from.com",
-								"time": "24/01/2017 05:35"
-							},
-							{
-								"message_id": "128",
-								"subject": "Important Content",
-								"content": "Test Content",
-								"to": "cameron@to.com",
-								"cc": "cctest@test.com",
-								"bcc": "cctest@test.com",
-								"from": "from@from.com",
-								"time": "24/01/2017 05:35"
-							},
-							{
-								"message_id": "129",
-								"subject": "RE: Job Offer",
-								"content": "Test Content",
-								"to": "cameron@to.com",
-								"cc": "cctest@test.com",
-								"bcc": "cctest@test.com",
-								"from": "from@from.com",
-								"time": "24/01/2017 05:35"
-							},
-							{
-								"message_id": "130",
-								"subject": "Test Subject",
-								"content": "Test Content",
-								"to": "cameron@to.com",
-								"cc": "cctest@test.com",
-								"bcc": "cctest@test.com",
-								"from": "from@from.com",
-								"time": "24/01/2017 05:35"
-							},
-							{
-								"message_id": "131",
-								"subject": "Test Subject",
-								"content": "Test Content",
-								"to": "cameron@to.com",
-								"cc": "cctest@test.com",
-								"bcc": "cctest@test.com",
-								"from": "from@from.com",
-								"time": "24/01/2017 05:35"
-							},
-							{
-								"message_id": "132",
-								"subject": "Test Subject",
-								"content": "Test Content",
-								"to": "cameron@to.com",
-								"cc": "cctest@test.com",
-								"bcc": "cctest@test.com",
-								"from": "from@from.com",
-								"time": "24/01/2017 05:35"
-							},
-							{
-								"message_id": "133",
-								"subject": "Test Subject",
-								"content": "Test Content",
-								"to": "cameron@to.com",
-								"cc": "cctest@test.com",
-								"bcc": "cctest@test.com",
-								"from": "from@from.com",
-								"time": "24/01/2017 05:35"
-							},
-							{
-								"message_id": "134",
-								"subject": "Test Subject",
-								"content": "Test Content",
-								"to": "cameron@to.com",
-								"cc": "cctest@test.com",
-								"bcc": "cctest@test.com",
-								"from": "from@from.com",
-								"time": "24/01/2017 05:35"
-							},
-							{
-								"message_id": "135",
-								"subject": "Test Subject",
-								"content": "Test Content",
-								"to": "cameron@to.com",
-								"cc": "cctest@test.com",
-								"bcc": "cctest@test.com",
-								"from": "from@from.com",
-								"time": "24/01/2017 05:35"
-							},
-							{
-								"message_id": "136",
-								"subject": "Test Subject",
-								"content": "Test Content",
-								"to": "cameron@to.com",
-								"cc": "cctest@test.com",
-								"bcc": "cctest@test.com",
-								"from": "from@from.com",
-								"time": "24/01/2017 05:35"
-							},
-							{
-								"message_id": "137",
-								"subject": "Test Subject",
-								"content": "Test Content",
-								"to": "cameron@to.com",
-								"cc": "cctest@test.com",
-								"bcc": "cctest@test.com",
-								"from": "from@from.com",
-								"time": "24/01/2017 05:35"
-							},
-							{
-								"message_id": "138",
-								"subject": "Test Subject",
-								"content": "Test Content",
-								"to": "cameron@to.com",
-								"cc": "cctest@test.com",
-								"bcc": "cctest@test.com",
-								"from": "from@from.com",
-								"time": "24/01/2017 05:35"
-							},
-							{
-								"message_id": "139",
-								"subject": "Test Subject",
-								"content": "Test Content",
-								"to": "cameron@to.com",
-								"cc": "cctest@test.com",
-								"bcc": "cctest@test.com",
-								"from": "from@from.com",
-								"time": "24/01/2017 05:35"
-							},
-							{
-								"message_id": "140",
-								"subject": "Test Subject",
-								"content": "Test Content",
-								"to": "cameron@to.com",
-								"cc": "cctest@test.com",
-								"bcc": "cctest@test.com",
-								"from": "from@from.com",
-								"time": "24/01/2017 05:35"
-							},
-							{
-								"message_id": "141",
-								"subject": "Test Subject",
-								"content": "Test Content",
-								"to": "cameron@to.com",
-								"cc": "cctest@test.com",
-								"bcc": "cctest@test.com",
-								"from": "from@from.com",
-								"time": "24/01/2017 05:35"
-							}
-						];
-					</script>
-					<script src="js/write_inbox.js"></script>
+					<% if(inbox.length > 0) { %>
+						<% for(var i=0; i < inbox.length; i++) { %>
+							<%= //inbox[i] %>
+							<tr class="read_email">
+							<td class = "read_email select">
+								<div class="email-checkbox">
+									<input type="checkbox" value="1" id="email-checkbox-<%= inbox[i].id %>" name="select" />
+								</div>
+							</td>
+							<td class="read_email from"><%= inbox[i].from_emails %></td>
+							<td class="read_email subject"><%= inbox[i].subject %></td>
+							<td class="read_email date"><%= inbox[i].date %></td>
+							<td class="read_email actions">
+							<button class ='styled read-mail-btn' onclick='display_message(<%= JSON.stringify(inbox[i]) %>);'>Read</button>
+							<button id='more-<%= inbox[i].id %>' class ='styled more-mail-btn'>More</button>
+							<button class = 'delete_button' onclick='not_yet_implemented();'></button>
+							<div id='dropdown-more-<%= inbox[i].id %>' class='dropdown-content more-dropdown-content'>
+								<a id='more-reply-btn-<%= inbox[i].id %>' onclick='more_reply_function(<%= JSON.stringify(inbox[i]) %>)'>Reply</a>
+								<a id='more-replyall-btn-<%= inbox[i].id %>' onclick='more_replyall_function(<%= JSON.stringify(inbox[i]) %>)'>Reply All</a>
+								<a id='more-forward-btn-<%= inbox[i].id %>' onclick='more_forward_function(<%= JSON.stringify(inbox[i]) %>)'>Forward</a>
+								<a id='more-markasread-btn-<%= inbox[i].id %>' onclick='not_yet_implemented()'>Mark As Read</a>
+								<a id='more-moveto-btn-<%= inbox[i].id %>' onclick='not_yet_implemented()'>Move To</a>
+							</div>
+							</td>
+							</tr>
+						<% } %>
+					<% } else { %>
+						<tr><td colspan="5"><span >No emails yet! <a href="/settings">Configure settings</a> and refresh.</span></td></tr>
+					<% } %>
 				</tbody>
 			</table>
 		</div>
@@ -274,7 +112,7 @@
 							<td><span id="read_email_from"></span></td>
 						</tr>
 						<tr>
-							<td colspan="2"><textarea id="read_email_content" rows="20" cols="60" readonly=""></textarea></td>
+							<td colspan="2"><div id="read_email_content" style="width: 100%;    border: 1px solid #ccc;    padding: 5px;"></div></td>
 						</tr>
 
 					</table>

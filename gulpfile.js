@@ -20,7 +20,8 @@ gulps.registerTasks({
 		  	   },
 		  	   settings: {
 		  		   email_alias: "gulp_user",
-		  	   }
+		  	   },
+					 inbox: []
 		     }, {ext:'.html'}))
 		     .pipe(gulp.dest(config.build_dest + parsed_folder));
 		}),
