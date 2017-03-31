@@ -1,7 +1,9 @@
 <nav class="basic-nav email-nav">
+	<% if (typeof user != 'undefined') { %>
 	<div class = "nav-status">
 		Logged in as <%= user.username %>
 	</div>
+	<% } %>
 
 	<button id="compose_button" class="styled compose-nav">Compose</button>
 
