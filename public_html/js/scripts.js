@@ -175,7 +175,6 @@ function getToggle(){
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.responseText != "") {
-			console.log(this.responseText);
 			var cur = this.responseText;
 			if(cur == "true"){
 				toggle = true;
