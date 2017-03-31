@@ -50,7 +50,6 @@ function display_message(email_message_json) {
     var modal = document.getElementById('read_email_modal');
 
     var close_button = document.getElementById('read_email_modal_close');
-
     // When the user clicks on <span> (x), close the modal
     close_button.onclick = function() {
         modal.style.display = "none";
@@ -64,11 +63,11 @@ function display_message(email_message_json) {
     var to = document.getElementById('read_email_to');
     to.innerHTML = email_message_json.to_emails;
 
-		var cc = document.getElementById('read_email_cc');
+	var cc = document.getElementById('read_email_cc');
     cc.innerHTML = email_message_json.cc_emails;
 
-		var bcc = document.getElementById('read_email_bcc');
-		bcc.innerHTML = email_message_json.bcc_emails;
+	var bcc = document.getElementById('read_email_bcc');
+	bcc.innerHTML = email_message_json.bcc_emails;
 
     var from = document.getElementById('read_email_from');
     from.innerHTML = email_message_json.from_emails;
@@ -176,10 +175,7 @@ function getToggle(){
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.responseText != "") {
-			console.log("200");
-			console.log(this.responseText);
 			var cur = this.responseText;
-			console.log("cur: " + cur);
 			if(cur == "true"){
 				toggle = true;
 				return true;
@@ -192,11 +188,11 @@ function getToggle(){
 	};
 	xhttp.open("GET", "/get_background", true);
 	xhttp.send();
-	
+
 }
 
 background_change.onclick = function() {
-	
+
     if (toggle) {
         toggle = false;
         message("info", "The background will stop changing periodically.");
@@ -212,20 +208,19 @@ function update_background(toggle) {
 	var form = document.createElement("form");
 	form.setAttribute("method", method);
 	form.setAttribute("action", "/update_background");
-	
+
 	var hiddenField = document.createElement("input");
     hiddenField.setAttribute("type", "hidden");
     hiddenField.setAttribute("name", "update_background");
     hiddenField.setAttribute("value", toggle);
-            
+
     form.appendChild(hiddenField);
-            
+
     document.body.appendChild(form);
 	form.submit();
 }
 
 function change_background() {
-	console.log("toggle: " + toggle);
     if (toggle) {
         current++;
         document.body.style.backgroundImage = backgrounds[current];
