@@ -2,50 +2,56 @@
 	Copyright (C) 2017 Cameron A. Craig, Stuart J. Thain, Aidan P. Gallagher, Lee A. Hamilton
 
 	<script type="text/javascript">
+				<![CDATA[
 		function validate(doctype) {
+			console.log("Validating");
 			//See https://github.com/validator/validator/wiki/Service-%C2%BB-Input-%C2%BB-textarea
+			var pre_head;
 			var parser;
-			if(doctype == "xhtml"){
+
+			if (doctype == "xhtml") {
+				pre_head = '<!DOCTYPE html ><html xmlns="http://www.w3.org/1999/xhtml" lang="en">';
 				parser = "xml";
-			} else{
+			} else {
+				pre_head = '<!DOCTYPE html ><html lang="en">';
 				parser = "html5";
 			}
-			var html = document.documentElement.innerHTML;
-			console.log(html);
-			var validation_url = "https://validator.nu/";
-		    // The rest of this code assumes you are not using a library.
-		    // It can be made less wordy if you use one.
-		    var form = document.createElement("form");
-		    form.setAttribute("method", "post");
-		    form.setAttribute("action", validation_url);
-			form.setAttribute("enctype", "multipart/form-data");
+
+			//var html = document.documentElement.innerHTML;
+			//console.log(html);
+			// The rest of this code assumes you are not using a library.
+			// It can be made less wordy if you use one.
+			var validation_form = document.createElement("form");
+			validation_form.setAttribute("method", "post");
+			validation_form.setAttribute("action", "https://validator.nu/");
+			validation_form.setAttribute("enctype", "multipart/form-data");
 
 			var parserField = document.createElement("input");
 			parserField.setAttribute("type", "hidden");
 			parserField.setAttribute("name", "parser");
 			parserField.setAttribute("value", parser);
 
-            var hiddenField = document.createElement("input");
-            hiddenField.setAttribute("type", "hidden");
-            hiddenField.setAttribute("name", "content");
-            hiddenField.setAttribute("value", html);
+			var hiddenField = document.createElement("input");
+			hiddenField.setAttribute("type", "hidden");
+			hiddenField.setAttribute("name", "content");
+			// hiddenField.setAttribute("value", pre_head + html);
+			hiddenField.setAttribute("value", '<meta charset="UTF-8">');
 
-			form.appendChild(parserField);
+			validation_form.appendChild(parserField);
 			// Content MUST be last input
-            form.appendChild(hiddenField);
+			validation_form.appendChild(hiddenField);
 
-		    document.body.appendChild(form);
-		    form.submit();
+			document.body.appendChild(validation_form);
+			validation_form.submit();
 		}
-
-
+						]]>
 	</script>
 
-  <script src="js/scripts.js"></script>
+
+	<script src="js/scripts.js"></script>
 	<script>
-	  var button = document.getElementById("chat_button");
+		var button = document.getElementById("chat_button");
 		//setup_modal(chat_modal, chat_btn, chat_modal_close);
-		<% if (typeof port == 'undefined') {var port = 3001;} %>
 		setup_chat(<%= port %>, button);
 	</script>
 
