@@ -1,6 +1,6 @@
 function show_reply_form() {
 	hide_read_email_buttons();
-	hide_forward_form();
+	hide_forward_forms();
 	hide_reply_all_form();
 
 	//Display the reply text area
@@ -40,7 +40,7 @@ function hide_reply_form(){
 
 function show_reply_all_form(){
 	hide_read_email_buttons();
-	hide_forward_form();
+	hide_forward_forms();
 	hide_reply_form();
 	//Display the reply text area
 	document.getElementById("reply_all_content").style.display = "inline";
@@ -63,7 +63,7 @@ function hide_reply_all_form(){
 
 function hide_reply_all_form(){
 	show_read_email_buttons();
-	hide_forward_form();
+	hide_forward_forms();
 	hide_reply_form();
 	//Display the reply text area
 	document.getElementById("reply_all_content").style.display = "none";
@@ -86,9 +86,8 @@ function show_forward_form() {
 	document.getElementById("cancel_forward_btn").style.display = "inline";
 }
 
-function hide_forward_form() {
-	show_read_email_buttons()
-
+function hide_forward_forms() {
+	show_read_email_buttons();
 	//Display the reply text area
 	document.getElementById("forward_content").style.display = "none";
 	//Hide all the stuff we shown for the reply option
@@ -99,7 +98,7 @@ function hide_forward_form() {
 
 function hide_all_email_forms() {
 	hide_reply_form();
-	hide_forward_form();
+	hide_forward_forms();
 	hide_reply_all_form();
 }
 
@@ -252,5 +251,5 @@ forward_button.onclick = function() {
 
 var cancel_forward_button = document.getElementById('cancel_forward_btn');
 cancel_forward_button.onclick = function() {
-	hide_forward_form();
+	hide_forward_forms();
 }
