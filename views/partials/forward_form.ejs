@@ -4,28 +4,33 @@
 		<h1>Forward</h1>
 		<table>
 			<tr>
-				<td>To:</td><td><input type="email" name="forward_to" /></td>
+				<td>To:</td>
+				<td><input type="email" name="forward_to" /></td>
 			</tr>
 			<tr>
-				<td>CC:</td><td> <input id="forward_cc_field" type="email" name="forward_cc" multiple="" /></td>
+				<td>CC:</td>
+				<td> <input id="forward_cc_field" type="email" name="forward_cc" multiple="" /></td>
 			</tr>
 			<tr>
-				<td>BCC:</td><td>	<input id="forward_bcc_field" type="email" name="forward_bcc" multiple="" /></td>
+				<td>BCC:</td>
+				<td> <input id="forward_bcc_field" type="email" name="forward_bcc" multiple="" /></td>
 			</tr>
 			<tr>
-				<td>Subject:</td><td><input id="forward_subject_field" type="text" name="forward_subject" /></td>
+				<td>Subject:</td>
+				<td><input id="forward_subject_field" type="text" name="forward_subject" /></td>
 			</tr>
 			<tr>
-				<td>From:</td><td><input id="forward_from_field" type="email" name="forward_from" value="<%=user.email%>" readonly=""/></td>
+				<td>From:</td>
+				<td><input id="forward_from_field" type="email" name="forward_from" value="<%=user.email%>" readonly="" /></td>
 			</tr>
 		</table>
-		<textarea class= "reply_box" form="form_forward" name="forward_content"  rows="20" cols="60"></textarea>
-		<input id="original_forward_content" type="hidden" name="forward_content" value=""/>
+		<textarea class="reply_box" form="form_forward" name="forward_content" rows="20" cols="60"></textarea>
+		<input id="original_forward_content" type="hidden" name="forward_content" value="" />
 		<input id="forward_name" type="hidden" name="name" value="forward" />
 		<br/>
 		<button type="submit" id="send_forward_btn" class="styled">Forward Email</button>
 	</form>
-		<button id="cancel_forward_btn" class="styled">Cancel Forward</button>
+	<button id="cancel_forward_btn" class="styled">Cancel Forward</button>
 </div>
 
 <!-- End forward email section -->

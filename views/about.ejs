@@ -10,10 +10,10 @@
 	<script src="js/head.js"></script>
 	<!-- Hide some nav elements -->
 	<style>
-	#compose_button,
-	#chat_button {
-		display:none;
-	}
+		#compose_button,
+		#chat_button {
+			display: none;
+		}
 	</style>
 
 	<!--[if lt IE 9]>
@@ -23,79 +23,78 @@
 
 <body>
 	<% include partials/header.ejs %>
-	<% include ../public_html/html/nav.html %>
-	<main class="settings">
-			<h1>About</h1>
-			<h2>Overview</h2>
-			<p>YouWatt is designed to be a relavity simple email client with an inbuilt chat feature. </p>
+		<% include ../public_html/html/nav.html %>
+			<main class="settings">
+				<h1>About</h1>
+				<h2>Overview</h2>
+				<p>YouWatt is designed to be a relavity simple email client with an inbuilt chat feature. </p>
 
-			<h2>Version</h2>
-			<p> If you are running the web app from the address: <a href="http://www2.macs.hw.ac.uk/~cac30/">http://www2.macs.hw.ac.uk/~cac30/</a> then you are running the latest version from <img src="https://img.shields.io/badge/Branch-stable-green.svg" alt="branch badge" /> </p>
-			<p> The latest tag is <img src="https://img.shields.io/github/tag/apg30/email_agent.svg" alt="repository tag" /> </p>
+				<h2>Version</h2>
+				<p> If you are running the web app from the address: <a href="http://www2.macs.hw.ac.uk/~cac30/">http://www2.macs.hw.ac.uk/~cac30/</a> then you are running the latest version from <img src="https://img.shields.io/badge/Branch-stable-green.svg" alt="branch badge"
+					/> </p>
+				<p> The latest tag is <img src="https://img.shields.io/github/tag/apg30/email_agent.svg" alt="repository tag" /> </p>
 
-			<h2>Bugs</h2>
-			<p> We aim to make YouWatt as robust as possible. If you discover what you believe to be a bug then we strongly encourage you to report it as an issue on the <a href="https://github.com/apg30/email_agent">github repository</a>.</p>
-			<img src="https://img.shields.io/github/issues-closed/apg30/email_agent.svg" alt="closed issues badge" /> <br/>
-			<img src="https://img.shields.io/github/issues-raw/apg30/email_agent.svg" alt="all issues badge" />
+				<h2>Bugs</h2>
+				<p> We aim to make YouWatt as robust as possible. If you discover what you believe to be a bug then we strongly encourage you to report it as an issue on the <a href="https://github.com/apg30/email_agent">github repository</a>.</p>
+				<img src="https://img.shields.io/github/issues-closed/apg30/email_agent.svg" alt="closed issues badge" /> <br/>
+				<img src="https://img.shields.io/github/issues-raw/apg30/email_agent.svg" alt="all issues badge" />
 
 
-			<h2>Contribution</h2>
-			<p>This is an open source project. We encourage users to send pull requests if they are interested in contributing to the system. You can follow <a href="https://github.com/apg30/email_agent">the github repository here.</a></p>
+				<h2>Contribution</h2>
+				<p>This is an open source project. We encourage users to send pull requests if they are interested in contributing to the system. You can follow <a href="https://github.com/apg30/email_agent">the github repository here.</a></p>
 				<img src="https://img.shields.io/github/issues-pr/apg30/email_agent.svg" alt="pull requests badge" /> <br/>
 				<img src="https://img.shields.io/github/issues-pr-closed/apg30/email_agent.svg" alt="closed pull requests badge" /> <br/>
 				<img src="https://img.shields.io/github/forks/apg30/email_agent.svg" alt="github forks badge" />
-				<img src="https://img.shields.io/github/stars/apg30/email_agent.svg"  alt="github stars badge" />
-				<img src="https://img.shields.io/github/watchers/apg30/email_agent.svg"  alt="github watchers badge" />
-				<img src="https://img.shields.io/github/downloads/apg30/email_agent/total.svg"  alt="github downloads badge" />
+				<img src="https://img.shields.io/github/stars/apg30/email_agent.svg" alt="github stars badge" />
+				<img src="https://img.shields.io/github/watchers/apg30/email_agent.svg" alt="github watchers badge" />
+				<img src="https://img.shields.io/github/downloads/apg30/email_agent/total.svg" alt="github downloads badge" />
 
-			<h2>Links</h2>
-			<p>The website is comprised of the following pages: </p>
-			<table class="about_links">
-				<tr>
-					<td><a href="/login">Login/Register</a></td>
-					<td>Allows the user to enter their credentials</td>
-				</tr>
-				<tr>
-					<td><a href="/">Index</a></td>
-					<td>The main interface from which the user can access their emails</td>
-				</tr>
-				<tr>
-					<td><a href="/settings">Settings</a></td>
-					<td>The settings page which allows the user to edit details about their account</td>
-				</tr>
-				<tr>
-					<td><a href="/about">About</a></td>
-					<td>Meta information about the software.</td>
-				</tr>
-			</table>
+				<h2>Links</h2>
+				<p>The website is comprised of the following pages: </p>
+				<table class="about_links">
+					<tr>
+						<td><a href="/login">Login/Register</a></td>
+						<td>Allows the user to enter their credentials</td>
+					</tr>
+					<tr>
+						<td><a href="/">Index</a></td>
+						<td>The main interface from which the user can access their emails</td>
+					</tr>
+					<tr>
+						<td><a href="/settings">Settings</a></td>
+						<td>The settings page which allows the user to edit details about their account</td>
+					</tr>
+					<tr>
+						<td><a href="/about">About</a></td>
+						<td>Meta information about the software.</td>
+					</tr>
+				</table>
 
 
-			<h2>Authors</h2>
-			<p>This software was produced at Heriot Watt University by
-				<a href="https://github.com/apg30">Aidan PJ Gallagher</a>,
-				<a href="https://github.com/StuartThain">Stuart J. Thain</a>,
-				<a href="https://github.com/camieac">Cameron A. Craig</a> and
-				<a href="https://github.com/Hamilton252">Lee A. Hamilton</a>.
-			</p>
+				<h2>Authors</h2>
+				<p>This software was produced at Heriot Watt University by
+					<a href="https://github.com/apg30">Aidan PJ Gallagher</a>,
+					<a href="https://github.com/StuartThain">Stuart J. Thain</a>,
+					<a href="https://github.com/camieac">Cameron A. Craig</a> and
+					<a href="https://github.com/Hamilton252">Lee A. Hamilton</a>.
+				</p>
 				<img src="https://img.shields.io/github/contributors/apg30/email_agent.svg" alt="contributors to repository" />
 
-			<h2>Technologies</h2>
-			<p>No external files are used in YouWatt. All HTML, CSS and javascript components have been written by members of the group. SHTML files
-				are used to tell the web server the files should be processed using Server Side Includes (SSI). The SHTML features are used to include
-				common features across all the pages; the common features are the header, footer and navigation bar.
-				A conscience effort has been taken to avoid using Bootstrap,jQuery or Online HTML templates. The developers have tried to include
-				new technologies from HTML5 and CSS3. Below are some the new components used in the system.<br/>
-				<b>HTML5:</b> footer tag, header tag and nav tag. <br/>
-				<b>CSS3:</b> transitions, animations, background resize and flex box.
-			</p>
+				<h2>Technologies</h2>
+				<p>No external files are used in YouWatt. All HTML, CSS and javascript components have been written by members of the group. SHTML files are used to tell the web server the files should be processed using Server Side Includes (SSI). The SHTML features
+					are used to include common features across all the pages; the common features are the header, footer and navigation bar. A conscience effort has been taken to avoid using Bootstrap,jQuery or Online HTML templates. The developers have tried to include
+					new technologies from HTML5 and CSS3. Below are some the new components used in the system.<br/>
+					<b>HTML5:</b> footer tag, header tag and nav tag. <br/>
+					<b>CSS3:</b> transitions, animations, background resize and flex box.
+				</p>
 
-			<h2>Donations</h2>
-			<p>If you use this software and find it valuable please consider donating to support the projects continued growth. Email cac30@hw.ac.uk with your bank account number, sort code, bank card number,pin number, that number on the back of the bank card and
-				lastly your national insurance number.</p>
-	</main>
+				<h2>Donations</h2>
+				<p>If you use this software and find it valuable please consider donating to support the projects continued growth. Email cac30@hw.ac.uk with your bank account number, sort code, bank card number,pin number, that number on the back of the bank card and
+					lastly your national insurance number.</p>
+			</main>
 
-	<% include partials/footer.ejs %>
-	<script src="js/scripts.js"></script>
+			<% include partials/footer.ejs %>
+				<script src="js/scripts.js"></script>
 
 </body>
 

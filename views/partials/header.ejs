@@ -1,11 +1,11 @@
-	<script src="js/sotw.js"></script>
+<script src="js/sotw.js"></script>
 
-	<header>
+<header>
 	<a href="/">
 		<img class="logo" src="img/icons/you_watt.png" alt="logo" />
 	</a>
 	<div style="max-width: 20em; width: auto; float:left; margin: 1.5em 1em; overflow: hidden; white-space: nowrap">
-		<span id="scroll" onload="go()" onmouseover="enabled = false" onmouseout = "enabled = true; go()">
+		<span id="scroll" onload="go()" onmouseover="enabled = false" onmouseout="enabled = true; go()">
 			Linux command of the Week: gpg
 		</span>
 	</div>
@@ -66,7 +66,7 @@
 						</select></td>
 					</tr>
 					<tr>
-						<td colspan="2"><button class="styled" >Search</button></td>
+						<td colspan="2"><button class="styled">Search</button></td>
 					</tr>
 				</table>
 			</form>
@@ -82,13 +82,13 @@
 	<% if(typeof messages != 'undefined') { %>
 		<% if(messages.info) { %>
 			<% for(var i=0; i<messages.info.length; i++) { %>
-				<div class="message_box info_text"><i class="info_icon"></i><span class = "info_text"><%= messages.info[i] %></span></div>
-			<% } %>
-		<% } %>
-		<script type="text/javascript">
-			setTimeout(function() {
-				document.getElementById("message_location").innerHTML = "";
-			}, 4100);
-		</script>
-	<% } %>
+				<div class="message_box info_text"><i class="info_icon"></i><span class="info_text"><%= messages.info[i] %></span></div>
+				<% } %>
+					<% } %>
+						<script type="text/javascript">
+							setTimeout(function() {
+								document.getElementById("message_location").innerHTML = "";
+							}, 4100);
+						</script>
+						<% } %>
 </div>

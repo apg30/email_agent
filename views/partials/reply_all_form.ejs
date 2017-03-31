@@ -4,27 +4,32 @@
 		<h1>Reply to all</h1>
 		<table>
 			<tr>
-				<td>To:</td><td><input id="reply_all_to_field" type="email" name="reply_all_to" multiple="" /></td>
+				<td>To:</td>
+				<td><input id="reply_all_to_field" type="email" name="reply_all_to" multiple="" /></td>
 			</tr>
 			<tr>
-				<td>CC:</td><td> <input id="reply_all_cc_field" type="email" name="reply_all_cc" multiple="" /></td>
+				<td>CC:</td>
+				<td> <input id="reply_all_cc_field" type="email" name="reply_all_cc" multiple="" /></td>
 			</tr>
 			<tr>
-				<td>BCC:</td><td><input id="reply_all_bcc_field" type="email" name="reply_all_bcc" multiple="" /></td>
+				<td>BCC:</td>
+				<td><input id="reply_all_bcc_field" type="email" name="reply_all_bcc" multiple="" /></td>
 			</tr>
 			<tr>
-				<td>Subject:</td><td><input id="reply_all_subject_field" type="text" name="reply_all_subject" /></td>
+				<td>Subject:</td>
+				<td><input id="reply_all_subject_field" type="text" name="reply_all_subject" /></td>
 			</tr>
 			<tr>
-				<td>From:</td><td><input id="reply_all_from_field" type="email" name="reply_all_from" value="<%=user.email%>" readonly=""/></td>
+				<td>From:</td>
+				<td><input id="reply_all_from_field" type="email" name="reply_all_from" value="<%=user.email%>" readonly="" /></td>
 			</tr>
 		</table>
-		<textarea class= "reply_box" form="form_reply_all" name="reply_all_content"  rows="20" cols="60"></textarea>
-		<input id="original_all_content" type="hidden" name="reply_all_content" value=""/>
+		<textarea class="reply_box" form="form_reply_all" name="reply_all_content" rows="20" cols="60"></textarea>
+		<input id="original_all_content" type="hidden" name="reply_all_content" value="" />
 		<input id="reply_all_name" type="hidden" name="name" value="reply_all" />
 		<br/>
-		<button type="submit" id="send_reply_all_btn"  class="styled">Reply to All</button>
+		<button type="submit" id="send_reply_all_btn" class="styled">Reply to All</button>
 	</form>
-		<button id="cancel_reply_all_btn" class="styled">Cancel Reply to All</button>
+	<button id="cancel_reply_all_btn" class="styled">Cancel Reply to All</button>
 </div>
 <!-- End write reply section -->
