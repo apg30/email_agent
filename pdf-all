@@ -1,0 +1,25 @@
+#!/bin/bash
+# Merge all source files into one pdf code listing!
+# This is useful when you need a quick and easy way to convert
+# code to PDF listings. The script can be easily tweaked to filter
+# different file extensions.
+#
+# Author: Cameron A. Craig
+# Date: 7 Mar 2017
+# License: WTFPL (http://www.wtfpl.net/)
+
+# Ensure an output filename is given
+if [ $# -ne 1 ]
+then
+   echo "Please provide output file name as argument!"
+   exit
+else
+	OUTPUT_FILE=$1
+fi
+
+# Find all files to be converted to PDF
+SOURCE_FILES=`find -regex '.*/.*\.\(ejs\|html\|js\|json\|css\|md\)$'`
+echo $SOURCE_FILES
+
+# Convert all the files to one PDF listing
+a2ps -1 --pro=color $SOURCE_FILES -o - | ps2pdf -sPAPERSIZE=a4 -dOptimize=true -dEmbedAllFonts=true - > $OUTPUT_FILE
