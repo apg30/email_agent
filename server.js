@@ -23,14 +23,14 @@ var path = require('path');
 
 // datebase connection
 var conn = db.init(config.mongodb_username,
-	config.mongodb_password,
-	config.mongodb_server,
-	config.mongodb_port
+    config.mongodb_password,
+    config.mongodb_server,
+    config.mongodb_port
 );
 
 var db = conn.db;
 conn.once('open', function() {
-	console.log('Connected to YouWatt MongoDB database')
+    console.log('Connected to YouWatt MongoDB database')
 });
 
 // Configure local strategy for Passport authentication
@@ -49,15 +49,25 @@ app.set('view engine', 'ejs');
 // logging, parsing, and session handling.
 app.use(require('morgan')('combined'));
 app.use(require('cookie-parser')());
-app.use(require('body-parser').urlencoded({ extended: true }));
-app.use(require('express-session')({ secret: 'keyboard cat', resave: false, saveUninitialized: false }));
+app.use(require('body-parser').urlencoded({
+    extended: true
+}));
+app.use(require('express-session')({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: false
+}));
 
 // for parsing application/json
 app.use(bodyParser.json());
 // for parsing application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 // for parsing multipart/form-data
-app.use(multer({dest:'./uploads/'}).array('multiInputFileName'));
+app.use(multer({
+    dest: './uploads/'
+}).array('multiInputFileName'));
 
 // Initialize Passport and restore authentication state, if any, from the
 // session.

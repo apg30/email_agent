@@ -1,5 +1,3 @@
-
-
 /* Called when login button is pressed, before data is passed to server. */
 function validate_login() {
     // Validate username
@@ -16,11 +14,11 @@ function validate_login() {
 }
 /* Called when login button is pressed, before data is passed to server. */
 function validate_register() {
-  var password = document.forms["register_form"]["password"].value;
-  var confirm_password = document.forms["register_form"]["confirm_password"].value;
-  console.log("validate reg");
-  if (password != confirm_password){
-    message("error", "Passwords must match");
-    return false;
-  }
+    var password = document.forms["register_form"]["password"].value;
+    var confirm_password = document.forms["register_form"]["confirm_password"].value;
+    console.log("validate reg");
+    if (password != confirm_password) {
+        message("error", "Passwords must match");
+        return false;
+    }
 }

@@ -2,16 +2,16 @@
 
 # Does a git pull to deploy stable branch on web, records event in log file.
 
-
-print "Content-type: text/html",                     "\n\n";
-print "<html>",                                      "\n";
+print "Content-type: text/html",                       "\n\n";
+print "<html>",                                        "\n";
 print "<head><title>Deployment script</title></head>", "\n";
-print "<body>",                                      "\n";
+print "<body>",                                        "\n";
 print "<h1>",                          "Git Pull Script", "</h1>", "<hr>", "\n";
 print "Sit back and relax :)<br><br>", "\n";
 
 print "git pull result: ", "\n";
-my $result = `cd ~/git/email_agent/; git pull origin stable; npm install; node server.js`;
+my $result =
+  `cd ~/git/email_agent/; git pull origin stable; npm install; node server.js`;
 print $result;
 
 print "</body></html>", "\n";

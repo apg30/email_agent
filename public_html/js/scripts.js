@@ -10,16 +10,17 @@ function setup_modal(modal, button, close) {
     // When the user clicks on <span> (x), close the modal
     close.onclick = function() {
         modal.style.display = "none";
-				hide_all_email_forms();
-				hide_all_send_modal_forms();
+        hide_all_email_forms();
+        hide_all_send_modal_forms();
     }
 }
 
-var show=false;
+var show = false;
+
 function setup_chat(port, button) {
 
-  var url = window.location.href.split(':');
-  var chat_url = "http:" + url[1] + ":" + port;
+    var url = window.location.href.split(':');
+    var chat_url = "http:" + url[1] + ":" + port;
 
     if ((button == null)) {
         console.log("button not defined");
@@ -27,13 +28,12 @@ function setup_chat(port, button) {
     }
     // When the user clicks the button, open the modal
     button.onclick = function() {
-        if(show==false){
-          document.getElementById('chat_iframe').src = chat_url;
-          show=true;
-        }
-        else{
-          document.getElementById('chat_iframe').src = "";
-          show=false;
+        if (show == false) {
+            document.getElementById('chat_iframe').src = chat_url;
+            show = true;
+        } else {
+            document.getElementById('chat_iframe').src = "";
+            show = false;
         }
     }
 }
@@ -53,8 +53,8 @@ function display_message(email_message_json) {
     // When the user clicks on <span> (x), close the modal
     close_button.onclick = function() {
         modal.style.display = "none";
-				hide_all_email_forms();
-				hide_all_send_modal_forms();
+        hide_all_email_forms();
+        hide_all_send_modal_forms();
     }
 
     var subject = document.getElementById('read_email_subject');
@@ -63,11 +63,11 @@ function display_message(email_message_json) {
     var to = document.getElementById('read_email_to');
     to.innerHTML = email_message_json.to_emails;
 
-	var cc = document.getElementById('read_email_cc');
+    var cc = document.getElementById('read_email_cc');
     cc.innerHTML = email_message_json.cc_emails;
 
-	var bcc = document.getElementById('read_email_bcc');
-	bcc.innerHTML = email_message_json.bcc_emails;
+    var bcc = document.getElementById('read_email_bcc');
+    bcc.innerHTML = email_message_json.bcc_emails;
 
     var from = document.getElementById('read_email_from');
     from.innerHTML = email_message_json.from_emails;
@@ -104,8 +104,8 @@ window.onclick = function(event) {
     var edit_draft_modal = document.getElementById('edit_draft_modal');
     if (event.target == compose_modal) {
         compose_modal.style.display = "none";
-  //  } else if (event.target == chat_modal) {
-  //      chat_modal.style.display = "none";
+        //  } else if (event.target == chat_modal) {
+        //      chat_modal.style.display = "none";
     } else if (event.target == advanced_search_modal) {
         advanced_search_modal.style.display = "none";
     } else if (event.target == help_modal) {
@@ -136,28 +136,28 @@ function moreDropdown(id) {
 /* Mail more button functions*/
 
 var btns = document.getElementsByClassName("more-mail-btn");
-for (var i = 0; i < btns.length; i++){
-  btns[i].onclick = function(e){
-    var id = e.target.id;
-    moreDropdown(id);
-  }
+for (var i = 0; i < btns.length; i++) {
+    btns[i].onclick = function(e) {
+        var id = e.target.id;
+        moreDropdown(id);
+    }
 }
 
 //open the read modal and show the reply box
-function more_reply_function(email){
-  display_message(email);
-  show_reply_form();
+function more_reply_function(email) {
+    display_message(email);
+    show_reply_form();
 }
 
-function more_replyall_function(email){
-  display_message(email);
-  show_reply_all_form();
+function more_replyall_function(email) {
+    display_message(email);
+    show_reply_all_form();
 }
 
 //open the read modal and show forward options
-function more_forward_function(email){
-  display_message(email);
-  show_forward_form();
+function more_forward_function(email) {
+    display_message(email);
+    show_forward_form();
 }
 
 
@@ -171,23 +171,22 @@ var toggle = getToggle();
 
 var background_change = document.getElementById('background_change_btn');
 
-function getToggle(){
-	var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
-		if (this.readyState == 4 && this.responseText != "") {
-			var cur = this.responseText;
-			if(cur == "true"){
-				toggle = true;
-				return true;
-			}
-			else{
-				toggle = false;
-				return false;
-			}
-		}
-	};
-	xhttp.open("GET", "/get_background", true);
-	xhttp.send();
+function getToggle() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.responseText != "") {
+            var cur = this.responseText;
+            if (cur == "true") {
+                toggle = true;
+                return true;
+            } else {
+                toggle = false;
+                return false;
+            }
+        }
+    };
+    xhttp.open("GET", "/get_background", true);
+    xhttp.send();
 
 }
 
@@ -204,12 +203,12 @@ background_change.onclick = function() {
 }
 
 function update_background(toggle) {
-	var method = "post";
-	var form = document.createElement("form");
-	form.setAttribute("method", method);
-	form.setAttribute("action", "/update_background");
+    var method = "post";
+    var form = document.createElement("form");
+    form.setAttribute("method", method);
+    form.setAttribute("action", "/update_background");
 
-	var hiddenField = document.createElement("input");
+    var hiddenField = document.createElement("input");
     hiddenField.setAttribute("type", "hidden");
     hiddenField.setAttribute("name", "update_background");
     hiddenField.setAttribute("value", toggle);
@@ -217,7 +216,7 @@ function update_background(toggle) {
     form.appendChild(hiddenField);
 
     document.body.appendChild(form);
-	form.submit();
+    form.submit();
 }
 
 function change_background() {
