@@ -11,7 +11,7 @@ print "<h1>",                          "Git Pull Script", "</h1>", "<hr>", "\n";
 print "Sit back and relax :)<br><br>", "\n";
 
 print "git pull result: ", "\n";
-my $result = `cd ~/git/email_agent/; git pull origin stable; npm install; node server.js`;
+my $result = `cd ~/git/email_agent/; git pull origin stable; killall node; npm install; node server.js`;
 print $result;
 
 print "</body></html>", "\n";
