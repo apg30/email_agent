@@ -1,0 +1,2 @@
+#! /bin/sh
+cd /home/ce5/apg30/git/email_agent/; git pull origin stable; npm install; node server.js 
