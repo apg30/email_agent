@@ -22,4 +22,4 @@ SOURCE_FILES=`find -regex '.*/.*\.\(ejs\|html\|js\|json\|css\|md\)$'`
 echo $SOURCE_FILES
 
 # Convert all the files to one PDF listing
-a2ps -1 --pro=color $SOURCE_FILES -o - | ps2pdf -sPAPERSIZE=a4 -dOptimize=true -dEmbedAllFonts=true - > $OUTPUT_FILE
+a2ps -1 --pro=color --delegate no $SOURCE_FILES -o - | ps2pdf -sPAPERSIZE=a4 -dOptimize=true -dEmbedAllFonts=true - > $OUTPUT_FILE
