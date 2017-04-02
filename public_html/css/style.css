@@ -373,7 +373,7 @@ th {
     padding: 0.5em 1em;
 }
 
-body {
+body:first {
     background-image: url("../img/backgrounds/01.jpg");
     background-repeat: no-repeat;
     background-size: auto;
